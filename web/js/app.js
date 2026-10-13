@@ -102,6 +102,13 @@ async function iniciar() {
     });
   });
   $("form-comparar").addEventListener("submit", (e) => { e.preventDefault(); buscar(); });
+  let temporizador = null;
+  $("buscador").addEventListener("input", () => {
+    clearTimeout(temporizador);
+    temporizador = setTimeout(() => {
+      if ($("buscador").value.trim().length >= 2) buscar();
+    }, 300);
+  });
   $("tier").addEventListener("change", () => { estado.tier = $("tier").value; compararActual(); });
   $("topn").addEventListener("change", () => { estado.top = Number($("topn").value); compararActual(); });
 }
