@@ -79,7 +79,13 @@ Lectura honesta: en el top hay casi todo. Fuera del top los nulos subirán (jueg
 ## 9. Conclusión y siguientes pasos
 
 Viabilidad **sí, condicional**: IGDB principal + RAWG complemento para el comparador con snapshots. Próximos pasos priorizados:
-1. Muestreo mid-tail aleatorio + `/release_dates` IGDB y detalle RAWG de 10 juegos (mide 90% real y coste dev/pub).
+1. ~~Muestreo mid-tail aleatorio + `/release_dates` IGDB y detalle RAWG de 10 juegos~~ — hecho, ver §10.
 2. Tabla equivalencias géneros + regla de competidor directo validada en 3 juegos piloto.
 3. Congelar esquema histórico (`04_diccionario_y_modelo.md`) y primer snapshot versionado.
 4. Solo entonces, diseño EDA/KPIs y app. Precio fuera del MVP.
+
+## 10. Addendum mid-tail (2026-10-13, `src/muestreo_midtail.py`)
+
+* Mid-tail 160 filas (80+80, página 6 RAWG / offset 150 IGDB): RAWG critic 77/80 (96%) + user 80/80; IGDB critic 76/80 (95%) + user 80/80; fechas y géneros 0% nulos. El 90% **aguanta fuera del top** en esta ventana (sigue siendo top-adjacent, no long-tail profundo).
+* `/release_dates` 10 juegos → 80 filas en 7/10 juegos (3 sin filas; ej. San Andreas 21 filas/10 plats, Arkham City 16/5, GTA V 7/7). Granularidad por plataforma **existe pero no es universal**: la app debe tolerar juegos sin fechas por plataforma y mostrar región.
+* Detalle RAWG 10/10 OK (~474ms medio): dev 10/10 y pub 10/10 recuperados. Coste: +1 req/juego (~10% de la cuota Free para 2000 juegos/mes). Viable como enriquecimiento bajo demanda, no en barridos masivos.
