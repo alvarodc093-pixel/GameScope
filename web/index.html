@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameScope — ¿Cómo se posiciona tu juego frente a sus competidores?</title>
+  <meta name="description" content="GameScope compara un videojuego con sus competidores directos en PC, consolas y móvil usando datos verificados de IGDB y RAWG, con crítica y usuarios siempre separados.">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#comparador">Saltar al comparador</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="#inicio">Game<span>Scope</span></a>
+      <ul class="nav-links">
+        <li><a href="#comparador">Comparador</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#datos">Datos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <h1>¿Cómo se posiciona tu juego frente a sus competidores?</h1>
+      <p>Selecciona un videojuego y descubre sus competidores directos en PC, consolas y móvil. Crítica y usuarios, siempre por separado y con su número de votos. Sin precios inventados, sin métricas fusionadas.</p>
+      <p id="meta-linea" style="color:var(--color-muted);font-size:.9rem">Cargando metadatos…</p>
+    </div>
+
+    <section id="comparador" aria-labelledby="t-comparador">
+      <h2 id="t-comparador">Comparador</h2>
+      <form id="form-comparar" class="card" aria-label="Buscar juego de referencia">
+        <div class="controls">
+          <div>
+            <label for="buscador">Juego de referencia</label>
+            <input type="search" id="buscador" list="juego-lista" placeholder="p. ej. Hollow Knight" autocomplete="off" required>
+            <datalist id="juego-lista"></datalist>
+          </div>
+          <div>
+            <span id="fuente-label" style="font-weight:600;display:block;margin-bottom:8px">Fuente</span>
+            <div class="source-toggle" id="fuente" role="group" aria-labelledby="fuente-label">
+              <button type="button" class="chip" data-source="igdb" aria-pressed="true">IGDB</button>
+              <button type="button" class="chip" data-source="rawg" aria-pressed="false">RAWG</button>
+            </div>
+          </div>
+          <div>
+            <label for="tier">Umbral mínimo</label>
+            <select id="tier">
+              <option value="secundario" selected>Secundario o mejor</option>
+              <option value="directo">Solo directos</option>
+              <option value="relacionado">Incluir relacionados</option>
+            </select>
+          </div>
+          <div>
+            <label for="topn">Resultados</label>
+            <select id="topn">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn" type="submit">Comparar</button>
+      </form>
+      <div id="resultados" style="margin-top:var(--spacing-md)"></div>
+    </section>
+
+    <section id="metodologia" class="methodology" aria-labelledby="t-metodologia">
+      <h2 id="t-metodologia">Metodología (scoring v1, heurístico)</h2>
+      <div class="card">
+        <ol>
+          <li><strong>Requisitos duros:</strong> sin género común o sin plataforma común no hay competidor.</li>
+          <li><strong>Género</strong> (peso 3): 1.0 con ≥2 equivalentes, 0.6 con 1. Tabla RAWG↔IGDB documentada.</li>
+          <li><strong>Plataforma</strong> (peso 2): 1.0 con ≥2 en común, 0.5 con 1.</li>
+          <li><strong>Era</strong> (peso 1): 1.0 si ≤2 años, 0.5 si ≤4, 0 si más o sin fecha (ausente = 0).</li>
+          <li><strong>Estudio</strong> (peso 1): solo si ambas partes lo tienen; si no, no aplica ni penaliza.</li>
+          <li><strong>Tiers:</strong> ≥0.75 directo · ≥0.45 secundario · ≥0.25 relacionado.</li>
+        </ol>
+        <p>Cada competidor muestra qué aportó cada componente. Subgénero, modelo de negocio y audiencia están excluidos por falta de fuente válida. Popularidad solo como contexto dentro de cada fuente.</p>
+      </div>
+    </section>
+
+    <section id="datos" aria-labelledby="t-datos">
+      <h2 id="t-datos">Datos y limitaciones</h2>
+      <div class="card">
+        <table class="data-table">
+          <thead><tr><th>Aspecto</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td>Fuentes</td><td>IGDB (principal) + RAWG (complemento), fotos fechadas UTC</td></tr>
+            <tr><td>Escalas</td><td>RAWG crítica 0–100 / usuarios 0–5 · IGDB 0–100 / 0–100. No se fusionan.</td></tr>
+            <tr><td>Precio</td><td>Descartado: sin fuente comparable trilateral</td></tr>
+            <tr><td>Cobertura</td><td>Sesgo a juegos populares; móvil con identidad propia parcial</td></tr>
+            <tr><td>Evolución</td><td>Pendiente de segundo snapshot: hoy no hay deltas temporales</td></tr>
+          </tbody>
+        </table>
+        <p>Metodología completa y auditoría en el <a href="https://github.com/" rel="noopener">repositorio del proyecto</a> (<code>docs/01–08</code>).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Datos: <a href="https://www.igdb.com/" target="_blank" rel="noopener">IGDB</a> · <a href="https://rawg.io/" target="_blank" rel="noopener">RAWG</a> — con atribución. Proyecto de portfolio educativo sin afiliación.
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

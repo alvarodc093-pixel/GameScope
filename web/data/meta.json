@@ -1,0 +1,11 @@
+{
+  "snapshot": "snapshot_20261013",
+  "generated_at": "2026-10-13T18:44:24.136638+00:00",
+  "n": 229,
+  "por_fuente": {
+    "igdb": 119,
+    "rawg": 110
+  },
+  "scoring": "v1",
+  "nota": "Métricas por fuente y escala, sin fusionar."
+}
