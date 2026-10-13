@@ -15,6 +15,7 @@ Nunca imprime claves.
 """
 from __future__ import annotations
 
+import csv
 import json
 import sys
 import time
@@ -226,8 +227,6 @@ def main() -> int:
     print("IGDB grupos:", json.dumps(imeta["grupos"], ensure_ascii=False))
 
     rows = [norm_rawg(g, observed) for g in rg] + [norm_igdb(g, observed) for g in ig]
-    import csv
-
     cols = list(rows[0].keys()) if rows else []
     out = PROC_DIR / "muestra_normalizada.csv"
     with out.open("w", newline="", encoding="utf-8") as f:

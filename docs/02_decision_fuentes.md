@@ -3,6 +3,8 @@
 Fecha: 2026-10-13.
 Base: `docs/01_validacion_fuentes.md`. Sin ejecuciones todavía: los “resultados medidos” son 0 y van separados de los criterios propuestos.
 
+> Nota posterior (Fase 2): decisión confirmada con datos en `docs/03_auditoria_exploratoria.md` y `docs/05_equivalencias_competidores.md`.
+
 ## 1. Comparativa resumida (documental, no medida)
 
 | Dimensión | RAWG | IGDB (Twitch) | CheapShark / Steam (solo precio PC) |

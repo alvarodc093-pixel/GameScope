@@ -80,6 +80,14 @@ def load() -> list[dict]:
     return rows
 
 
+def _critic_key(v) -> float:
+    """Clave de desempate: numérico o -1 si ausente (nunca rompe el orden)."""
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return -1.0
+
+
 def competidores(rows: list[dict], piloto: dict, n: int = 12) -> list[dict]:
     out = []
     for r in rows:
@@ -98,7 +106,7 @@ def competidores(rows: list[dict], piloto: dict, n: int = 12) -> list[dict]:
             "generos": "|".join(gs), "plats_comunes": len(ps),
             "era_ok": era_ok, "critic": r["critic_score"], "user": r["user_score"],
         })
-    out.sort(key=lambda x: (-x["score"], -(float(x["critic"] or -1)) if str(x["critic"]).replace(".", "", 1).isdigit() else 0))
+    out.sort(key=lambda x: (-x["score"], -_critic_key(x["critic"])))
     return out[:n]
 
 

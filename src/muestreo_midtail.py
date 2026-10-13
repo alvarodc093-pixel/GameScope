@@ -47,6 +47,11 @@ def _ids(csv_path: Path, source: str, n: int, step: int = 7) -> list[str]:
     return out[:n]
 
 
+def _present(v) -> bool:
+    """Hay datoútil: ni vacío ni 'None' (los CSV guardan nulos como '')."""
+    return str(v if v is not None else "").strip() not in ("", "None")
+
+
 def main() -> int:
     observed = _now()
     base = PROC_DIR / "muestra_normalizada.csv"
@@ -92,13 +97,12 @@ def main() -> int:
     print(f"MID-TAIL filas: {len(rows)}")
 
     def pct(sub: list[dict], col: str) -> float:
-        v = [str(r.get(col) if r.get(col) is not None else "").strip() for r in sub]
-        return round(sum(1 for x in v if x in ("", "None")) / len(v) * 100, 1)
+        return round(sum(1 for r in sub if not _present(r.get(col))) / len(sub) * 100, 1)
 
     for src in ("rawg", "igdb"):
         sub = [r for r in rows if r["source"] == src]
-        cs = sum(1 for r in sub if str(r["critic_score"] if r["critic_score"] is not None else "").strip() not in ("", "None"))
-        us = sum(1 for r in sub if str(r["user_score"] if r["user_score"] is not None else "").strip() not in ("", "None"))
+        cs = sum(1 for r in sub if _present(r["critic_score"]))
+        us = sum(1 for r in sub if _present(r["user_score"]))
         print(f"{src}: n={len(sub)} critic={cs} user={us} "
               f"nulos_fecha={pct(sub,'release_date')}% generos={pct(sub,'genre_names')}%")
 
