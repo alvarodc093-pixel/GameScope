@@ -1,0 +1,5 @@
+# data/raw — respuestas originales
+# Solo guardar aquí si las condiciones de la fuente lo permiten:
+# - IGDB: permitido cachear y servir (ver docs/01_validacion_fuentes.md).
+# - RAWG: NO redistribuir. No subir raw de RAWG a repo público. Local + .gitignore.
+# Sin credenciales no hay datos todavía. Este .gitkeep mantiene la carpeta vacía.
