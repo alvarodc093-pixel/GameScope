@@ -1,5 +1,1516 @@
 {
-  "suficientes_observaciones": false,
-  "n_snapshots": 1,
-  "mensaje": "Con 1 solo snapshot no hay serie temporal. Captura una foto nueva (python -m src.muestreo y luego python -m src.snapshot) para poder comparar observaciones fechadas."
+  "n_anteriores": 831,
+  "n_actuales": 1131,
+  "con_cambio": 0,
+  "altas": [
+    {
+      "source": "igdb",
+      "source_id": "19600",
+      "name": "A King's Tale: Final Fantasy XV"
+    },
+    {
+      "source": "igdb",
+      "source_id": "67902",
+      "name": "Aimlabs"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7289",
+      "name": "Always Sometimes Monsters"
+    },
+    {
+      "source": "igdb",
+      "source_id": "19273",
+      "name": "Angry Birds 2"
+    },
+    {
+      "source": "igdb",
+      "source_id": "145319",
+      "name": "Arcade Paradise"
+    },
+    {
+      "source": "igdb",
+      "source_id": "221822",
+      "name": "Assassin's Creed II"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8218",
+      "name": "Assassin's Creed III: The Tyranny of King Washington"
+    },
+    {
+      "source": "igdb",
+      "source_id": "39044",
+      "name": "Assassin's Creed: Origins - Gold Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "42929",
+      "name": "Batman: Arkham Knight - Game of the Year Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "348180",
+      "name": "Beast of Reincarnation"
+    },
+    {
+      "source": "igdb",
+      "source_id": "103373",
+      "name": "Beyond Blue"
+    },
+    {
+      "source": "igdb",
+      "source_id": "9706",
+      "name": "Bleed"
+    },
+    {
+      "source": "igdb",
+      "source_id": "135337",
+      "name": "Bloodstained: Curse of the Moon 2"
+    },
+    {
+      "source": "igdb",
+      "source_id": "33501",
+      "name": "Bloons TD Battles"
+    },
+    {
+      "source": "igdb",
+      "source_id": "279612",
+      "name": "Brothers: A Tale of Two Sons Remake"
+    },
+    {
+      "source": "igdb",
+      "source_id": "18075",
+      "name": "Carmageddon: Max Damage"
+    },
+    {
+      "source": "igdb",
+      "source_id": "173432",
+      "name": "Choo-Choo Charles"
+    },
+    {
+      "source": "igdb",
+      "source_id": "138796",
+      "name": "Chronos: Before the Ashes"
+    },
+    {
+      "source": "igdb",
+      "source_id": "2442",
+      "name": "Commander Keen in Keen Dreams"
+    },
+    {
+      "source": "igdb",
+      "source_id": "143061",
+      "name": "Coral Island"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25252",
+      "name": "Crush Crush"
+    },
+    {
+      "source": "igdb",
+      "source_id": "165126",
+      "name": "Crysis 2 Remastered"
+    },
+    {
+      "source": "igdb",
+      "source_id": "165127",
+      "name": "Crysis 3 Remastered"
+    },
+    {
+      "source": "igdb",
+      "source_id": "27741",
+      "name": "Darwin Project"
+    },
+    {
+      "source": "igdb",
+      "source_id": "310545",
+      "name": "Date Everything!"
+    },
+    {
+      "source": "igdb",
+      "source_id": "26929",
+      "name": "Deus Ex: Mankind Divided - A Criminal Past"
+    },
+    {
+      "source": "igdb",
+      "source_id": "18081",
+      "name": "Devil Daggers"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25210",
+      "name": "Disc Jam"
+    },
+    {
+      "source": "igdb",
+      "source_id": "211243",
+      "name": "Doom 3"
+    },
+    {
+      "source": "igdb",
+      "source_id": "279374",
+      "name": "Duck Detective: The Secret Salami"
+    },
+    {
+      "source": "igdb",
+      "source_id": "55147",
+      "name": "Elex II"
+    },
+    {
+      "source": "igdb",
+      "source_id": "287849",
+      "name": "Epic Mickey: Rebrushed"
+    },
+    {
+      "source": "igdb",
+      "source_id": "31198",
+      "name": "Eternal Card Game"
+    },
+    {
+      "source": "igdb",
+      "source_id": "135842",
+      "name": "Eternal Return"
+    },
+    {
+      "source": "igdb",
+      "source_id": "18037",
+      "name": "Ever17: The Out of Infinity"
+    },
+    {
+      "source": "igdb",
+      "source_id": "90082",
+      "name": "Far Cry 5: Lost on Mars"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8321",
+      "name": "Feeding Frenzy 2: Shipwreck Showdown"
+    },
+    {
+      "source": "igdb",
+      "source_id": "158984",
+      "name": "Final Fantasy V"
+    },
+    {
+      "source": "igdb",
+      "source_id": "158985",
+      "name": "Final Fantasy VI"
+    },
+    {
+      "source": "igdb",
+      "source_id": "165479",
+      "name": "Forgive Me Father"
+    },
+    {
+      "source": "igdb",
+      "source_id": "27277",
+      "name": "Forma.8"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7350",
+      "name": "Get Even"
+    },
+    {
+      "source": "igdb",
+      "source_id": "174844",
+      "name": "Girls' Frontline 2: Exilium"
+    },
+    {
+      "source": "igdb",
+      "source_id": "41047",
+      "name": "Gorn"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7849",
+      "name": "Halo: Spartan Strike"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25821",
+      "name": "Hatsune Miku: Project Diva Future Tone"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7435",
+      "name": "Heroes & Generals"
+    },
+    {
+      "source": "igdb",
+      "source_id": "214873",
+      "name": "Hogwarts Legacy: Deluxe Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "105420",
+      "name": "Hollow Knight: Godmaster"
+    },
+    {
+      "source": "igdb",
+      "source_id": "55038",
+      "name": "Immortal: Unchained"
+    },
+    {
+      "source": "igdb",
+      "source_id": "121084",
+      "name": "In Sound Mind"
+    },
+    {
+      "source": "igdb",
+      "source_id": "55198",
+      "name": "Kentucky Route Zero: TV Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "116794",
+      "name": "Kingdom Come: Deliverance - Royal Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "221998",
+      "name": "Kingdom Hearts II Final Mix"
+    },
+    {
+      "source": "igdb",
+      "source_id": "117778",
+      "name": "Kingdom Hearts III: Re Mind"
+    },
+    {
+      "source": "igdb",
+      "source_id": "6006",
+      "name": "Kingdom Rush Frontiers"
+    },
+    {
+      "source": "igdb",
+      "source_id": "111393",
+      "name": "Kingdom Rush Vengeance"
+    },
+    {
+      "source": "igdb",
+      "source_id": "134438",
+      "name": "Kingdoms of Amalur: Re-Reckoning"
+    },
+    {
+      "source": "igdb",
+      "source_id": "20907",
+      "name": "Layers of Fear: Inheritance"
+    },
+    {
+      "source": "igdb",
+      "source_id": "145796",
+      "name": "Lil Gator Game"
+    },
+    {
+      "source": "igdb",
+      "source_id": "36834",
+      "name": "Little Nightmares: The Depths"
+    },
+    {
+      "source": "igdb",
+      "source_id": "206806",
+      "name": "Lorelei and the Laser Eyes"
+    },
+    {
+      "source": "igdb",
+      "source_id": "150462",
+      "name": "Lost in Play"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7058",
+      "name": "Lost: Via Domus"
+    },
+    {
+      "source": "igdb",
+      "source_id": "19850",
+      "name": "Lumo"
+    },
+    {
+      "source": "igdb",
+      "source_id": "102122",
+      "name": "Madden NFL 19"
+    },
+    {
+      "source": "igdb",
+      "source_id": "111544",
+      "name": "Maid of Sker"
+    },
+    {
+      "source": "igdb",
+      "source_id": "306137",
+      "name": "Mario & Luigi: Brothership"
+    },
+    {
+      "source": "igdb",
+      "source_id": "152201",
+      "name": "Mario + Rabbids Sparks of Hope"
+    },
+    {
+      "source": "igdb",
+      "source_id": "191398",
+      "name": "Mario Strikers: Battle League"
+    },
+    {
+      "source": "igdb",
+      "source_id": "266674",
+      "name": "Mario vs. Donkey Kong"
+    },
+    {
+      "source": "igdb",
+      "source_id": "6147",
+      "name": "Mercenary Kings"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25637",
+      "name": "Metal Gear Solid V: The Definitive Experience"
+    },
+    {
+      "source": "igdb",
+      "source_id": "27150",
+      "name": "Minion Masters"
+    },
+    {
+      "source": "igdb",
+      "source_id": "22499",
+      "name": "Moons of Madness"
+    },
+    {
+      "source": "igdb",
+      "source_id": "139446",
+      "name": "Mortal Kombat 11: Ultimate"
+    },
+    {
+      "source": "igdb",
+      "source_id": "64957",
+      "name": "Mutazione"
+    },
+    {
+      "source": "igdb",
+      "source_id": "27192",
+      "name": "My Memory of Us"
+    },
+    {
+      "source": "igdb",
+      "source_id": "308034",
+      "name": "NBA 2K25"
+    },
+    {
+      "source": "igdb",
+      "source_id": "141192",
+      "name": "NEO: The World Ends with You"
+    },
+    {
+      "source": "igdb",
+      "source_id": "36847",
+      "name": "NHL 18"
+    },
+    {
+      "source": "igdb",
+      "source_id": "103500",
+      "name": "NHL 19"
+    },
+    {
+      "source": "igdb",
+      "source_id": "26297",
+      "name": "Need for Speed: No Limits"
+    },
+    {
+      "source": "igdb",
+      "source_id": "18954",
+      "name": "Neon Chrome"
+    },
+    {
+      "source": "igdb",
+      "source_id": "119403",
+      "name": "New Super Lucky's Tale"
+    },
+    {
+      "source": "igdb",
+      "source_id": "79994",
+      "name": "Night Call"
+    },
+    {
+      "source": "igdb",
+      "source_id": "3414",
+      "name": "Nightmare Creatures"
+    },
+    {
+      "source": "igdb",
+      "source_id": "5317",
+      "name": "Ninja Gaiden 3: Razor's Edge"
+    },
+    {
+      "source": "igdb",
+      "source_id": "15407",
+      "name": "No More Room in Hell"
+    },
+    {
+      "source": "igdb",
+      "source_id": "74545",
+      "name": "Opus Magnum"
+    },
+    {
+      "source": "igdb",
+      "source_id": "28975",
+      "name": "Peggle Deluxe"
+    },
+    {
+      "source": "igdb",
+      "source_id": "122646",
+      "name": "People Playground"
+    },
+    {
+      "source": "igdb",
+      "source_id": "11445",
+      "name": "Persona 4 Arena Ultimax"
+    },
+    {
+      "source": "igdb",
+      "source_id": "221286",
+      "name": "Phoenix Wright: Ace Attorney - Justice For All"
+    },
+    {
+      "source": "igdb",
+      "source_id": "221287",
+      "name": "Phoenix Wright: Ace Attorney - Trials and Tribulations"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8040",
+      "name": "Poker Night at the Inventory"
+    },
+    {
+      "source": "igdb",
+      "source_id": "366893",
+      "name": "Pokémon Pokopia"
+    },
+    {
+      "source": "igdb",
+      "source_id": "152297",
+      "name": "Police Simulator: Patrol Officers"
+    },
+    {
+      "source": "igdb",
+      "source_id": "274791",
+      "name": "Pools"
+    },
+    {
+      "source": "igdb",
+      "source_id": "194467",
+      "name": "Poppy Playtime: Chapter 2 - Fly in a Web"
+    },
+    {
+      "source": "igdb",
+      "source_id": "258842",
+      "name": "Poppy Playtime: Chapter 3 - Deep Sleep"
+    },
+    {
+      "source": "igdb",
+      "source_id": "145947",
+      "name": "Portal Reloaded"
+    },
+    {
+      "source": "igdb",
+      "source_id": "335439",
+      "name": "PowerWash Simulator 2"
+    },
+    {
+      "source": "igdb",
+      "source_id": "19961",
+      "name": "Q.U.B.E: Director's Cut"
+    },
+    {
+      "source": "igdb",
+      "source_id": "261085",
+      "name": "Quake II"
+    },
+    {
+      "source": "igdb",
+      "source_id": "173033",
+      "name": "Ravenous Devils"
+    },
+    {
+      "source": "igdb",
+      "source_id": "28548",
+      "name": "Remothered: Tormented Fathers"
+    },
+    {
+      "source": "igdb",
+      "source_id": "24223",
+      "name": "Resident Evil 4: Ultimate HD Edition"
+    },
+    {
+      "source": "igdb",
+      "source_id": "95308",
+      "name": "Ring of Elysium"
+    },
+    {
+      "source": "igdb",
+      "source_id": "148352",
+      "name": "Samorost 1"
+    },
+    {
+      "source": "igdb",
+      "source_id": "2108",
+      "name": "Sanctum 2"
+    },
+    {
+      "source": "igdb",
+      "source_id": "4101",
+      "name": "Second Sight"
+    },
+    {
+      "source": "igdb",
+      "source_id": "55092",
+      "name": "Secret of Mana"
+    },
+    {
+      "source": "igdb",
+      "source_id": "145060",
+      "name": "Shadow Tactics: Blades of the Shogun - Aiko’s Choice"
+    },
+    {
+      "source": "igdb",
+      "source_id": "54775",
+      "name": "Shadows: Awakening"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25811",
+      "name": "Shadowverse"
+    },
+    {
+      "source": "igdb",
+      "source_id": "36402",
+      "name": "Shantae: Risky's Revenge - Director's Cut"
+    },
+    {
+      "source": "igdb",
+      "source_id": "134826",
+      "name": "Shapez"
+    },
+    {
+      "source": "igdb",
+      "source_id": "11058",
+      "name": "Skylanders: SuperChargers"
+    },
+    {
+      "source": "igdb",
+      "source_id": "210585",
+      "name": "Soulstone Survivors"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8390",
+      "name": "SpaceChem"
+    },
+    {
+      "source": "igdb",
+      "source_id": "25683",
+      "name": "StarCraft: Remastered"
+    },
+    {
+      "source": "igdb",
+      "source_id": "77175",
+      "name": "Street Fighter 30th Anniversary Collection"
+    },
+    {
+      "source": "igdb",
+      "source_id": "229246",
+      "name": "Super Mario Galaxy"
+    },
+    {
+      "source": "igdb",
+      "source_id": "172903",
+      "name": "Supraland: Six Inches Under"
+    },
+    {
+      "source": "igdb",
+      "source_id": "115309",
+      "name": "Suzerain"
+    },
+    {
+      "source": "igdb",
+      "source_id": "327500",
+      "name": "Terminator 2D: No Fate"
+    },
+    {
+      "source": "igdb",
+      "source_id": "5408",
+      "name": "The Book of Unwritten Tales"
+    },
+    {
+      "source": "igdb",
+      "source_id": "204543",
+      "name": "The Entropy Centre"
+    },
+    {
+      "source": "igdb",
+      "source_id": "39749",
+      "name": "The House of Da Vinci"
+    },
+    {
+      "source": "igdb",
+      "source_id": "3782",
+      "name": "The Incredibles"
+    },
+    {
+      "source": "igdb",
+      "source_id": "26564",
+      "name": "The Legend of Heroes: Trails of Cold Steel III"
+    },
+    {
+      "source": "igdb",
+      "source_id": "317621",
+      "name": "The Midnight Walk"
+    },
+    {
+      "source": "igdb",
+      "source_id": "296843",
+      "name": "The Rogue Prince of Persia"
+    },
+    {
+      "source": "igdb",
+      "source_id": "13143",
+      "name": "The Sims 4: Get to Work"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8765",
+      "name": "The Witcher: Adventure Game"
+    },
+    {
+      "source": "igdb",
+      "source_id": "6902",
+      "name": "Theatrhythm Final Fantasy"
+    },
+    {
+      "source": "igdb",
+      "source_id": "236547",
+      "name": "Thronefall"
+    },
+    {
+      "source": "igdb",
+      "source_id": "180298",
+      "name": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure"
+    },
+    {
+      "source": "igdb",
+      "source_id": "8389",
+      "name": "ToeJam & Earl"
+    },
+    {
+      "source": "igdb",
+      "source_id": "16880",
+      "name": "Tower of Guns"
+    },
+    {
+      "source": "igdb",
+      "source_id": "245390",
+      "name": "Trine 5: A Clockwork Conspiracy"
+    },
+    {
+      "source": "igdb",
+      "source_id": "217645",
+      "name": "Turnip Boy Robs a Bank"
+    },
+    {
+      "source": "igdb",
+      "source_id": "165352",
+      "name": "UFL"
+    },
+    {
+      "source": "igdb",
+      "source_id": "3126",
+      "name": "Ultima Online"
+    },
+    {
+      "source": "igdb",
+      "source_id": "18967",
+      "name": "Valkyria Chronicles Remastered"
+    },
+    {
+      "source": "igdb",
+      "source_id": "7240",
+      "name": "Wanted: Weapons of Fate"
+    },
+    {
+      "source": "igdb",
+      "source_id": "11364",
+      "name": "Warhammer 40,000: Inquisitor - Martyr"
+    },
+    {
+      "source": "igdb",
+      "source_id": "107203",
+      "name": "Windjammers 2"
+    },
+    {
+      "source": "igdb",
+      "source_id": "198157",
+      "name": "World of Warcraft: Dragonflight"
+    },
+    {
+      "source": "igdb",
+      "source_id": "20480",
+      "name": "Worms 2: Armageddon"
+    },
+    {
+      "source": "igdb",
+      "source_id": "6171",
+      "name": "Year Walk"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10270",
+      "name": "100% Orange Juice"
+    },
+    {
+      "source": "rawg",
+      "source_id": "13035",
+      "name": "12 is Better Than 6"
+    },
+    {
+      "source": "rawg",
+      "source_id": "16710",
+      "name": "1954 Alcatraz"
+    },
+    {
+      "source": "rawg",
+      "source_id": "47381",
+      "name": "60 Parsecs!"
+    },
+    {
+      "source": "rawg",
+      "source_id": "304247",
+      "name": "A Short Hike"
+    },
+    {
+      "source": "rawg",
+      "source_id": "7381",
+      "name": "ABZU"
+    },
+    {
+      "source": "rawg",
+      "source_id": "11223",
+      "name": "Absolver"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2764",
+      "name": "Agatha Christie - The ABC Murders"
+    },
+    {
+      "source": "rawg",
+      "source_id": "654591",
+      "name": "Alan Wake Remastered"
+    },
+    {
+      "source": "rawg",
+      "source_id": "421698",
+      "name": "Animal Crossing: New Horizons"
+    },
+    {
+      "source": "rawg",
+      "source_id": "748414",
+      "name": "Aperture Desk Job"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1184",
+      "name": "Aragami"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9997",
+      "name": "Arma 3"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2272",
+      "name": "Arma Tactics"
+    },
+    {
+      "source": "rawg",
+      "source_id": "29227",
+      "name": "Ashen"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4358",
+      "name": "Assassin's Creed Revelations"
+    },
+    {
+      "source": "rawg",
+      "source_id": "19640",
+      "name": "Assassin's Creed: Director's Cut Edition"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1391",
+      "name": "Assetto Corsa"
+    },
+    {
+      "source": "rawg",
+      "source_id": "16003",
+      "name": "Baldur's Gate II: Enhanced Edition"
+    },
+    {
+      "source": "rawg",
+      "source_id": "464",
+      "name": "Baldur's Gate: Enhanced Edition"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58494",
+      "name": "Battlefield V"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58325",
+      "name": "Beat Saber"
+    },
+    {
+      "source": "rawg",
+      "source_id": "481910",
+      "name": "Call of Duty: Black Ops Cold War"
+    },
+    {
+      "source": "rawg",
+      "source_id": "304320",
+      "name": "Cat Quest II"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4466",
+      "name": "Catherine"
+    },
+    {
+      "source": "rawg",
+      "source_id": "15713",
+      "name": "Chaos on Deponia"
+    },
+    {
+      "source": "rawg",
+      "source_id": "3647",
+      "name": "Child of Light"
+    },
+    {
+      "source": "rawg",
+      "source_id": "14422",
+      "name": "Condemned: Criminal Origins"
+    },
+    {
+      "source": "rawg",
+      "source_id": "54629",
+      "name": "Crazy Taxi (1999)"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10724",
+      "name": "Crossout"
+    },
+    {
+      "source": "rawg",
+      "source_id": "60634",
+      "name": "Cube Escape: Paradox"
+    },
+    {
+      "source": "rawg",
+      "source_id": "59695",
+      "name": "Cuisine Royale"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9811",
+      "name": "DayZ"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2003",
+      "name": "Deep Dungeons of Doom"
+    },
+    {
+      "source": "rawg",
+      "source_id": "894",
+      "name": "Destiny"
+    },
+    {
+      "source": "rawg",
+      "source_id": "5540",
+      "name": "Devil May Cry"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10602",
+      "name": "Dino D-Day"
+    },
+    {
+      "source": "rawg",
+      "source_id": "41490",
+      "name": "Divinity: Original Sin"
+    },
+    {
+      "source": "rawg",
+      "source_id": "59199",
+      "name": "Divinity: Original Sin 2 - Definitive Edition"
+    },
+    {
+      "source": "rawg",
+      "source_id": "798",
+      "name": "Downwell"
+    },
+    {
+      "source": "rawg",
+      "source_id": "42215",
+      "name": "Dying Light"
+    },
+    {
+      "source": "rawg",
+      "source_id": "11471",
+      "name": "ELEX"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2012",
+      "name": "Eufloria HD"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1249",
+      "name": "FIFA 17"
+    },
+    {
+      "source": "rawg",
+      "source_id": "46165",
+      "name": "Fight'N Rage"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10379",
+      "name": "Fishing Planet"
+    },
+    {
+      "source": "rawg",
+      "source_id": "52176",
+      "name": "Florence"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9891",
+      "name": "Friday the 13th: The Game"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9603",
+      "name": "GRIP: Combat Racing"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9612",
+      "name": "Ghost of a Tale"
+    },
+    {
+      "source": "rawg",
+      "source_id": "15712",
+      "name": "Goodbye Deponia"
+    },
+    {
+      "source": "rawg",
+      "source_id": "59313",
+      "name": "Gris"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4037",
+      "name": "Guilty Gear XX Accent Core Plus R"
+    },
+    {
+      "source": "rawg",
+      "source_id": "16723",
+      "name": "Gunpoint"
+    },
+    {
+      "source": "rawg",
+      "source_id": "28589",
+      "name": "Halo 3"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1545",
+      "name": "Hand of Fate"
+    },
+    {
+      "source": "rawg",
+      "source_id": "11887",
+      "name": "Hero Siege"
+    },
+    {
+      "source": "rawg",
+      "source_id": "22961",
+      "name": "Hitman: Contracts"
+    },
+    {
+      "source": "rawg",
+      "source_id": "452642",
+      "name": "Horizon Forbidden West"
+    },
+    {
+      "source": "rawg",
+      "source_id": "758",
+      "name": "Hue"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10878",
+      "name": "Iconoclasts"
+    },
+    {
+      "source": "rawg",
+      "source_id": "487910",
+      "name": "Immortals: Fenyx Rising"
+    },
+    {
+      "source": "rawg",
+      "source_id": "62409",
+      "name": "In Other Waters"
+    },
+    {
+      "source": "rawg",
+      "source_id": "350684",
+      "name": "In Sound Mind"
+    },
+    {
+      "source": "rawg",
+      "source_id": "18851",
+      "name": "Jurassic Park: The Game"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10056",
+      "name": "Kane and Lynch: Dead Men"
+    },
+    {
+      "source": "rawg",
+      "source_id": "12245",
+      "name": "Late Shift"
+    },
+    {
+      "source": "rawg",
+      "source_id": "573123",
+      "name": "Life is Strange: True Colors"
+    },
+    {
+      "source": "rawg",
+      "source_id": "445430",
+      "name": "Mafia III: Definitive Edition"
+    },
+    {
+      "source": "rawg",
+      "source_id": "23165",
+      "name": "Mario Kart 8 Deluxe"
+    },
+    {
+      "source": "rawg",
+      "source_id": "37669",
+      "name": "Marvel Heroes"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2666",
+      "name": "Mini Metro"
+    },
+    {
+      "source": "rawg",
+      "source_id": "423947",
+      "name": "Mortal Shell"
+    },
+    {
+      "source": "rawg",
+      "source_id": "5603",
+      "name": "NARUTO: Ultimate Ninja Storm"
+    },
+    {
+      "source": "rawg",
+      "source_id": "61900",
+      "name": "Night Call"
+    },
+    {
+      "source": "rawg",
+      "source_id": "59340",
+      "name": "Not Tonight"
+    },
+    {
+      "source": "rawg",
+      "source_id": "47326",
+      "name": "OKAMI HD"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58764",
+      "name": "Outer Wilds"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9880",
+      "name": "Oxygen Not Included"
+    },
+    {
+      "source": "rawg",
+      "source_id": "12157",
+      "name": "POSTAL Redux"
+    },
+    {
+      "source": "rawg",
+      "source_id": "272448",
+      "name": "Pikuniku"
+    },
+    {
+      "source": "rawg",
+      "source_id": "44030",
+      "name": "Pinball FX3"
+    },
+    {
+      "source": "rawg",
+      "source_id": "3290",
+      "name": "PlanetSide 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "17470",
+      "name": "Please, Don’t Touch Anything"
+    },
+    {
+      "source": "rawg",
+      "source_id": "18852",
+      "name": "Poker Night at the Inventory"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4518",
+      "name": "Prince of Persia: The Forgotten Sands"
+    },
+    {
+      "source": "rawg",
+      "source_id": "3226",
+      "name": "Prototype 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "54492",
+      "name": "Quake II"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10342",
+      "name": "RaceRoom Racing Experience"
+    },
+    {
+      "source": "rawg",
+      "source_id": "47594",
+      "name": "Raji: An Ancient Epic"
+    },
+    {
+      "source": "rawg",
+      "source_id": "176",
+      "name": "Ravensword: Shadowlands"
+    },
+    {
+      "source": "rawg",
+      "source_id": "46399",
+      "name": "Regions Of Ruin"
+    },
+    {
+      "source": "rawg",
+      "source_id": "795632",
+      "name": "Resident Evil 4"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1999",
+      "name": "Retro City Rampage DX"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9540",
+      "name": "Road Redemption"
+    },
+    {
+      "source": "rawg",
+      "source_id": "3052",
+      "name": "STAR WARS Battlefront"
+    },
+    {
+      "source": "rawg",
+      "source_id": "38418",
+      "name": "Sam & Max: Episode 202 - Moai Better Blues"
+    },
+    {
+      "source": "rawg",
+      "source_id": "38456",
+      "name": "Sam & Max: Episode 203 - Night of the Raving Dead"
+    },
+    {
+      "source": "rawg",
+      "source_id": "38491",
+      "name": "Sam & Max: Episode 204 - Chariots of the Dogs"
+    },
+    {
+      "source": "rawg",
+      "source_id": "17947",
+      "name": "Savant - Ascent"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10980",
+      "name": "Serial Cleaner"
+    },
+    {
+      "source": "rawg",
+      "source_id": "12735",
+      "name": "Shakes and Fidget"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4962",
+      "name": "Shank"
+    },
+    {
+      "source": "rawg",
+      "source_id": "4473",
+      "name": "Shank 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "965",
+      "name": "Sherlock Holmes: The Devil's Daughter"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58497",
+      "name": "Shining Resonance Refrain"
+    },
+    {
+      "source": "rawg",
+      "source_id": "6885",
+      "name": "Sid Meier's Pirates!"
+    },
+    {
+      "source": "rawg",
+      "source_id": "416034",
+      "name": "Sludge Life"
+    },
+    {
+      "source": "rawg",
+      "source_id": "17536",
+      "name": "Sniper: Ghost Warrior"
+    },
+    {
+      "source": "rawg",
+      "source_id": "343597",
+      "name": "Sonic Adventure 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1559",
+      "name": "Sonic CD"
+    },
+    {
+      "source": "rawg",
+      "source_id": "23587",
+      "name": "Sonic Mania"
+    },
+    {
+      "source": "rawg",
+      "source_id": "326236",
+      "name": "Spiritfarer"
+    },
+    {
+      "source": "rawg",
+      "source_id": "17977",
+      "name": "Spirits"
+    },
+    {
+      "source": "rawg",
+      "source_id": "455532",
+      "name": "Star Wars: Squadrons"
+    },
+    {
+      "source": "rawg",
+      "source_id": "19536",
+      "name": "State of Decay"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1165",
+      "name": "SteamWorld Heist"
+    },
+    {
+      "source": "rawg",
+      "source_id": "194",
+      "name": "Styx: Shards of Darkness"
+    },
+    {
+      "source": "rawg",
+      "source_id": "1612",
+      "name": "Super Hexagon"
+    },
+    {
+      "source": "rawg",
+      "source_id": "27036",
+      "name": "Super Mario Galaxy 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "327219",
+      "name": "Superliminal"
+    },
+    {
+      "source": "rawg",
+      "source_id": "16118",
+      "name": "Supreme Commander 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "10986",
+      "name": "Syberia 3"
+    },
+    {
+      "source": "rawg",
+      "source_id": "28156",
+      "name": "Tacoma"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2784",
+      "name": "The Bridge"
+    },
+    {
+      "source": "rawg",
+      "source_id": "52330",
+      "name": "The Council"
+    },
+    {
+      "source": "rawg",
+      "source_id": "3489",
+      "name": "The Crew"
+    },
+    {
+      "source": "rawg",
+      "source_id": "44510",
+      "name": "The Escapists 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "6879",
+      "name": "The Flame in the Flood"
+    },
+    {
+      "source": "rawg",
+      "source_id": "25097",
+      "name": "The Legend of Zelda: Ocarina of Time (1998)"
+    },
+    {
+      "source": "rawg",
+      "source_id": "5687",
+      "name": "The Playroom"
+    },
+    {
+      "source": "rawg",
+      "source_id": "244806",
+      "name": "The Shapeshifting Detective"
+    },
+    {
+      "source": "rawg",
+      "source_id": "61377",
+      "name": "The Stillness of the Wind"
+    },
+    {
+      "source": "rawg",
+      "source_id": "397481",
+      "name": "The Survivalists"
+    },
+    {
+      "source": "rawg",
+      "source_id": "9066",
+      "name": "The Walking Dead: A New Frontier"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58783",
+      "name": "The Walking Dead: The Final Season"
+    },
+    {
+      "source": "rawg",
+      "source_id": "52179",
+      "name": "This Is the Police 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "282882",
+      "name": "Through the Darkest of Times"
+    },
+    {
+      "source": "rawg",
+      "source_id": "20709",
+      "name": "Tom Clancy's Splinter Cell Chaos Theory"
+    },
+    {
+      "source": "rawg",
+      "source_id": "2944",
+      "name": "Trine 3: The Artifacts of Power"
+    },
+    {
+      "source": "rawg",
+      "source_id": "29236",
+      "name": "Tunic"
+    },
+    {
+      "source": "rawg",
+      "source_id": "704634",
+      "name": "Uncharted: Legacy of Thieves Collection"
+    },
+    {
+      "source": "rawg",
+      "source_id": "28110",
+      "name": "Vampyr"
+    },
+    {
+      "source": "rawg",
+      "source_id": "263608",
+      "name": "Void Bastards"
+    },
+    {
+      "source": "rawg",
+      "source_id": "324992",
+      "name": "Watch Dogs: Legion"
+    },
+    {
+      "source": "rawg",
+      "source_id": "20466",
+      "name": "Worms Armageddon"
+    },
+    {
+      "source": "rawg",
+      "source_id": "58835",
+      "name": "Yakuza Kiwami 2"
+    },
+    {
+      "source": "rawg",
+      "source_id": "18143",
+      "name": "Zen Bound 2"
+    }
+  ],
+  "bajas": [],
+  "cambios": [],
+  "suficientes_observaciones": true,
+  "n_snapshots": 4,
+  "mensaje": "",
+  "entre": {
+    "anterior": "snapshot_20261015T185736Z",
+    "actual": "snapshot_20261015T200549Z"
+  }
 }

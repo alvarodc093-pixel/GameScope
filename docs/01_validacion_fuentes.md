@@ -1,7 +1,7 @@
 # 01 — Validación de fuentes (GameScope Fase 1)
 
-Fecha de consulta: 2026-10-13.
-Estado: investigación documental completada. Prueba de acceso **no ejecutada** (faltan credenciales). Sin datos reales, sin estadísticas inventadas.
+Fecha de consulta: 2026-10-13. **Actualización: 2026-10-15, validación ejecutada en vivo con credenciales reales.**
+Estado: investigación documental completada y **acceso probado** (RAWG + IGDB con `.env`; CheapShark sin clave). Resultados de la prueba: ver §7. Sin datos inventados.
 
 Fuentes oficiales consultadas:
 
@@ -160,14 +160,19 @@ Conclusión precio: para responder a las 6 preguntas sin sesgo, **precio fuera d
 * RAWG: `updated` en detalle indica última actualización, útil para decidir re-fetch, pero almacenar serie temporal en repo público choca con “no redistribución”. Estrategia si se usa: snapshots solo locales, gitignorados, y publicar solo agregados con atribución + link. Pendiente de confirmación escrita a `api@rawg.io`.
 * Campos aptos para serie temporal: ratings y conteos. Campos no aptos: precio (no hay en principales), fechas de lanzamiento pasadas (inmutables).
 
-## 6. Pendiente de validación (no asumir)
+## 6. Pendiente de validación (no asumir) — estado 2026-10-15
 
-1. Obtener `RAWG_API_KEY` y `IGDB_CLIENT_ID/SECRET` y ejecutar `notebooks/01_auditoria_datos.ipynb`.
-2. Medir cobertura real: % nulos por campo, duplicados, IDs ausentes, cobertura por plataforma/género, % con `metacritic`/`aggregated_rating` y con `rating`.
-3. Confirmar IDs de plataforma RAWG para PC / PlayStation / Xbox / Nintendo / iOS / Android vía `GET /platforms`.
-4. Confirmar mapeo familias IGDB para agrupar PC / consola / móvil.
-5. Aclarar con `api@rawg.io` si se pueden versionar `data/raw/*.json` en repo privado del bootcamp y qué agregados se pueden publicar con atribución.
-6. Definir comparables: ¿por género+plataforma, por `similar_games` (Business RAWG) o por distancia de features en IGDB? Sin datos no decidir.
-7. Precio: solo si se acepta alcance PC-only con CheapShark USD.
+1. ✅ Credenciales en `.env` y `python -m src.check_connections` en verde (RAWG + IGDB).
+2. ✅ Cobertura medida sobre las oleadas (mid/top + cola aleatoria): crítica top+mid ≈95%/90% vs cola ≈79%/73%; usuarios ≈100% en ambas. Detalle en `docs/06_kpis_snapshot.md`.
+3. ✅ IDs RAWG confirmados en vivo (2026-10-15): PC=`4`, PS5=`187`, PS4=`18`, Xbox One=`1`, Xbox Series S/X=`186`, Xbox 360=`14`, Nintendo Switch=`7`, iOS=`3`, Android=`21`, N64=`83`. **RAWG declara 51 plataformas y NO cataloga Switch 2.**
+4. ✅ IDs IGDB confirmados en vivo: PC=`6`, PS5=`167`, PS4=`48`, Xbox One=`49`, Xbox Series X|S=`169`, Nintendo Switch=`130`, **Nintendo Switch 2=`508`**, iOS=`39`, Android=`34`. Nintendo se consulta con grupo propio (130,508) + cola extra de Switch 2 por `first_release_date desc`.
+5. ⏳ Aclarar con `api@rawg.io` si se pueden versionar `data/raw/*.json` en repo privado del bootcamp (sigue pendiente; `data/raw/` sigue gitignorado).
+6. ✅ Comparables decididos: género + plataforma + era con pesos/umbrales (`docs/07`), no `similar_games` (solo plan Business RAWG).
+7. ✅ Precio en alcance PC-only con CheapShark USD: implementado en `src/precios.py` con UA propia (sin ella devuelve 400), umbral de nombre ≥0.90, `moneda=USD` explícito y `observed_at` propio; no se convierte a otra moneda.
 
-Sin estos 7 puntos no hay decisión definitiva de campos ni de umbrales.
+## 7. Resultados de la prueba en vivo (2026-10-15)
+
+* RAWG: 20.000 req/mes; `page_size` máximo efectivo 40; rechaza peticiones sin key; `/platforms` responde 51 plataformas (sin Switch 2).
+* IGDB: Apicalypse exige `;` entre cláusulas (`where`/`sort`/`limit`); límite útil 50 por página en listados grandes; token OAuth2 client_credentials OK; campo `platforms` con `508` válido para Switch 2.
+* CheapShark: sin clave pero **rechaza `User-Agent` genérico de `requests`** (400); con UA propia `GameScope-Bootcamp/1.0 (data-analyst project)` responde; `GET /api/1.0/games?title=X&limit=15` requiere umbral de nombre (ediciones “Enhanced/GOTY” se descartan); precios en USD con `lastChange` como `observed_at` por consulta.
+* Ninguna respuesta imprime claves; `src/check_connections.py` solo publica booleanos/longitudes.

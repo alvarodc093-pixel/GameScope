@@ -1,7 +1,9 @@
 """Exporta el snapshot a JSON estático para la web (sin secretos, sin claves).
 
 Genera desde el ÚLTIMO snapshot:
-- web/data/games.json     juegos con métricas por fuente y escala (sin fusionar).
+- web/data/games.json     juegos con métricas por fuente y escala (sin fusionar),
+  más `contraparte` (identidad cruzada derivada de src/matching.py; el enlace
+  apunta a la otra fuente, sus métricas siguen siendo las de su propia fila).
 - web/data/meta.json      trazabilidad: snapshot, fechas de observación, cobertura.
 - web/data/evolucion.json deltas entre los 2 últimos snapshots; si hay menos de 2,
   queda `suficientes_observaciones: false` (la web lo muestra como estado vacío
@@ -32,7 +34,50 @@ def _list(v):
     return [x.strip() for x in (v or "").split("|") if x.strip()]
 
 
-def juego_desde_fila(r: dict) -> dict:
+def contrapartes(matching_csv: Path | None = None) -> dict[tuple[str, str], dict]:
+    """Identidad cruzada derivada (src/matching.py). Vacío si no existe aún.
+
+    Solo aporta el ENLACE a la otra fuente (id/nombre/confianza); las métricas
+    de la contraparte se leen de su propia fila, nunca se copian ni fusionan.
+    """
+    path = matching_csv or (ROOT / "data" / "processed" / "matching.csv")
+    if not path.exists():
+        return {}
+    out: dict[tuple[str, str], dict] = {}
+    for r in csv.DictReader(path.open(encoding="utf-8")):
+        out[(r["source"], r["source_id"])] = {
+            "source": r["contraparte_source"], "source_id": r["contraparte_id"],
+            "slug": r["contraparte_slug"] or None, "name": r["contraparte_nombre"],
+            "confianza": r["confianza"],
+        }
+    return out
+
+
+def precios_pc(precios_csv: Path | None = None) -> dict[tuple[str, str], dict]:
+    """Precio PC de CheapShark (USD) con su PROPIO observed_at. Vacío si falta.
+
+    El precio es una observación aparte (cambia a diario): no entra en el
+    snapshot ni en la evolución; solo se adjunta al juego para mostrarlo con
+    su fecha y su moneda (USD, sin convertir).
+    """
+    path = precios_csv or (ROOT / "data" / "processed" / "precios_pc.csv")
+    if not path.exists():
+        return {}
+    out: dict[tuple[str, str], dict] = {}
+    for r in csv.DictReader(path.open(encoding="utf-8")):
+        if not r.get("precio_min_usd"):
+            continue
+        out[(r["source"], r["source_id"])] = {
+            "usd": r["precio_min_usd"], "moneda": "USD",
+            "en_steam": r.get("en_steam") == "1",
+            "observed_at": r.get("observed_at"),
+            "fuente": "CheapShark",
+        }
+    return out
+
+
+def juego_desde_fila(r: dict, contraparte: dict | None = None,
+                     precio: dict | None = None) -> dict:
     """Convierte una fila de snapshot al modelo JSON de la web."""
     src = r["source"]
     escala = SCALES.get(src, {"critic": 100, "user": 100})
@@ -49,17 +94,27 @@ def juego_desde_fila(r: dict) -> dict:
                  "count": datos.entero(r.get("user_count")), "scale": escala["user"]},
         "game_url": r.get("game_url") or None, "image_url": r.get("image_url") or None,
         "observed_at": r.get("observed_at"),
+        "contraparte": contraparte,
+        "precio_pc": precio,
     }
 
 
-def construir_juegos(rows: list[dict]) -> list[dict]:
-    games = [juego_desde_fila(r) for r in rows]
+def construir_juegos(rows: list[dict],
+                     cps: dict[tuple[str, str], dict] | None = None,
+                     pcs: dict[tuple[str, str], dict] | None = None) -> list[dict]:
+    cps = cps or {}
+    pcs = pcs or {}
+    games = [juego_desde_fila(r, cps.get((r["source"], r["source_id"])),
+                              pcs.get((r["source"], r["source_id"])))
+             for r in rows]
     games.sort(key=lambda g: (g["source"], (g["name"] or "").lower()))
     return games
 
 
 def meta_para(games: list[dict], snap: Path, n_snapshots: int) -> dict:
     obs = [g["observed_at"] for g in games if g.get("observed_at")]
+    n_cp = sum(1 for g in games if g.get("contraparte"))
+    n_precio = sum(1 for g in games if g.get("precio_pc"))
     return {
         "snapshot": snap.stem,
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -69,6 +124,12 @@ def meta_para(games: list[dict], snap: Path, n_snapshots: int) -> dict:
         "n": len(games),
         "por_fuente": {s: sum(1 for g in games if g["source"] == s) for s in ("igdb", "rawg")},
         "scoring": "v1",
+        "matching": {"filas_con_contraparte": n_cp,
+                     "nota": "Identidad cruzada derivada (src/matching.py); "
+                             "las metricas nunca se fusionan entre fuentes."},
+        "precios_pc": {"n": n_precio, "moneda": "USD", "fuente": "CheapShark",
+                       "nota": "Observacion propia con fecha (observed_at) fuera del "
+                               "snapshot; sin conversion de moneda."},
         "nota": "Metricas por fuente y escala, sin fusionar. observed_at = consulta a la API; generated_at = export.",
     }
 
@@ -101,7 +162,9 @@ def main(snap_dir: Path | None = None, web_data: Path | None = None) -> int:
         print("No hay snapshots en data/snapshots/: ejecuta `python -m src.snapshot` primero.")
         return 1
     web_data.mkdir(parents=True, exist_ok=True)
-    games = construir_juegos(datos.cargar_csv(snap))
+    cps = contrapartes()
+    pcs = precios_pc()
+    games = construir_juegos(datos.cargar_csv(snap), cps, pcs)
     (web_data / "games.json").write_text(json.dumps(games, ensure_ascii=False), encoding="utf-8")
     n_snaps = len(datos.snapshots(list(snap_dir.glob("snapshot_*.csv"))))
     meta = meta_para(games, snap, n_snaps)

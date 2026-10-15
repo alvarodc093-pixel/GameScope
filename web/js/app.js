@@ -7,7 +7,7 @@
   const $ = (id) => document.getElementById(id);
   const estado = {
     games: [], source: "igdb", tier: "secundario", top: 10, refSlug: null,
-    plataforma: "", genero: "", evolucion: null,
+    plataforma: "", genero: "", evolucion: null, estricto: false,
   };
 
   const RANGO = { directo: 3, secundario: 2, relacionado: 1, descartado: 0, insuficiente: -1 };
@@ -177,7 +177,7 @@
     for (const j of juegosDeFuente()) {
       if (j.source_id === ref.source_id) continue;
       if (!pasaFiltros(j)) continue;
-      const v = GS.puntuar(ref, j, G);
+      const v = GS.puntuar(ref, j, G, estado.estricto);
       if (RANGO[v.tier] >= minNivel) scored.push([v.nota, j, v]);
     }
     scored.sort((a, b) => b[0] - a[0]);
@@ -185,9 +185,17 @@
     const filtros = [];
     if (estado.plataforma) filtros.push(`plataforma=${estado.plataforma}`);
     if (estado.genero) filtros.push(`género=${estado.genero}`);
+    if (estado.estricto) filtros.push("modo estricto");
     const encabezado = `<h3>${scored.length} competidores (umbral: ${GS.esc(estado.tier)} o superior${filtros.length ? ` · filtros: ${GS.esc(filtros.join(" · "))}` : ""})</h3>`;
     const lista = top.length === 0
-      ? GS.estadoVacio("Sin competidores con estos filtros. Prueba a bajar el umbral o a quitar filtros.")
+      ? GS.estadoVacio(
+          estado.estricto && G.size < 2
+            ? `Sin competidores en modo estricto: la referencia solo tiene ${G.size} género(s) ` +
+              `(${[...G].join(", ") || "ninguno"}) y el mínimo son 2 en común. ` +
+              "Desactiva «Regla» para ver el listado con 1 género compartido."
+            : estado.estricto
+              ? "Sin competidores en modo estricto. Desactiva «Regla» o quita filtros."
+              : "Sin competidores con estos filtros. Prueba a bajar el umbral o a quitar filtros.")
       : `${encabezado}${GS.tablaComparativaHTML(ref, top)}${GS.insightsHTML(ref, scored, top)}
          <h3>Detalle y por qué</h3><ul class="comp-list">${top.map(([, j, v]) => GS.compHTML(j, v)).join("")}</ul>`;
     resultados.innerHTML = GS.refCardHTML(ref) + lista;
@@ -211,6 +219,17 @@
       }));
 
     $("form-comparar").addEventListener("submit", (e) => { e.preventDefault(); aceptarBusqueda(); });
+
+    // Enlace de identidad cruzada (mismo juego en la otra fuente): cambio de
+    // fuente + selección. Delegado porque el contenido de #resultados se repinta.
+    $("resultados").addEventListener("click", (e) => {
+      const b = e.target.closest("[data-ir-contraparte]");
+      if (!b) return;
+      const fuente = b.dataset.irFuente;
+      const slug = b.dataset.irContraparte;
+      if (estado.source !== fuente) cambiarFuente(fuente, true);
+      seleccionar(slug);
+    });
 
     let temporizador = null;
     $("buscador").addEventListener("input", () => {
@@ -241,6 +260,9 @@
     });
     $("filtro-genero").addEventListener("change", () => {
       estado.genero = $("filtro-genero").value; compararActual();
+    });
+    $("modo-estricto").addEventListener("change", () => {
+      estado.estricto = $("modo-estricto").checked; compararActual();
     });
   }
 

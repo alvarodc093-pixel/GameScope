@@ -36,21 +36,40 @@
     const tags = [...j.genres.slice(0, 4), ...j.platforms.slice(0, 4)]
       .map((t) => `<span class="tag">${esc(t)}</span>`).join("");
     const enlace = j.game_url ? `<a href="${esc(j.game_url)}" target="_blank" rel="noopener">Ficha en ${j.source === "igdb" ? "IGDB" : "RAWG"}</a>` : "";
+    const cp = cpHTML(j);
+    const precio = j.precio_pc
+      ? `<small class="precio-linea">Precio PC mínimo: <strong>${esc(String(j.precio_pc.usd))} USD</strong> · ${esc(j.precio_pc.fuente)} · observado ${esc((j.precio_pc.observed_at || "").slice(0, 10))} (sin convertir)</small>`
+      : "";
     return `<article class="card ref-card" aria-label="Juego de referencia">
       <div class="ref-head">${img}<div><h3 style="margin:0">${esc(j.name)}</h3>
       <small style="color:var(--color-muted)">${esc(j.source.toUpperCase())} · ${j.year ?? "año n/d"} · ${esc(j.grupo)}</small></div></div>
       <div class="tags">${tags}</div>
       <div class="metrics">${metricaHTML("Crítica", j.critic, "")}${metricaHTML("Usuarios", j.user, "user")}</div>
       <small style="color:var(--color-muted)">Crítica y usuarios son universos distintos: no se fusionan.</small>
-      <div>${enlace}</div>
+      ${precio}
+      <div class="ref-links">${enlace}${cp}</div>
     </article>`;
+  }
+
+  // Enlace a la otra fuente (identidad derivada en src/matching.py): cambia de
+  // fuente y selecciona el mismo juego. Nunca muestra metricas cruzadas aqui.
+  function cpHTML(j) {
+    if (!j.contraparte || !j.contraparte.slug) return "";
+    const otra = j.contraparte.source === "igdb" ? "IGDB" : "RAWG";
+    const conf = j.contraparte.confianza ? ` (${esc(j.contraparte.confianza)})` : "";
+    return `<button type="button" class="chip" data-ir-contraparte="${esc(j.contraparte.slug)}"
+      data-ir-fuente="${esc(j.contraparte.source)}"
+      title="Identidad derivada: mismo juego en la otra fuente. Las métricas se muestran en su propia escala.">↔ También en ${otra}${conf}</button>`;
   }
 
   function compHTML(j, v) {
     const partes = v.partes.map((p) => `${p.comp}=${p.valor} (${esc(p.detalle)})`).join("; ");
+    const porque = partes
+      ? `Por qué: ${esc(partes)}`
+      : v.motivo ? `Descartado: ${esc(v.motivo)}` : "Sin detalle";
     return `<li class="comp"><div class="comp-head"><span class="score">${v.nota.toFixed(3)}</span>
-      <span class="badge ${v.tier}">${v.tier}</span><h3>${esc(j.name)}</h3></div>
-      <p class="why">Por qué: ${esc(partes)} · Crítica ${j.critic.score ?? "n/d"} · Usuarios ${j.user.score ?? "n/d"}</p></li>`;
+      <span class="badge ${v.tier}">${v.tier}</span><h3>${esc(j.name)}</h3>${cpHTML(j)}</div>
+      <p class="why">${porque} · Crítica ${j.critic.score ?? "n/d"} · Usuarios ${j.user.score ?? "n/d"}</p></li>`;
   }
 
   // Tabla lado a lado ref vs competidores (misma fuente => misma escala: deltas válidos).

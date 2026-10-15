@@ -1,4 +1,5 @@
-// Regla de similitud v1 portada de src/scoring.py (mismos pesos y umbrales).
+// Regla de similitud v1 portada de src/scoring.py (mismos pesos y umbrales),
+// con el mismo modo estricto que la version Python (parametro estricto=true).
 // Script clasico (sin modulos ES): funciona tambien abriendo index.html con doble clic.
 (function (global) {
   "use strict";
@@ -26,7 +27,11 @@
   const canonGeneros = (juego) =>
     new Set(juego.genres.map((g) => (juego.source === "igdb" ? INVERSO[norm(g)] ?? norm(g) : norm(g))));
 
-  function puntuar(ref, cand, G = null) {
+  // Modo estricto: endurece la admisión de parejas sin tocar los pesos ni los
+  // umbrales (v1). Requiere año en ambas partes y >=2 generos en comun.
+  // Ausente => insuficiente; 1 genero suelto => descartado. Estudio sigue
+  // opcional (RAWG no trae developers en listado: exigirlo borraria RAWG).
+  function puntuar(ref, cand, G = null, estricto = false) {
     const gRef = G ?? canonGeneros(ref);
     const gCand = canonGeneros(cand);
     const pRef = new Set(ref.platforms.map(norm));
@@ -37,6 +42,13 @@
     const pCom = [...pRef].filter((p) => pCand.has(p));
     if (gCom.length === 0) return { tier: "descartado", nota: 0, partes: [], motivo: "sin género común" };
     if (pCom.length === 0) return { tier: "descartado", nota: 0, partes: [], motivo: "sin plataforma común" };
+    if (estricto) {
+      if (ref.year == null || cand.year == null)
+        return { tier: "insuficiente", nota: 0, partes: [], motivo: "fecha ausente en modo estricto" };
+      if (gCom.length < 2)
+        return { tier: "descartado", nota: 0, partes: [],
+                 motivo: "solo 1 género en común (mínimo 2 en estricto)" };
+    }
 
     const partes = [
       { comp: "género", valor: gCom.length >= 2 ? 1.0 : 0.6, peso: PESOS.genero,

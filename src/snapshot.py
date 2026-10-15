@@ -88,7 +88,9 @@ def main(proc_dir: Path | None = None, snap_dir: Path | None = None) -> int:
     proc_dir = proc_dir or PROC_DIR
     snap_dir = snap_dir or SNAP_DIR
     rows: list[dict] = []
-    for fn, oleada in (("muestra_normalizada.csv", "top"), ("muestra_midtail.csv", "mid")):
+    for fn, oleada in (("muestra_normalizada.csv", "top"),
+                       ("muestra_midtail.csv", "mid"),
+                       ("muestra_longtail.csv", "longtail")):
         path = proc_dir / fn
         if not path.exists():
             print(f"Aviso: falta {fn}; se omite esta oleada.")

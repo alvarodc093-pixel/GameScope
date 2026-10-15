@@ -1,5 +1,10 @@
 # 03 — Auditoría exploratoria y viabilidad (Fase 2, datos reales)
 
+> **Actualización 2026-10-15:** documento histórico de la fase. La muestra top pasó de
+> 4×25×2 (200) a 5 grupos × 2 páginas/fuente + extras Switch 2 (950), con oleadas mid
+> (200) y cola acumulativa (500); ver `docs/06_kpis_snapshot.md` para los números
+> vigentes y `docs/01_validacion_fuentes.md` §7 para la prueba en vivo.
+
 Fecha muestra: 2026-10-13T18:34 UTC. Código: `src/muestreo.py` (4 grupos x 25 x 2 fuentes = 200 filas en `data/processed/muestra_normalizada.csv`; raw gitignorado en `data/raw/`).
 Muestreo **top popular** (`ordering=-added` RAWG, `sort total_rating_count desc` IGDB): mide el **techo** de cobertura, no el catálogo medio. Todo % es de ese top.
 

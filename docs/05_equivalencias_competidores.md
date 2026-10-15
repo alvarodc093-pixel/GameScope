@@ -1,7 +1,7 @@
 # 05 — Equivalencias y regla de competidor directo (Fase 2)
 
-Código: `src/competidores.py` (`python -m src.competidores`). Base: 200 filas top.
-Medido el 2026-10-13, sin inventar: todo candidato sale de la muestra real.
+Código: `src/competidores.py` (`python -m src.competidores`). Base medido el 2026-10-13: 200 filas top, sin inventar: todo candidato sale de la muestra real.
+**Actualización 2026-10-15:** regla v1 intacta y validada sobre la base nueva (último snapshot 1.131, `docs/06`); los límites §4.1–§4.5 tienen hoy respuesta: cola aleatoria medida, modo estricto implementado, matching automatizado (`src/matching.py`, confianza declarada) y precio PC aparte (`src/precios.py`).
 
 ## 1. Tabla de equivalencias de géneros (vocabularios medidos)
 
@@ -47,11 +47,11 @@ Lectura: los 6 casos superan el umbral con resultados sensatos (mismo estante me
 
 ## 4. Limitaciones
 
-1. Muestra top: los candidatos son populares; el long-tail dará menos y peores.
-2. `Action` es demasiado ancha: endurecer a ≥2 géneros o peso por género raro en la app.
-3. Era ±4 es arbitraria: calibrar por franquicia (remasters) en EDA.
-4. Mismo título ≠ mismo juego: la regla no fusiona por nombre; el matching cruzado RAWG↔IGDB sigue siendo manual.
-5. Sin precio ni región en el score (no hay fuente).
+1. Muestra top: los candidatos son populares; el long-tail dará menos y peores. → **Medido 2026-10-15:** cola aleatoria (500 filas) con cobertura crítica ≈79% (RAWG) / 73% (IGDB) frente a ≈95%/90% del top+mid.
+2. `Action` es demasiado ancha: endurecer a ≥2 géneros o peso por género raro en la app. → **Implementado:** modo estricto exige ≥2 géneros + año (`src/scoring.py --estricto`, interruptor web); peso por rareza queda pendiente de fuente de catálogo.
+3. Era ±4 es arbitraria: calibrar por franquicia (remasters) en EDA. → Pendiente (requiere fuente de remasters/franquicias).
+4. Mismo título ≠ mismo juego: la regla no fusiona por nombre; el matching cruzado RAWG↔IGDB sigue siendo manual. → **Parcialmente implementado:** matching automático con guardia de años y confianza `exacto`/`cercano` (`src/matching.py`); la validación humana de los casos `cercano` sigue pendiente.
+5. Sin precio ni región en el score (no hay fuente). → Precio PC en tabla propia CheapShark (USD, `src/precios.py`), fuera del score; consolas siguen sin fuente.
 
 ## 5. Decisión
 

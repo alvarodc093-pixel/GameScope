@@ -1,0 +1,68 @@
+# Snapshot semanal automatizado (GameScope).
+#
+# Captura una foto nueva cada lunes: muestreo top + mid + cola acumulativa,
+# snapshot fechado append-only, matching cruzado, precios PC (USD) y export a
+# web. Lanza los tests antes de commitar; si fallan, NO se sube nada.
+#
+# Requiere configurar estos Secrets en el repositorio (Settings > Secrets):
+#   RAWG_API_KEY, IGDB_CLIENT_ID, IGDB_CLIENT_SECRET
+# Nunca se imprimen claves: src/config.py solo expone booleanos/longitudes.
+name: snapshot-semanal
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # lunes 06:00 UTC
+  workflow_dispatch: {}    # ejecución manual desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      RAWG_API_KEY: ${{ secrets.RAWG_API_KEY }}
+      IGDB_CLIENT_ID: ${{ secrets.IGDB_CLIENT_ID }}
+      IGDB_CLIENT_SECRET: ${{ secrets.IGDB_CLIENT_SECRET }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Dependencias
+        run: pip install -r requirements.txt
+
+      - name: Comprobar credenciales (solo booleanos)
+        run: python -m src.check_connections
+
+      - name: Capturar pipeline
+        run: |
+          python -m src.muestreo
+          python -m src.muestreo_midtail
+          python -m src.muestreo_longtail
+          python -m src.snapshot
+          python -m src.matching
+          python -m src.precios
+          python -m src.export_web
+
+      - name: Tests (si fallan, no se commitea)
+        run: python -m unittest discover tests
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "gamescope-bot"
+          git config user.email "gamescope-bot@users.noreply.github.com"
+          git add data/snapshots data/processed web/data
+          if git diff --cached --quiet; then
+            echo "Sin cambios nuevos; nada que commitar."
+          else
+            git commit -m "snapshot: actualización automática ($(date -u +%Y-%m-%d))"
+            git push
+          fi

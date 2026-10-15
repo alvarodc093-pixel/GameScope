@@ -74,6 +74,13 @@
               <option value="">Todos los géneros</option>
             </select>
           </div>
+          <div>
+            <span style="font-weight:600;display:block;margin-bottom:8px">Regla</span>
+            <label class="check-estricto" for="modo-estricto" title="Admisión más dura: exige año en ambas partes y al menos 2 géneros en común. Misma ponderación que v1.">
+              <input type="checkbox" id="modo-estricto">
+              Modo estricto
+            </label>
+          </div>
         </div>
         <button class="btn" type="submit">Comparar</button>
         <div class="ejemplos">
@@ -103,6 +110,7 @@
           <li><strong>Era</strong> (peso 1): 1.0 si ≤2 años, 0.5 si ≤4, 0 si más o sin fecha (ausente = 0).</li>
           <li><strong>Estudio</strong> (peso 1): solo si ambas partes lo tienen; si no, no aplica ni penaliza.</li>
           <li><strong>Tiers:</strong> ≥0.75 directo · ≥0.45 secundario · ≥0.25 relacionado.</li>
+          <li><strong>Modo estricto</strong> (interruptor del comparador): admisión más dura con los mismos pesos — exige año en ambas partes (si falta: <em>insuficiente</em>) y ≥2 géneros en común (con 1 solo: <em>descartado</em>). El estudio sigue siendo opcional: RAWG no publica desarrolladores en listado y exigirlo eliminaría todas las parejas RAWG. Sincronizado con <code>src/scoring.py --estricto</code>.</li>
           <li><strong>Deltas (tabla comparativa):</strong> solo dentro de la misma fuente y escala; nunca entre IGDB y RAWG.</li>
         </ol>
         <p>Cada competidor muestra qué aportó cada componente. Subgénero, modelo de negocio y audiencia están excluidos por falta de fuente válida. Popularidad solo como contexto dentro de cada fuente. Puntuaciones y votos no son ventas.</p>
@@ -117,7 +125,7 @@
           <tbody>
             <tr><td>Fuentes</td><td>IGDB (principal) + RAWG (complemento), fotos fechadas UTC</td></tr>
             <tr><td>Escalas</td><td>RAWG crítica 0–100 / usuarios 0–5 · IGDB 0–100 / 0–100. No se fusionan.</td></tr>
-            <tr><td>Precio</td><td>Descartado: sin fuente comparable trilateral</td></tr>
+            <tr><td>Precio</td><td>PC vía CheapShark (USD, observación propia con fecha; sin conversión). Consolas: sin fuente comparable — no se estima</td></tr>
             <tr><td>Cobertura</td><td>Sesgo a juegos populares; móvil con identidad propia parcial</td></tr>
             <tr><td>Evolución</td><td>Disponible con ≥2 snapshots; con 1 sola foto la app muestra un estado vacío honesto</td></tr>
             <tr><td>Ventas / MAU</td><td>No calculables: no hay fuente en el dataset</td></tr>
@@ -133,10 +141,10 @@
   </footer>
 
   <!-- Datos como script (no fetch): la app funciona tambien con doble clic (file://) -->
-  <script src="data/datos.js?v=5"></script>
-  <script src="js/scoring.js?v=5" defer></script>
-  <script src="js/ui.js?v=5" defer></script>
-  <script src="js/data.js?v=5" defer></script>
-  <script src="js/app.js?v=5" defer></script>
+  <script src="data/datos.js?v=6"></script>
+  <script src="js/scoring.js?v=6" defer></script>
+  <script src="js/ui.js?v=6" defer></script>
+  <script src="js/data.js?v=6" defer></script>
+  <script src="js/app.js?v=6" defer></script>
 </body>
 </html>

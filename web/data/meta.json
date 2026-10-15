@@ -1,14 +1,24 @@
 {
-  "snapshot": "snapshot_20261013",
-  "generated_at": "2026-10-15T17:58:43.312722+00:00",
-  "observed_at_min": "2026-10-13T18:34:36.038189+00:00",
-  "observed_at_max": "2026-10-13T18:44:24.136638+00:00",
-  "n_snapshots": 1,
-  "n": 229,
+  "snapshot": "snapshot_20261015T200549Z",
+  "generated_at": "2026-10-15T20:05:53.905341+00:00",
+  "observed_at_min": "2026-10-15T18:32:12.112852+00:00",
+  "observed_at_max": "2026-10-15T20:05:08.925189+00:00",
+  "n_snapshots": 4,
+  "n": 1131,
   "por_fuente": {
-    "igdb": 119,
-    "rawg": 110
+    "igdb": 630,
+    "rawg": 501
   },
   "scoring": "v1",
+  "matching": {
+    "filas_con_contraparte": 375,
+    "nota": "Identidad cruzada derivada (src/matching.py); las metricas nunca se fusionan entre fuentes."
+  },
+  "precios_pc": {
+    "n": 38,
+    "moneda": "USD",
+    "fuente": "CheapShark",
+    "nota": "Observacion propia con fecha (observed_at) fuera del snapshot; sin conversion de moneda."
+  },
   "nota": "Metricas por fuente y escala, sin fusionar. observed_at = consulta a la API; generated_at = export."
 }

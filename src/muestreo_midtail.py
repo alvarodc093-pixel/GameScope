@@ -41,7 +41,10 @@ def _ids(csv_path: Path, source: str, n: int, step: int = 7) -> list[str]:
     for r in rows:
         groups.setdefault(r["grupo"], []).append(r["source_id"])
     out: list[str] = []
-    for g in ("PC", "Consola_Sony", "Consola_MS_Nintendo", "Movil"):
+    # Grupos dinámicos (incluye Nintendo y Nintendo_Switch2 tras la ampliación).
+    orden = list(RAWG_GROUPS.keys() if source == "rawg" else IGDB_GROUPS.keys()) + \
+        (["Nintendo_Switch2"] if source == "igdb" else [])
+    for g in orden:
         ids = groups.get(g, [])
         out += [ids[i] for i in range(0, len(ids), step)][:3]
     return out[:n]

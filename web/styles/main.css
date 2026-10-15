@@ -130,6 +130,17 @@ input[type="search"], select {
 }
 input[type="search"]:focus, select:focus { border-color: var(--color-primary); outline: none; }
 
+label.check-estricto {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0;
+  min-height: 42px;
+}
+label.check-estricto input { width: 18px; height: 18px; accent-color: var(--color-primary); cursor: pointer; }
+
 .controls {
   display: grid;
   gap: var(--spacing-md);
@@ -234,6 +245,7 @@ input[type="search"]:focus, select:focus { border-color: var(--color-primary); o
 }
 
 .ref-card { display: grid; gap: var(--spacing-md); }
+.precio-linea { color: var(--color-muted); font-size: .9rem; }
 .ref-head { display: flex; gap: var(--spacing-md); align-items: center; }
 .ref-head img {
   width: 72px;

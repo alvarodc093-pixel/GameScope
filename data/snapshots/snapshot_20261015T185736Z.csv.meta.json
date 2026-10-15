@@ -1,0 +1,22 @@
+{
+  "n": 831,
+  "por_fuente": {
+    "rawg": {
+      "n": 353,
+      "con_critica": 322,
+      "con_usuario": 353,
+      "multiplataforma": 350
+    },
+    "igdb": {
+      "n": 478,
+      "con_critica": 393,
+      "con_usuario": 428,
+      "multiplataforma": 460
+    }
+  },
+  "observed_at_min": "2026-10-15T18:32:12.112852+00:00",
+  "observed_at_max": "2026-10-15T18:56:47.149799+00:00",
+  "archivo": "snapshot_20261015T185736Z.csv",
+  "creado_en": "2026-10-15T18:57:36.480679+00:00",
+  "append_only": true
+}

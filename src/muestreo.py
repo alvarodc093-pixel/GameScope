@@ -1,8 +1,11 @@
-"""Muestreo real PC / consola / móvil + auditoría (Fase 2).
+"""Muestreo real PC / consola / móvil + auditoría (Fase 2, ampliado 2026-10-15).
 
 Qué hace y por qué:
 - Descubre plataformas con los IDs verificados (no hardcodeados a ciegas).
-- Pide 4 grupos x 25 juegos por fuente (top popular = mejor caso de cobertura).
+- 5 grupos (PC, Sony, MS, Nintendo propio, móvil) x 2 páginas x 40 = top 80
+  por grupo y fuente. Nintendo va en grupo propio: antes compartía 25 plazas
+  con Xbox y los exclusivos de Switch quedaban fuera. IGDB añade Switch 2
+  (id 508) incluyendo nativos sin ratings aún; RAWG no cataloga Switch 2.
 - Normaliza a un esquema común con observed_at + source (base del histórico).
 - Guarda raw en data/raw/ (gitignorado) y muestra normalizada en data/processed/.
 
@@ -10,7 +13,7 @@ Ejecución Windows (raíz del proyecto):
     .\\.venv\\Scripts\\Activate.ps1
     python -m src.muestreo
 
-Respeta cuotas: RAWG ~5 peticiones, IGDB ~7 peticiones con pausas (<4 req/s).
+Respeta cuotas: RAWG ~11 peticiones, IGDB ~13 peticiones con pausas (<4 req/s).
 Nunca imprime claves.
 """
 from __future__ import annotations
@@ -34,18 +37,25 @@ PROC_DIR = ROOT / "data" / "processed"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 PROC_DIR.mkdir(parents=True, exist_ok=True)
 
-PAGE = 25
-# IDs verificados el 2026-10-13 (ver docs/01). Si una API los cambia, el discovery avisa.
+PAGE = 40          # RAWG: page_size máximo documentado = 40
+PAGINAS = 2        # 2 páginas x 40 = 80 por grupo (antes 25: diluía Switch y PC)
+# IDs verificados en vivo el 2026-10-15 (RAWG catálogo completo=51 plataformas;
+# IGDB /platforms). Si una API los cambia, el discovery avisa.
+# Nintendo va en grupo propio: con 25 resultados compartidos con Xbox, los
+# exclusivos de Switch quedaban fuera de la muestra. RAWG NO cataloga Switch 2
+# (verificado: count=51, sin "Switch 2"); IGDB sí: id 508.
 RAWG_GROUPS = {
     "PC": "4",
     "Consola_Sony": "187,18",
-    "Consola_MS_Nintendo": "1,186,7",
+    "Consola_MS": "1,186,14",
+    "Nintendo": "7",
     "Movil": "3,21",
 }
 IGDB_GROUPS = {
     "PC": "(6)",
     "Consola_Sony": "(167,48)",
-    "Consola_MS_Nintendo": "(49,169,130)",
+    "Consola_MS": "(49,169)",
+    "Nintendo": "(130,508)",
     "Movil": "(39,34)",
 }
 IGDB_FIELDS = (
@@ -76,21 +86,28 @@ def fetch_rawg() -> tuple[list[dict], dict]:
     all_games: list[dict] = []
     meta: dict = {"grupos": {}}
     for grupo, plats in RAWG_GROUPS.items():
-        time.sleep(1.2)
-        r = requests.get(
-            "https://api.rawg.io/api/games",
-            params={"key": key, "page_size": PAGE, "platforms": plats, "ordering": "-added"},
-            timeout=30,
-        )
-        if r.status_code != 200:
-            meta["grupos"][grupo] = {"status": r.status_code, "error": r.text[:150]}
-            continue
-        body = r.json()
-        results = body.get("results", [])
-        for g in results:
-            g["_grupo"] = grupo
-        all_games.extend(results)
-        meta["grupos"][grupo] = {"status": 200, "devueltos": len(results)}
+        devueltos, status, error = 0, 200, None
+        for page in range(1, PAGINAS + 1):
+            time.sleep(1.2)
+            r = requests.get(
+                "https://api.rawg.io/api/games",
+                params={"key": key, "page_size": PAGE, "page": page,
+                        "platforms": plats, "ordering": "-added"},
+                timeout=30,
+            )
+            if r.status_code != 200:
+                status, error = r.status_code, r.text[:150]
+                break
+            results = r.json().get("results", [])
+            for g in results:
+                g["_grupo"] = grupo
+            all_games.extend(results)
+            devueltos += len(results)
+            if len(results) < PAGE:
+                break
+        meta["grupos"][grupo] = {"status": status, "devueltos": devueltos}
+        if error:
+            meta["grupos"][grupo]["error"] = error
     # Mapa de plataformas como evidencia (51 esperadas).
     time.sleep(1.2)
     p = requests.get(
@@ -123,22 +140,46 @@ def fetch_igdb() -> tuple[list[dict], dict]:
     headers = {"Client-ID": cid, "Authorization": f"Bearer {token}"}
     all_games: list[dict] = []
     meta: dict = {"grupos": {}}
-    for grupo, plats in IGDB_GROUPS.items():
+
+    def _consulta(plats: str, orden: str, extra_where: str, limite: int, offset: int) -> tuple[list[dict], str]:
         time.sleep(0.4)
-        # Top por total_rating_count = mejor caso de cobertura de métricas.
-        body = (
-            f"{IGDB_FIELDS} where platforms = {plats} & total_rating_count != null; "
-            f"sort total_rating_count desc; limit {PAGE};"
-        )
+        # IGDB_FIELDS ya termina en ';': cada cláusula se separa con ';'.
+        body = (f"{IGDB_FIELDS} where platforms = {plats}{extra_where}; "
+                f"{orden} limit {limite}" + (f"; offset {offset};" if offset else ";"))
         r = requests.post("https://api.igdb.com/v4/games", headers=headers, data=body, timeout=30)
         if r.status_code != 200:
-            meta["grupos"][grupo] = {"status": r.status_code, "error": r.text[:150]}
-            continue
-        results = r.json()
-        for g in results:
-            g["_grupo"] = grupo
-        all_games.extend(results)
-        meta["grupos"][grupo] = {"status": 200, "devueltos": len(results)}
+            return [], f"{r.status_code}: {r.text[:120]}"
+        return r.json(), ""
+
+    errores: list[str] = []
+    for grupo, plats in IGDB_GROUPS.items():
+        devueltos = 0
+        # Top por total_rating_count = mejor caso de cobertura de métricas (2 páginas).
+        for offset in (0, 50):
+            results, err = _consulta(plats, "sort total_rating_count desc;",
+                                     " & total_rating_count != null", 50, offset)
+            if err:
+                errores.append(f"{grupo}@{offset} {err}")
+                break
+            for g in results:
+                g["_grupo"] = grupo
+            all_games.extend(results)
+            devueltos += len(results)
+            if len(results) < 50:
+                break
+        meta["grupos"][grupo] = {"status": 200, "devueltos": devueltos}
+    # Extras Switch 2 (id 508): nativos recientes pueden no tener ratings aún;
+    # se piden aparte por fecha de lanzamiento para no perderlos.
+    results, err = _consulta("(508)", "sort first_release_date desc;", "", 50, 0)
+    if err:
+        errores.append(f"Switch2 {err}")
+    for g in results:
+        g["_grupo"] = "Nintendo_Switch2"
+        all_games.append(g)
+    meta["grupos"]["Nintendo_Switch2"] = {"status": 200, "devueltos": len(results),
+                                          "nota": "sin filtro de ratings (nativos tempranos)"}
+    if errores:
+        meta["errores"] = errores
     (RAW_DIR / f"igdb_sample_{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json").write_text(
         json.dumps(all_games, ensure_ascii=False, indent=2), encoding="utf-8"
     )

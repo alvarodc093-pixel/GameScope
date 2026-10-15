@@ -62,5 +62,37 @@ class TestScoring(unittest.TestCase):
         self.assertEqual(v["tier"], "insuficiente")
 
 
+class TestModoEstricto(unittest.TestCase):
+    def test_v1_admite_fecha_ausente_estricto_no(self):
+        ref = juego(release_date="")
+        v1 = puntuar(ref, juego())
+        self.assertNotEqual(v1["tier"], "insuficiente")
+        ve = puntuar(ref, juego(), estricto=True)
+        self.assertEqual(ve["tier"], "insuficiente")
+        self.assertIn("fecha ausente", ve["motivo"])
+
+    def test_estricto_un_solo_genero_comun_descarta(self):
+        ref, cand = juego(), juego(genre_names="Adventure")  # 1 en común
+        self.assertNotEqual(puntuar(ref, cand)["tier"], "descartado")
+        ve = puntuar(ref, cand, estricto=True)
+        self.assertEqual(ve["tier"], "descartado")
+        self.assertIn("mínimo 2", ve["motivo"])
+
+    def test_estricto_pareja_admitida_puntua_igual(self):
+        ref, cand = juego(), juego(genre_names="Adventure|Shooter")  # 2 en común
+        v1 = puntuar(ref, cand)
+        ve = puntuar(ref, cand, estricto=True)
+        self.assertEqual(v1["nota"], ve["nota"])
+        self.assertEqual(v1["tier"], ve["tier"])
+
+    def test_estricto_no_cambia_pesos_ni_umbrales(self):
+        from src.scoring import PESOS, UMBRALES
+        ref, cand = juego(), juego(genre_names="Adventure|Shooter")
+        ve = puntuar(ref, cand, estricto=True)
+        self.assertEqual(ve["nota"], puntuar(ref, cand)["nota"])
+        self.assertEqual(sorted(UMBRALES), ["directo", "relacionado", "secundario"])
+        self.assertEqual(PESOS["genero"], 3.0)
+
+
 if __name__ == "__main__":
     unittest.main()
