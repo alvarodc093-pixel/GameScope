@@ -1,11 +1,14 @@
 {
   "snapshot": "snapshot_20261013",
-  "generated_at": "2026-10-13T18:44:24.136638+00:00",
+  "generated_at": "2026-10-15T17:17:12.847603+00:00",
+  "observed_at_min": "2026-10-13T18:34:36.038189+00:00",
+  "observed_at_max": "2026-10-13T18:44:24.136638+00:00",
+  "n_snapshots": 1,
   "n": 229,
   "por_fuente": {
     "igdb": 119,
     "rawg": 110
   },
   "scoring": "v1",
-  "nota": "Métricas por fuente y escala, sin fusionar."
+  "nota": "Metricas por fuente y escala, sin fusionar. observed_at = consulta a la API; generated_at = export."
 }

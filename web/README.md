@@ -1,6 +1,15 @@
 # GameScope web (Vercel)
 
-Comparador estático: HTML + CSS + JS sin build. Los datos son una foto generada del snapshot (`web/data/games.json`, 229 juegos).
+Comparador estático: HTML + CSS + JS sin build. Los datos son una foto generada del snapshot (`web/data/games.json`, 229 juegos) más `meta.json` (trazabilidad) y `evolucion.json` (deltas entre snapshots, o bandera honesta si hay menos de 2 fotos).
+
+## Funcionalidades
+
+* Buscador por fuente (IGDB/RAWG), umbral de tier, nº de resultados.
+* Filtros de plataforma y género (opciones salen de los datos del snapshot) que restringen la lista de competidores.
+* Tabla comparativa ref vs competidores (Δ crítica, Δ usuarios, Δ años; solo intra-fuente y misma escala).
+* Resumen de diferencias con mediana del grupo y caveats (no hay ventas ni métricas fusionadas).
+* Scoring v1 en `js/scoring.js`: réplica de `src/scoring.py`; mantén pesos y umbrales sincronizados.
+* Sección Evolución: deltas reales con ≥2 snapshots; con 1 sola foto, estado vacío honesto.
 
 ## Ejecutar en local
 
@@ -16,14 +25,16 @@ python -m http.server 8000
 
 ```powershell
 # desde la raíz del repo
-python -m src.snapshot    # nuevo snapshot fechado
-python -m src.export_web  # reescribe web/data/*.json desde el último snapshot
+python -m src.muestreo       # (opcional) nueva captura de muestras; consume cuota
+python -m src.snapshot       # snapshot fechado con hora (append-only, no sobrescribe)
+python -m src.export_web     # reescribe web/data/*.json desde el último snapshot
 ```
 
 ## Modificar
 
 * Diseño: `styles/main.css` (variables en `:root`).
-* Regla de similitud: `js/scoring.js` (réplica de `src/scoring.py`; mantén pesos y umbrales sincronizados).
+* Regla de similitud: `js/scoring.js` (réplica de `src/scoring.py`).
+* Renderizado (tabla, insights, evolución): `js/ui.js`. Estado y eventos: `js/app.js`.
 * Textos/secciones: `index.html`.
 
 ## Desplegar en Vercel

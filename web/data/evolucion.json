@@ -1,0 +1,5 @@
+{
+  "suficientes_observaciones": false,
+  "n_snapshots": 1,
+  "mensaje": "Con 1 solo snapshot no hay serie temporal. Captura una foto nueva (python -m src.muestreo y luego python -m src.snapshot) para poder comparar observaciones fechadas."
+}
