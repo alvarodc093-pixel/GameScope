@@ -108,7 +108,13 @@ def main(snap_dir: Path | None = None, web_data: Path | None = None) -> int:
     (web_data / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     evo = evolucion_para(snap_dir)
     (web_data / "evolucion.json").write_text(json.dumps(evo, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Juegos: {len(games)} -> web/data/games.json + meta.json + evolucion.json ({snap.name})")
+    # datos.js: los mismos datos como script global. Los modulos ES y fetch() de
+    # JSON estan bloqueados en file:// (doble clic); como script, la web funciona
+    # con servidor local y tambien abriendo index.html directamente.
+    payload = {"games": games, "meta": meta, "evolucion": evo}
+    (web_data / "datos.js").write_text(
+        "window.GS_DATOS = " + json.dumps(payload, ensure_ascii=False) + ";\n", encoding="utf-8")
+    print(f"Juegos: {len(games)} -> web/data/games.json + meta.json + evolucion.json + datos.js ({snap.name})")
     print("Evolucion:", "activa" if evo["suficientes_observaciones"] else "insuficiente (hace falta 2do snapshot)")
     return 0
 

@@ -30,7 +30,7 @@ GameScope responde a eso: eliges un juego y ves sus competidores (mismo género,
 
 ## 5. Aplicación web (estado: funcional)
 
-Web estática (HTML + CSS + JS sin build) en `web/`, generada desde el snapshot versionado:
+Web estática (HTML + CSS + JS sin build) en `web/`, generada desde el snapshot versionado. **Funciona abriendo `index.html` con doble clic** (los datos viajan como script `data/datos.js`, sin fetch) y también con cualquier servidor estático:
 
 * **Buscador en un solo paso:** escribes, eliges de la lista desplegable y la comparación aparece al instante (insensible a mayúsculas y acentos; si el juego está en la otra fuente, ofrece cambiarla con un clic). La página carga con un ejemplo real ya comparado (Hollow Knight vs sus competidores) y botones de ejemplos.
 * Fuente (IGDB/RAWG), umbral de tier y nº de resultados.
@@ -59,8 +59,8 @@ python -m src.export_web         # regenera web/data/*.json desde el último sna
 python -m unittest discover tests  # 40 tests (sin API)
 jupyter notebook notebooks/02_eda.ipynb
 
-# app web en local (desde web/)
-python -m http.server 8000       # abrir http://localhost:8000
+# app web: doble clic en web/index.html, o en local con servidor:
+cd web; python -m http.server 8000   # abrir http://localhost:8000
 ```
 
 `.env` está gitignorado y ninguna salida imprime claves.

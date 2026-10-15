@@ -1,6 +1,6 @@
 # GameScope web (Vercel)
 
-Comparador estático: HTML + CSS + JS sin build. Los datos son una foto generada del snapshot (`web/data/games.json`, 229 juegos) más `meta.json` (trazabilidad) y `evolucion.json` (deltas entre snapshots, o bandera honesta si hay menos de 2 fotos).
+Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. Los datos son una foto generada del snapshot (`web/data/games.json`, 229 juegos) más `meta.json` y `evolucion.json`; la app los carga desde `web/data/datos.js` (mismos datos como script global), por lo que **funciona abriendo `index.html` con doble clic** y también con cualquier servidor estático.
 
 ## Funcionalidades
 
@@ -15,12 +15,14 @@ Comparador estático: HTML + CSS + JS sin build. Los datos son una foto generada
 ## Ejecutar en local
 
 ```powershell
+# Opción 1: doble clic en web/index.html (ya funciona: los datos viajan como script)
+# Opción 2: servidor local (recomendado para probar como en producción)
 # desde la carpeta web/
 python -m http.server 8000
 # abrir http://localhost:8000
 ```
 
-> Abrir `index.html` como fichero no funciona: los módulos ES y `fetch()` exigen servidor HTTP.
+> Nota: los módulos ES y `fetch()` de JSON están bloqueados en `file://`; por eso la app usa scripts clásicos y `data/datos.js` en lugar de `fetch` a JSON.
 
 ## Regenerar datos
 
@@ -28,7 +30,7 @@ python -m http.server 8000
 # desde la raíz del repo
 python -m src.muestreo       # (opcional) nueva captura de muestras; consume cuota
 python -m src.snapshot       # snapshot fechado con hora (append-only, no sobrescribe)
-python -m src.export_web     # reescribe web/data/*.json desde el último snapshot
+python -m src.export_web     # reescribe web/data/*.json y datos.js desde el último snapshot
 ```
 
 ## Modificar
@@ -37,6 +39,7 @@ python -m src.export_web     # reescribe web/data/*.json desde el último snapsh
 * Regla de similitud: `js/scoring.js` (réplica de `src/scoring.py`).
 * Renderizado (tabla, insights, evolución): `js/ui.js`. Estado y eventos: `js/app.js`.
 * Textos/secciones: `index.html`.
+* Los JS son scripts clásicos con namespace `window.GS` (sin import/export): el orden de carga en `index.html` importa (scoring → ui → data → app).
 
 ## Desplegar en Vercel
 

@@ -100,6 +100,10 @@ class TestMain(unittest.TestCase):
             self.assertFalse(evo["suficientes_observaciones"])
             self.assertTrue(meta["generated_at"])
             self.assertEqual(meta["observed_at_min"], "2026-10-13T18:00:00+00:00")
+            # datos.js: la web lo carga como script (funciona en file://).
+            datos_js = (webdata / "datos.js").read_text(encoding="utf-8")
+            self.assertTrue(datos_js.startswith("window.GS_DATOS = "))
+            self.assertIn('"games"', datos_js)
 
     def test_main_sin_snapshots_devuelve_1(self):
         with tempfile.TemporaryDirectory() as td:
