@@ -1,8 +1,10 @@
 # 07 — Metodología de análisis competitivo (Fase 4, v1 heurística)
 
 Código: `src/scoring.py` (`python -m src.scoring --slug <slug> --source <igdb|rawg>`).
-Tests: `tests/test_scoring.py` (`python -m unittest discover tests`, 7/7 OK).
-Base: `data/snapshots/snapshot_20261013.csv` (229 únicas).
+Carga el **último** snapshot de `data/snapshots/` (antes hardcodeado a una fecha; corregido
+en la auditoría 2026-10-15) ya deduplicado por `(source, source_id)`.
+Tests: `python -m unittest discover tests` (40: scoring, datos, snapshot, evolución, export; sin API).
+Base usada en el caso real: `data/snapshots/snapshot_20261013.csv` (229 únicas).
 
 ## 1. Dimensiones evaluadas y veredicto de fuente
 
@@ -27,7 +29,7 @@ Base: `data/snapshots/snapshot_20261013.csv` (229 únicas).
 
 ## 3. KPIs competitivos v1 (extienden `docs/06`)
 
-Directos+secundarios por juego, similitud media del top-10, diferencia de crítica/usuarios frente a la mediana del grupo comparable (misma fuente y escala), y bandera de confianza (n de prensa <5 = orientativo). Evolución temporal: pendiente de segundo snapshot (hoy n=1, no se calcula).
+Directos+secundarios por juego, similitud media del top-10, diferencia de crítica/usuarios frente a la mediana del grupo comparable (misma fuente y escala), y bandera de confianza (n de prensa <5 = orientativo). La tabla comparativa de la web calcula deltas absolutos y relativos intra-fuente. Evolución temporal: `src/evolucion.py` compara los dos últimos snapshots; hoy hay n=1, así que la web muestra el estado vacío honesto (sin tendencias inventadas).
 
 ## 4. Validación
 
