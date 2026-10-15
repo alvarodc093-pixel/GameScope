@@ -24,7 +24,7 @@
   <main id="inicio">
     <div class="hero">
       <h1>¿Cómo se posiciona tu juego frente a sus competidores?</h1>
-      <p>Selecciona un videojuego y descubre sus competidores directos en PC, consolas y móvil, con comparación lado a lado y resumen de diferencias. Crítica y usuarios, siempre por separado, con su escala y su número de votos. Sin precios inventados, sin métricas fusionadas.</p>
+      <p>Escribe el nombre de un videojuego, elige de la lista y verás al instante sus competidores directos en PC, consolas y móvil, con comparación lado a lado y resumen de diferencias. Crítica y usuarios, siempre por separado, con su escala y su número de votos.</p>
       <p id="meta-linea" style="color:var(--color-muted);font-size:.9rem">Cargando metadatos…</p>
     </div>
 
@@ -32,10 +32,12 @@
       <h2 id="t-comparador">Comparador</h2>
       <form id="form-comparar" class="card" aria-label="Buscar juego de referencia">
         <div class="controls">
-          <div>
+          <div class="search-wrap">
             <label for="buscador">Juego de referencia</label>
-            <input type="search" id="buscador" list="juego-lista" placeholder="p. ej. Hollow Knight" autocomplete="off" required>
-            <datalist id="juego-lista"></datalist>
+            <input type="search" id="buscador" placeholder="p. ej. Hollow Knight"
+                   autocomplete="off" aria-controls="sugerencias" aria-expanded="false"
+                   role="combobox" aria-autocomplete="list">
+            <ul id="sugerencias" class="sugerencias" role="listbox" hidden></ul>
           </div>
           <div>
             <span id="fuente-label" style="font-weight:600;display:block;margin-bottom:8px">Fuente</span>
@@ -73,8 +75,14 @@
             </select>
           </div>
         </div>
-        <p class="hint">Los filtros de plataforma y género restringen la lista de competidores; el juego de referencia se puede elegir siempre. Las opciones salen de los datos reales del snapshot según la fuente activa.</p>
         <button class="btn" type="submit">Comparar</button>
+        <div class="ejemplos">
+          <span class="hint" style="margin:0">¿Sin ideas? Prueba con:</span>
+          <button type="button" class="chip" data-ejemplo-slug="hollow-knight" data-ejemplo-source="igdb">Hollow Knight (IGDB)</button>
+          <button type="button" class="chip" data-ejemplo-slug="grand-theft-auto-v" data-ejemplo-source="igdb">GTA V (IGDB)</button>
+          <button type="button" class="chip" data-ejemplo-slug="bioshock-infinite" data-ejemplo-source="rawg">BioShock Infinite (RAWG)</button>
+        </div>
+        <p class="hint" style="margin-top:var(--spacing-md)">Los filtros de plataforma y género restringen la lista de competidores; el juego de referencia se puede elegir siempre. Las opciones salen de los datos reales del snapshot según la fuente activa.</p>
       </form>
       <div id="resultados" style="margin-top:var(--spacing-md)"></div>
     </section>
@@ -124,6 +132,6 @@
     Datos: <a href="https://www.igdb.com/" target="_blank" rel="noopener">IGDB</a> · <a href="https://rawg.io/" target="_blank" rel="noopener">RAWG</a> — con atribución. Proyecto de portfolio educativo sin afiliación.
   </footer>
 
-  <script type="module" src="js/app.js?v=3"></script>
+  <script type="module" src="js/app.js?v=4"></script>
 </body>
 </html>

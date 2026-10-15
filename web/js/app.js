@@ -1,4 +1,5 @@
 // Estado y cableado del comparador.
+// Buscador: escribir -> elegir de la lista -> comparación al instante (un solo paso).
 import { cargarDatos } from "./data.js";
 import { puntuar, canonGeneros } from "./scoring.js";
 import {
@@ -14,13 +15,86 @@ const estado = {
 
 const RANGO = { directo: 3, secundario: 2, relacionado: 1, descartado: 0, insuficiente: -1 };
 
+// Juego preseleccionado al cargar: la app se explica sola con un ejemplo real.
+const EJEMPLO_INICIAL = { slug: "hollow-knight", source: "igdb" };
+
+const normalizar = (s) =>
+  (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
 function juegosDeFuente() {
   return estado.games.filter((j) => j.source === estado.source);
 }
 
-function refrescarLista() {
-  $("juego-lista").innerHTML = juegosDeFuente()
-    .map((j) => `<option value="${esc(j.name)}">`).join("");
+// Busca por nombre (insensible a mayúsculas y acentos), mejor coincidencia primero.
+export function buscarJuegos(q, juegos = juegosDeFuente()) {
+  const nq = normalizar(q).trim();
+  if (nq.length < 2) return [];
+  const conPrio = [];
+  for (const j of juegos) {
+    const n = normalizar(j.name);
+    let prio = -1;
+    if (n === nq) prio = 0;
+    else if (n.startsWith(nq)) prio = 1;
+    else if (n.includes(nq)) prio = 2;
+    else {
+      // Palabras sueltas en cualquier orden (solo si la query tiene >1 palabra).
+      const palabras = nq.split(/\s+/);
+      if (palabras.length > 1 && palabras.every((p) => n.includes(p))) prio = 3;
+    }
+    if (prio >= 0) conPrio.push([prio, j]);
+  }
+  conPrio.sort((a, b) => a[0] - b[0] || a[1].name.localeCompare(b[1].name));
+  return conPrio.map(([, j]) => j).slice(0, 10);
+}
+
+function juegosEnOtraFuente(q) {
+  const otra = estado.source === "igdb" ? "rawg" : "igdb";
+  const cands = estado.games.filter(
+    (j) => j.source === otra && normalizar(j.name).includes(normalizar(q)),
+  ).slice(0, 3);
+  return { otra, cands };
+}
+
+function cerrarSugerencias() {
+  const panel = $("sugerencias");
+  panel.hidden = true;
+  panel.innerHTML = "";
+  $("buscador").setAttribute("aria-expanded", "false");
+}
+
+function pintarSugerencias() {
+  const panel = $("sugerencias");
+  const q = $("buscador").value.trim();
+  if (normalizar(q).length < 2) {
+    cerrarSugerencias();
+    return;
+  }
+  const cands = buscarJuegos(q);
+  let html = "";
+  if (cands.length) {
+    html = cands.map((j) => `
+      <li role="option">
+        <button type="button" class="sug-item" data-slug="${esc(j.slug)}">
+          <span>${esc(j.name)}</span>
+          <small>${j.year ?? "s/f"} · ${esc(j.genres.slice(0, 2).join(" / ") || "s/g")}</small>
+        </button>
+      </li>`).join("");
+  } else {
+    const { otra, cands: enOtra } = juegosEnOtraFuente(q);
+    html = enOtra.length
+      ? `<li class="sug-info">Sin resultados en ${estado.source.toUpperCase()}.
+           ¿Lo buscas en ${otra.toUpperCase()}?
+           <button type="button" class="btn btn-sm" data-otra-fuente="${otra}">Cambiar fuente</button>
+         </li>`
+      : `<li class="sug-info">Sin resultados para “${esc(q)}”. Prueba con menos letras.</li>`;
+  }
+  panel.innerHTML = html;
+  panel.hidden = false;
+  $("buscador").setAttribute("aria-expanded", "true");
+  panel.querySelectorAll("[data-slug]").forEach((b) =>
+    b.addEventListener("click", () => seleccionar(b.dataset.slug)));
+  const otraBtn = panel.querySelector("[data-otra-fuente]");
+  if (otraBtn) otraBtn.addEventListener("click", () => cambiarFuente(otraBtn.dataset.otraFuente, true));
 }
 
 // Opciones de filtro derivadas de los datos reales de la fuente activa.
@@ -42,36 +116,47 @@ function refrescarFiltros() {
   estado.genero = llenar("filtro-genero", gens, "Todos los géneros", estado.genero);
 }
 
-function seleccionar(slug) {
-  estado.refSlug = slug;
+// Selección = comparación inmediata (sin segundo botón).
+export function seleccionar(slug) {
   const j = juegosDeFuente().find((x) => x.slug === slug);
-  if (j) $("buscador").value = j.name;
+  if (!j) return;
+  estado.refSlug = slug;
+  $("buscador").value = j.name;
+  cerrarSugerencias();
   compararActual();
 }
 
-function buscar() {
-  const q = $("buscador").value.trim().toLowerCase();
-  const resultados = $("resultados");
-  if (!q) {
-    resultados.innerHTML = estadoVacio("Escribe al menos 3 letras del juego.");
+function cambiarFuente(source, mantenerConsulta = false) {
+  estado.source = source;
+  estado.refSlug = null;
+  estado.plataforma = "";
+  estado.genero = "";
+  document.querySelectorAll("#fuente [data-source]").forEach((b) =>
+    b.setAttribute("aria-pressed", String(b.dataset.source === source)));
+  refrescarFiltros();
+  if (!mantenerConsulta) $("buscador").value = "";
+  const q = $("buscador").value.trim();
+  if (normalizar(q).length >= 2) {
+    const cands = buscarJuegos(q);
+    if (cands.length === 1) { seleccionar(cands[0].slug); return; }
+    pintarSugerencias();
+    $("resultados").innerHTML = estadoVacio(`Fuente ${source.toUpperCase()}. Elige de la lista.`);
+  } else {
+    cerrarSugerencias();
+    $("resultados").innerHTML = estadoVacio("Fuente cambiada. Escribe el nombre de un juego.");
+  }
+}
+
+// El botón y Enter eligen la mejor coincidencia (o abren la lista).
+function aceptarBusqueda() {
+  const q = $("buscador").value.trim();
+  if (!q) return;
+  const cands = buscarJuegos(q);
+  if (cands.length) {
+    seleccionar(cands[0].slug);
     return;
   }
-  const exactos = juegosDeFuente().filter((j) => j.name.toLowerCase() === q);
-  if (exactos.length === 1) {
-    seleccionar(exactos[0].slug);
-    return;
-  }
-  const cand = juegosDeFuente().filter((j) => j.name.toLowerCase().includes(q)).slice(0, 12);
-  if (cand.length === 0) {
-    resultados.innerHTML = estadoVacio(`Sin resultados para "${$("buscador").value.trim()}". Prueba con otro nombre o cambia de fuente (IGDB/RAWG).`);
-    return;
-  }
-  resultados.innerHTML = `<h3>${cand.length} coincidencias: elige una</h3><ul class="comp-list">` +
-    cand.map((j) => `<li class="comp"><div class="comp-head"><h3>${esc(j.name)}</h3>
-      <small style="color:var(--color-muted)">${j.year ?? "?"} · ${esc(j.genres.slice(0, 2).join(" / "))}</small>
-      <button type="button" class="btn" data-slug="${esc(j.slug)}">Comparar</button></div></li>`).join("") + "</ul>";
-  resultados.querySelectorAll("[data-slug]").forEach((b) =>
-    b.addEventListener("click", () => seleccionar(b.dataset.slug)));
+  pintarSugerencias();
 }
 
 // Los filtros restringen COMPETIDORES (el de referencia siempre se puede elegir).
@@ -81,11 +166,11 @@ function pasaFiltros(j) {
   return true;
 }
 
-function compararActual() {
+export function compararActual() {
   const resultados = $("resultados");
   const ref = juegosDeFuente().find((j) => j.slug === estado.refSlug);
   if (!ref) {
-    resultados.innerHTML = estadoVacio("Selecciona primero un juego de referencia.");
+    resultados.innerHTML = estadoVacio("Escribe un juego arriba y elige de la lista.");
     return;
   }
   const G = canonGeneros(ref);
@@ -130,6 +215,51 @@ async function cargarEvolucion() {
   pintarEvolucion();
 }
 
+function cablearEventos() {
+  document.querySelectorAll("#fuente [data-source]").forEach((btn) =>
+    btn.addEventListener("click", () => cambiarFuente(btn.dataset.source)));
+
+  document.querySelectorAll("[data-ejemplo-slug]").forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const { ejemploSlug, ejemploSource } = btn.dataset;
+      if (estado.source !== ejemploSource) cambiarFuente(ejemploSource, true);
+      seleccionar(ejemploSlug);
+    }));
+
+  $("form-comparar").addEventListener("submit", (e) => { e.preventDefault(); aceptarBusqueda(); });
+
+  let temporizador = null;
+  $("buscador").addEventListener("input", () => {
+    clearTimeout(temporizador);
+    temporizador = setTimeout(pintarSugerencias, 150);
+  });
+  $("buscador").addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { cerrarSugerencias(); return; }
+    if (e.key === "ArrowDown") {
+      const primero = $("sugerencias").querySelector(".sug-item");
+      if (primero) { e.preventDefault(); primero.focus(); }
+      return;
+    }
+    if (e.key === "Enter") {
+      e.preventDefault();
+      aceptarBusqueda();
+    }
+  });
+  // Cerrar la lista al pulsar fuera.
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrap")) cerrarSugerencias();
+  });
+
+  $("tier").addEventListener("change", () => { estado.tier = $("tier").value; compararActual(); });
+  $("topn").addEventListener("change", () => { estado.top = Number($("topn").value); compararActual(); });
+  $("filtro-plataforma").addEventListener("change", () => {
+    estado.plataforma = $("filtro-plataforma").value; compararActual();
+  });
+  $("filtro-genero").addEventListener("change", () => {
+    estado.genero = $("filtro-genero").value; compararActual();
+  });
+}
+
 async function iniciar() {
   const resultados = $("resultados");
   if (window.location.protocol === "file:") {
@@ -146,41 +276,17 @@ async function iniciar() {
     resultados.innerHTML = estadoError(e.message);
     return;
   }
-  refrescarLista();
   refrescarFiltros();
   cargarEvolucion();
-  resultados.innerHTML = estadoVacio("Busca un juego y pulsa Comparar.");
-  document.querySelectorAll("#fuente [data-source]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      estado.source = btn.dataset.source;
-      estado.refSlug = null;
-      estado.plataforma = "";
-      estado.genero = "";
-      $("buscador").value = "";
-      document.querySelectorAll("#fuente [data-source]").forEach((b) =>
-        b.setAttribute("aria-pressed", String(b === btn)));
-      refrescarLista();
-      refrescarFiltros();
-      resultados.innerHTML = estadoVacio("Fuente cambiada. Busca un juego y pulsa Comparar.");
-    });
-  });
-  $("form-comparar").addEventListener("submit", (e) => { e.preventDefault(); buscar(); });
-  let temporizador = null;
-  $("buscador").addEventListener("input", () => {
-    clearTimeout(temporizador);
-    temporizador = setTimeout(() => {
-      if ($("buscador").value.trim().length >= 2) buscar();
-    }, 300);
-  });
-  $("tier").addEventListener("change", () => { estado.tier = $("tier").value; compararActual(); });
-  $("topn").addEventListener("change", () => { estado.top = Number($("topn").value); compararActual(); });
-  $("filtro-plataforma").addEventListener("change", () => {
-    estado.plataforma = $("filtro-plataforma").value; compararActual();
-  });
-  $("filtro-genero").addEventListener("change", () => {
-    estado.genero = $("filtro-genero").value; compararActual();
-  });
+  cablearEventos();
+  // Demo inicial: comparación real visible sin tocar nada.
+  const inicial = estado.games.find(
+    (j) => j.slug === EJEMPLO_INICIAL.slug && j.source === EJEMPLO_INICIAL.source);
+  if (inicial) seleccionar(inicial.slug);
+  else resultados.innerHTML = estadoVacio("Escribe un juego arriba y elige de la lista.");
 }
 
-iniciar();
-export { buscar, seleccionar, compararActual, estado };
+// Solo arranca en navegador (en Node se importa para testing de la lógica pura).
+if (typeof document !== "undefined") iniciar();
+
+export { estado };

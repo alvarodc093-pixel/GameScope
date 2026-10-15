@@ -32,7 +32,8 @@ GameScope responde a eso: eliges un juego y ves sus competidores (mismo género,
 
 Web estática (HTML + CSS + JS sin build) en `web/`, generada desde el snapshot versionado:
 
-* Buscador de juego de referencia por fuente (IGDB/RAWG), umbral de tier y nº de resultados.
+* **Buscador en un solo paso:** escribes, eliges de la lista desplegable y la comparación aparece al instante (insensible a mayúsculas y acentos; si el juego está en la otra fuente, ofrece cambiarla con un clic). La página carga con un ejemplo real ya comparado (Hollow Knight vs sus competidores) y botones de ejemplos.
+* Fuente (IGDB/RAWG), umbral de tier y nº de resultados.
 * Filtros de plataforma y género (opciones derivadas de los datos reales) que restringen competidores.
 * **Tabla comparativa** ref vs competidores con Δ crítica, Δ usuarios, Δ años (solo intra-fuente y misma escala).
 * **Resumen de diferencias** (insights): mediana del grupo, cuántos superan a la referencia, rango del top, caveats explícitos (sin ventas, sin fusionar escalas).

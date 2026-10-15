@@ -4,7 +4,8 @@ Comparador estático: HTML + CSS + JS sin build. Los datos son una foto generada
 
 ## Funcionalidades
 
-* Buscador por fuente (IGDB/RAWG), umbral de tier, nº de resultados.
+* Buscador en un solo paso: escribes → eliges de la lista → comparación al instante (insensible a mayúsculas/acentos; avisa si el juego está en la otra fuente). La landing carga con Hollow Knight ya comparado y chips de ejemplos.
+* Fuente (IGDB/RAWG), umbral de tier, nº de resultados.
 * Filtros de plataforma y género (opciones salen de los datos del snapshot) que restringen la lista de competidores.
 * Tabla comparativa ref vs competidores (Δ crítica, Δ usuarios, Δ años; solo intra-fuente y misma escala).
 * Resumen de diferencias con mediana del grupo y caveats (no hay ventas ni métricas fusionadas).
