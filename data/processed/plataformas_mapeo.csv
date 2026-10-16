@@ -1,0 +1,272 @@
+source,platform_id,platform_name,platform_slug,platform_family_id,platform_family_name,familia,observed_at
+rawg,4,PC,pc,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,187,PlayStation 5,playstation5,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,18,PlayStation 4,playstation4,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,1,Xbox One,xbox-one,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,186,Xbox Series S/X,xbox-series-x,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,7,Nintendo Switch,nintendo-switch,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,3,iOS,ios,,,Movil,2026-10-16T08:54:40.008467+00:00
+rawg,21,Android,android,,,Movil,2026-10-16T08:54:40.008467+00:00
+rawg,8,Nintendo 3DS,nintendo-3ds,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,9,Nintendo DS,nintendo-ds,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,13,Nintendo DSi,nintendo-dsi,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,5,macOS,macos,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,6,Linux,linux,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,14,Xbox 360,xbox360,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,80,Xbox,xbox-old,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,16,PlayStation 3,playstation3,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,15,PlayStation 2,playstation2,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,27,PlayStation,playstation1,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,19,PS Vita,ps-vita,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,17,PSP,psp,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,10,Wii U,wii-u,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,11,Wii,wii,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,105,GameCube,gamecube,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,83,Nintendo 64,nintendo-64,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,24,Game Boy Advance,game-boy-advance,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,43,Game Boy Color,game-boy-color,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,26,Game Boy,game-boy,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,79,SNES,snes,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,49,NES,nes,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,55,Classic Macintosh,macintosh,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,41,Apple II,apple-ii,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,166,Commodore / Amiga,commodore-amiga,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,28,Atari 7800,atari-7800,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,31,Atari 5200,atari-5200,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,23,Atari 2600,atari-2600,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,22,Atari Flashback,atari-flashback,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,25,Atari 8-bit,atari-8-bit,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,34,Atari ST,atari-st,,,PC,2026-10-16T08:54:40.008467+00:00
+rawg,46,Atari Lynx,atari-lynx,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,50,Atari XEGS,atari-xegs,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,167,Genesis,genesis,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,107,SEGA Saturn,sega-saturn,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,119,SEGA CD,sega-cd,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,117,SEGA 32X,sega-32x,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,74,SEGA Master System,sega-master-system,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,106,Dreamcast,dreamcast,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,111,3DO,3do,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,112,Jaguar,jaguar,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,77,Game Gear,game-gear,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,12,Neo Geo,neogeo,,,Consola,2026-10-16T08:54:40.008467+00:00
+rawg,171,Web,web,,,Otro,2026-10-16T08:54:40.008467+00:00
+igdb,376,Epoch Super Cassette Vision,epoch-super-cassette-vision,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,510,e-Reader / Card-e Reader,e-reader-slash-card-e-reader,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,12,Xbox 360,xbox360,2,Xbox,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,32,Sega Saturn,saturn,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,62,Atari Jaguar,jaguar,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,148,AY-3-8607,ay-3-8607,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,150,Turbografx-16/PC Engine CD,turbografx-16-slash-pc-engine-cd,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,156,Thomson MO5,thomson-mo5,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,306,Satellaview,satellaview,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,339,Sega Pico,sega-pico,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,389,AirConsole,airconsole,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,13,DOS,dos,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,60,Atari 7800,atari7800,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,41,Wii U,wiiu,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,309,Evercade,evercade,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,506,Amstrad GX4000,gx4000,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,112,Microcomputer,microcomputer--1,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,410,Atari Jaguar CD,atari-jaguar-cd,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,30,Sega 32X,sega32,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,53,MSX2,msx2,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,61,Atari Lynx,lynx,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,77,Sharp X1,x1,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,120,Neo Geo Pocket Color,neo-geo-pocket-color,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,127,Fairchild Channel F,fairchild-channel-f,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,132,Amazon Fire TV,firetv,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,413,Leapster Explorer/LeadPad Explorer,leapster-explorer-slash-leadpad-explorer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,140,AY-3-8500,ay-3-8500,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,143,AY-3-8760,ay-3-8760,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,153,Dragon 32/64,dragon-32-slash-64,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,167,PlayStation 5,ps5,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,154,Amstrad PCW,apcw,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,70,Vectrex,vectrex,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,87,Virtual Boy,virtualboy,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,145,AY-3-8603,ay-3-8603,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,386,Meta Quest 2,meta-quest-2,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,390,PlayStation VR2,psvr2,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,477,Panasonic Jungle,panasonic-jungle,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,65,Atari 8-bit,atari8bit,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,158,Commodore CDTV,commodore-cdtv,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,165,PlayStation VR,psvr,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,504,Uzebox,uzebox,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,440,Visual Memory Unit / Visual Memory System,visual-memory-unit-slash-visual-memory-system,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,473,Arcadia 2001,arcadia-2001,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,474,Gizmondo,gizmondo,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,48,PlayStation 4,ps4--1,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,51,Family Computer Disk System,fds,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,89,Microvision,microvision--1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,94,Commodore Plus/4,c-plus-4,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,123,WonderSwan Color,wonderswan-color,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,128,PC Engine SuperGrafx,supergrafx,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,129,Texas Instruments TI-99,ti-99,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,482,Sega CD 32X,sega-cd-32x,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,3,Linux,linux,4,Linux,PC,2026-10-16T08:54:42.639652+00:00
+igdb,8,PlayStation 2,ps2,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,88,Odyssey,odyssey--1,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,97,PDP-8,pdp-8--1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,23,Dreamcast,dc,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,136,Neo Geo CD,neo-geo-cd,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,134,Acorn Electron,acorn-electron,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,35,Sega Game Gear,gamegear,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,39,iOS,ios,,,Movil,2026-10-16T08:54:42.639652+00:00
+igdb,44,Tapwave Zodiac,zod,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,6,PC (Microsoft Windows),win,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,78,Sega CD,sega-cd,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,144,AY-3-8710,ay-3-8710,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,146,AY-3-8605,ay-3-8605,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,163,SteamVR,steam-vr,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,373,Sinclair ZX81,sinclair-zx81,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,147,AY-3-8606,ay-3-8606,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,149,PC-9800 Series,pc-9800-series,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,237,Sol-20,sol-20,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,505,Elektor TV Games Computer,elektor-tv-games-computer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,24,Game Boy Advance,gba,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,72,Ouya,ouya,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,85,Donner Model 30,donner30,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,115,Apple IIGS,apple-iigs,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,119,Neo Geo Pocket,neo-geo-pocket,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,125,PC-8800 Series,pc-8800-series,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,133,Odyssey 2 / Videopac G7000,odyssey-2-slash-videopac-g7000,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,135,Hyper Neo Geo 64,hyper-neo-geo-64,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,142,PC-50X Family,pc-50x-family,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,9,PlayStation 3,ps3,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,98,DEC GT40,gt40,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,11,Xbox,xbox,2,Xbox,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,111,Imlac PDS-1,imlac-pds1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,162,Oculus VR,oculus-vr,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,20,Nintendo DS,nds,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,18,Nintendo Entertainment System,nes,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,46,PlayStation Vita,psvita,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,308,Playdia,playdia,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,116,Acorn Archimedes,acorn-archimedes,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,117,Philips CD-i,philips-cdi,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,22,Game Boy Color,gbc,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,15,Commodore C64/128/MAX,c64,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,101,Ferranti Nimrod Computer,nimrod,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,67,Intellivision,intellivision,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,73,BlackBerry OS,blackberry,,,Movil,2026-10-16T08:54:42.639652+00:00
+igdb,86,TurboGrafx-16/PC Engine,turbografx16--1,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,66,Atari 5200,atari5200,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,108,PDP-11,pdp11,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,109,CDC Cyber 70,cdccyber70,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,113,OnLive Game System,onlive,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,118,FM Towns,fm-towns,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,121,Sharp X68000,sharp-x68000,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,124,SwanCrystal,swancrystal,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,131,Super NES CD-ROM System,super-nes-cd-rom-system,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,138,VC 4000,vc-4000,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,139,1292 Advanced Programmable Video System,1292-advanced-programmable-video-system,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,152,FM-7,fm-7,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,155,Tatung Einstein,tatung-einstein,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,157,NEC PC-6000 Series,nec-pc-6000-series,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,307,Game & Watch,g-and-w,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,114,Amiga CD32,amiga-cd32,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,161,Windows Mixed Reality,windows-mixed-reality,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,374,Sharp MZ-2200,sharp-mz-2200,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,375,Epoch Cassette Vision,epoch-cassette-vision,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,377,Plug & Play,plug-and-play,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,379,Game.com,game-dot-com,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,103,PDP-7,pdp-7--1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,382,Intellivision Amico,intellivision-amico,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,384,Oculus Quest,oculus-quest,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,385,Oculus Rift,oculus-rift,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,387,Oculus Go,oculus-go,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,479,Terebikko / See 'n Say Video Phone,terebikko-slash-see-n-say-video-phone,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,507,Advanced Pico Beena,advanced-pico-beena,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,508,Nintendo Switch 2,switch-2,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,21,Nintendo GameCube,ngc,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,33,Game Boy,gb,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,137,New Nintendo 3DS,new-3ds,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,42,N-Gage,ngage,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,57,WonderSwan,wonderswan,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,38,PlayStation Portable,psp,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,69,BBC Microcomputer System,bbcmicro,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,71,Commodore VIC-20,vic-20,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,74,Windows Phone,winphone,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,79,Neo Geo MVS,neogeomvs,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,84,SG-1000,sg1000,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,91,Bally Astrocade,astrocade,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,93,Commodore 16,c16,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,96,PDP-10,pdp10,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,122,Nuon,nuon,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,141,AY-3-8610,ay-3-8610,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,170,Google Stadia,stadia,4,Linux,PC,2026-10-16T08:54:42.639652+00:00
+igdb,388,Gear VR,gear-vr,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,372,OOParts,ooparts,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,203,DUPLICATE Stadia,duplicate-stadia,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,164,Daydream,daydream,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,380,Casio Loopy,casio-loopy,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,100,Analogue electronics,analogueelectronics,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,415,Watara/QuickShot Supervision,watara-slash-quickshot-supervision,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,478,Panasonic M2,panasonic-m2,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,486,Digiblast,digiblast,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,381,Playdate,playdate,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,509,Polymega,polymega,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,26,ZX Spectrum,zxs,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,378,Gamate,gamate,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,27,MSX,msx,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,37,Nintendo 3DS,3ds,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,169,Xbox Series X|S,series-x-s,2,Xbox,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,64,Sega Master System/Mark III,sms,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,95,PDP-1,pdp1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,99,Family Computer,famicom,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,102,EDSAC,edsac--1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,104,HP 2100,hp2100,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,105,HP 3000,hp3000,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,106,SDS Sigma 7,sdssigma7,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,107,Call-A-Computer time-shared mainframe computer system,call-a-computer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,110,PLATO,plato--1,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,151,TRS-80 Color Computer,trs-80-color-computer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,166,Pokémon mini,pokemon-mini,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,50,3DO Interactive Multiplayer,3do,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,238,DVD Player,dvd-player,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,239,Blu-ray Player,blu-ray-player,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,240,Zeebo,zeebo,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,274,PC-FX,pc-fx,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,411,Handheld Electronic LCD,handheld,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,236,Exidy Sorcerer,exidy-sorcerer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,405,Windows Mobile,windows-mobile,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,406,Sinclair QL,sinclair-ql,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,407,HyperScan,hyperscan,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,408,Mega Duck/Cougar Boy,mega-duck-slash-cougar-boy,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,409,Legacy Computer,legacy-computer,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,412,Leapster,leapster,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,414,LeapTV,leaptv,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,417,Palm OS,palm-os,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,439,V.Smile,vsmile,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,441,PocketStation,pocketstation,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,471,Meta Quest 3,meta-quest-3,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,472,visionOS,visionos,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,475,R-Zone,r-zone,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,476,Apple Pippin,apple-pippin,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,480,Super A'Can,super-acan,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,481,Tomy Tutor / Pyuta / Grandstand Tutor,tomy-tutor-slash-pyuta-slash-grandstand-tutor,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,34,Android,android,4,Linux,Movil,2026-10-16T08:54:42.639652+00:00
+igdb,16,Amiga,amiga,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,68,ColecoVision,colecovision,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,25,Amstrad CPC,acpc,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,52,Arcade,arcade,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,29,Sega Mega Drive/Genesis,genesis-slash-megadrive,3,Sega,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,47,Virtual Console,vc,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,7,PlayStation,ps,1,PlayStation,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,416,64DD,64dd,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,438,Arduboy,arduboy,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,55,Legacy Mobile Device,mobile,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,159,Nintendo DSi,nintendo-dsi,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,90,Commodore PET,cpet,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,126,TRS-80,trs-80,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,487,LaserActive,laseractive,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,4,Nintendo 64,n64,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,5,Wii,wii,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,19,Super Nintendo Entertainment System,snes,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,49,Xbox One,xboxone,2,Xbox,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,58,Super Famicom,sfam,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,63,Atari ST/STE,atari-st,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,75,Apple II,appleii,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,14,Mac,mac,,,PC,2026-10-16T08:54:42.639652+00:00
+igdb,82,Web browser,browser,,,Otro,2026-10-16T08:54:42.639652+00:00
+igdb,130,Nintendo Switch,switch,5,Nintendo,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,80,Neo Geo AES,neogeoaes,,,Consola,2026-10-16T08:54:42.639652+00:00
+igdb,59,Atari 2600,atari2600,6,Atari,Consola,2026-10-16T08:54:42.639652+00:00
