@@ -1,0 +1,160 @@
+{
+  "observed_at": "2026-10-16T08:54:51.744213+00:00",
+  "nota": "Una sola observación (snapshot de auditoría). No es histórico: comparar solo con futuros observed_at distintos.",
+  "mapeo_plataformas": {
+    "observed_at": "2026-10-16T08:54:36.793368+00:00",
+    "filas": 271,
+    "por_fuente": {
+      "rawg": 51,
+      "igdb": 220
+    },
+    "por_familia": {
+      "rawg:PC": 7,
+      "rawg:Consola": 41,
+      "rawg:Movil": 2,
+      "rawg:Otro": 1,
+      "igdb:Consola": 85,
+      "igdb:Otro": 91,
+      "igdb:PC": 41,
+      "igdb:Movil": 3
+    }
+  },
+  "rawg": {
+    "source": "rawg",
+    "n": 120,
+    "observed_at": "2026-10-16T08:54:42.644324+00:00",
+    "nulos_conteo": {
+      "id": 0,
+      "name": 0,
+      "slug": 0,
+      "released": 0,
+      "metacritic": 3,
+      "rating": 0,
+      "ratings_count": 0,
+      "background_image": 0,
+      "platforms": 0,
+      "genres": 0
+    },
+    "nulos_pct": {
+      "id": 0.0,
+      "name": 0.0,
+      "slug": 0.0,
+      "released": 0.0,
+      "metacritic": 2.5,
+      "rating": 0.0,
+      "ratings_count": 0.0,
+      "background_image": 0.0,
+      "platforms": 0.0,
+      "genres": 0.0
+    },
+    "duplicados_source_id": 40,
+    "duplicados_source_id_platform": 40,
+    "unicos_source_id": 80,
+    "ratings": {
+      "campo_criticos": "metacritic",
+      "con_criticos_pct": 97.5,
+      "con_usuarios_pct": 100.0,
+      "con_ambas_pct": 97.5,
+      "con_alguna_pct": 100.0
+    },
+    "por_grupo": {
+      "PC": {
+        "n": 40,
+        "critic": 40,
+        "user": 40,
+        "ambas": 40,
+        "critic_pct": 100.0,
+        "user_pct": 100.0,
+        "ambas_pct": 100.0
+      },
+      "Consola": {
+        "n": 40,
+        "critic": 39,
+        "user": 40,
+        "ambas": 39,
+        "critic_pct": 97.5,
+        "user_pct": 100.0,
+        "ambas_pct": 97.5
+      },
+      "Movil": {
+        "n": 40,
+        "critic": 38,
+        "user": 40,
+        "ambas": 38,
+        "critic_pct": 95.0,
+        "user_pct": 100.0,
+        "ambas_pct": 95.0
+      }
+    }
+  },
+  "igdb": {
+    "source": "igdb",
+    "n": 150,
+    "observed_at": "2026-10-16T08:54:48.619889+00:00",
+    "nulos_conteo": {
+      "id": 0,
+      "name": 0,
+      "slug": 0,
+      "first_release_date": 0,
+      "aggregated_rating": 1,
+      "aggregated_rating_count": 1,
+      "rating": 0,
+      "rating_count": 0,
+      "cover": 0,
+      "platforms": 0,
+      "genres": 0
+    },
+    "nulos_pct": {
+      "id": 0.0,
+      "name": 0.0,
+      "slug": 0.0,
+      "first_release_date": 0.0,
+      "aggregated_rating": 0.7,
+      "aggregated_rating_count": 0.7,
+      "rating": 0.0,
+      "rating_count": 0.0,
+      "cover": 0.0,
+      "platforms": 0.0,
+      "genres": 0.0
+    },
+    "duplicados_source_id": 45,
+    "duplicados_source_id_platform": 45,
+    "unicos_source_id": 105,
+    "ratings": {
+      "campo_criticos": "aggregated_rating",
+      "con_criticos_pct": 99.3,
+      "con_usuarios_pct": 100.0,
+      "con_ambas_pct": 99.3,
+      "con_alguna_pct": 100.0
+    },
+    "por_grupo": {
+      "PC": {
+        "n": 50,
+        "critic": 50,
+        "user": 50,
+        "ambas": 50,
+        "critic_pct": 100.0,
+        "user_pct": 100.0,
+        "ambas_pct": 100.0
+      },
+      "Consola": {
+        "n": 50,
+        "critic": 50,
+        "user": 50,
+        "ambas": 50,
+        "critic_pct": 100.0,
+        "user_pct": 100.0,
+        "ambas_pct": 100.0
+      },
+      "Movil": {
+        "n": 50,
+        "critic": 49,
+        "user": 50,
+        "ambas": 49,
+        "critic_pct": 98.0,
+        "user_pct": 100.0,
+        "ambas_pct": 98.0
+      }
+    }
+  }
+}
