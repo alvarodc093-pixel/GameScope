@@ -1,9 +1,9 @@
 {
-  "snapshot": "snapshot_20261015T200549Z",
-  "generated_at": "2026-10-15T20:05:53.905341+00:00",
-  "observed_at_min": "2026-10-15T18:32:12.112852+00:00",
-  "observed_at_max": "2026-10-15T20:05:08.925189+00:00",
-  "n_snapshots": 4,
+  "snapshot": "snapshot_20261024T211043Z",
+  "generated_at": "2026-10-24T21:11:44.844402+00:00",
+  "observed_at_min": "2026-10-15T18:56:47.149799+00:00",
+  "observed_at_max": "2026-10-24T21:10:04.617406+00:00",
+  "n_snapshots": 5,
   "n": 1131,
   "por_fuente": {
     "igdb": 630,
@@ -11,7 +11,7 @@
   },
   "scoring": "v1",
   "matching": {
-    "filas_con_contraparte": 375,
+    "filas_con_contraparte": 373,
     "nota": "Identidad cruzada derivada (src/matching.py); las metricas nunca se fusionan entre fuentes."
   },
   "precios_pc": {

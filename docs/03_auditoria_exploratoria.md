@@ -32,7 +32,7 @@ Muestreo **top popular** (`ordering=-added` RAWG, `sort total_rating_count desc`
 | Consola_MS_Nintendo | 25/25/25 | 25/25/25 |
 | Móvil | 24/25/24 | 25/25/25 |
 
-Lectura honesta: en el top hay casi todo. Fuera del top los nulos subirán (juegos nicho/móvil indie). El umbral 90% **pasa en el top pero no es generalizable**: hay que re-medirlo en una muestra aleatoria/mid-tail antes de prometerlo.
+Lectura: en el top hay casi todo. Fuera del top los nulos subirán (juegos nicho/móvil indie). El umbral 90% **pasa en el top pero no es generalizable**: hay que re-medirlo en una muestra aleatoria/mid-tail antes de prometerlo.
 
 ## 4. Comparabilidad de métricas (no mezclar)
 

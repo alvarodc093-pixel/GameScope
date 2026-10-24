@@ -44,9 +44,9 @@ Docs: https://rawg.io/apidocs. Condiciones: https://rawg.io/tos_api.
 
 Lista declara, entre otros: `id`, `slug`, `name`, `released`, `platforms[]`, `genres[]`, `developers[]`, `publishers[]`, `metacritic`, `rating`, `ratings_count`, `reviews_count`, `added`, `playtime`, `esrb_rating`, `stores[]`, `updated`.
 
-Mapeo a campos pedidos:
+Mapeo a los campos necesarios:
 
-| Campo pedido | RAWG | Observación |
+| Campo necesario | RAWG | Observación |
 |---|---|---|
 | ID original | `id` + `slug` | Disponible según docs. Cobertura por medir. |
 | Nombre | `name` | Disponible. |
@@ -120,7 +120,7 @@ Lenguaje Apicalypse: `fields name,rating; where rating > 75; sort rating desc; l
 
 ### Campos (documentados, cobertura real pendiente de medir)
 
-| Campo pedido | IGDB | Observación |
+| Campo necesario | IGDB | Observación |
 |---|---|---|
 | ID original | `games.id` + `checksum` | Estable. `checksum` es hash del objeto. |
 | Nombre | `games.name`, `alternative_names` | Disponible. Filtrar ediciones con `version_parent = null` para no duplicar “Collector’s Edition”. |

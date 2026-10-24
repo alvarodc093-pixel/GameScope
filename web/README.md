@@ -1,6 +1,6 @@
 # GameScope web (Vercel)
 
-Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. Los datos son una foto generada del snapshot (`web/data/games.json` — 1.131 juegos en la última exportación, 2026-10-15) más `meta.json` y `evolucion.json`; la app los carga desde `web/data/datos.js` (mismos datos como script global), por lo que **funciona abriendo `index.html` con doble clic** y también con cualquier servidor estático.
+Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. Los datos son una foto generada del snapshot (`web/data/games.json` — 1.131 juegos en la última exportación, 2026-10-24) más `meta.json` y `evolucion.json`; la app los carga desde `web/data/datos.js` (mismos datos como script global), por lo que **funciona abriendo `index.html` con doble clic** y también con cualquier servidor estático.
 
 ## Funcionalidades
 
@@ -13,7 +13,7 @@ Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. 
 * Tabla comparativa ref vs competidores (Δ crítica, Δ usuarios, Δ años; solo intra-fuente y misma escala).
 * Resumen de diferencias con mediana del grupo y caveats (no hay ventas ni métricas fusionadas).
 * Scoring v1 en `js/scoring.js`: réplica de `src/scoring.py` (incluido modo estricto); mantén pesos y umbrales sincronizados.
-* Sección Evolución: deltas reales con ≥2 snapshots; con 1 sola foto, estado vacío honesto.
+* Sección Evolución: deltas reales con ≥2 snapshots; con una sola foto, la app lo indica en lugar de inventar una tendencia.
 
 ## Ejecutar en local
 

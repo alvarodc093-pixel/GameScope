@@ -27,7 +27,7 @@
       return `<div class="metric"><div class="metric-top"><span>${etiqueta}</span><strong>sin dato</strong></div><small>Escala 0–${m.scale}</small></div>`;
     const pct = Math.max(0, Math.min(100, (m.score / m.scale) * 100));
     const n = m.count != null ? ` · n=${m.count}` : " · n no publicado";
-    return `<div class="metric"><div class="metric-top"><span>${etiqueta}</span><strong>${m.score} / ${m.scale}${esc(n)}</strong></div><div class="bar ${clase}" role="img" aria-label="${etiqueta}: ${m.score} de ${m.scale}"><span style="width:${pct}%"></span></div></div>`;
+    return `<div class="metric"><div class="metric-top"><span>${etiqueta}</span><strong>${fmt(m.score)} / ${m.scale}${esc(n)}</strong></div><div class="bar ${clase}" role="img" aria-label="${etiqueta}: ${fmt(m.score)} de ${m.scale}"><span style="width:${pct}%"></span></div></div>`;
   }
 
   function refCardHTML(j) {
