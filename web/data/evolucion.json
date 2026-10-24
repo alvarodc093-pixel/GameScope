@@ -1,72 +1,15 @@
 {
   "n_anteriores": 1131,
   "n_actuales": 1131,
-  "con_cambio": 2,
+  "con_cambio": 0,
   "altas": [],
   "bajas": [],
-  "cambios": [
-    {
-      "source": "igdb",
-      "source_id": "4843",
-      "name": "Kingdom Come: Deliverance",
-      "slug": "kingdom-come-deliverance",
-      "metricas": {
-        "critic_score": {
-          "antes": 73.72727272727273,
-          "ahora": 73.72727272727273,
-          "delta": 0.0
-        },
-        "critic_count": {
-          "antes": 11.0,
-          "ahora": 11.0,
-          "delta": 0.0
-        },
-        "user_score": {
-          "antes": 78.61584940019011,
-          "ahora": 78.61658060108181,
-          "delta": 0.001
-        },
-        "user_count": {
-          "antes": 475.0,
-          "ahora": 476.0,
-          "delta": 1.0
-        }
-      }
-    },
-    {
-      "source": "igdb",
-      "source_id": "298526",
-      "name": "Kingdom Come: Deliverance II",
-      "slug": "kingdom-come-deliverance-ii",
-      "metricas": {
-        "critic_score": {
-          "antes": 93.0,
-          "ahora": 93.0,
-          "delta": 0.0
-        },
-        "critic_count": {
-          "antes": 4.0,
-          "ahora": 4.0,
-          "delta": 0.0
-        },
-        "user_score": {
-          "antes": 92.55491824623391,
-          "ahora": 92.55387253137798,
-          "delta": -0.001
-        },
-        "user_count": {
-          "antes": 273.0,
-          "ahora": 274.0,
-          "delta": 1.0
-        }
-      }
-    }
-  ],
+  "cambios": [],
   "suficientes_observaciones": true,
-  "n_snapshots": 6,
+  "n_snapshots": 7,
   "mensaje": "",
   "entre": {
-    "anterior": "snapshot_20261024T211043Z",
-    "actual": "snapshot_20261024T213242Z"
+    "anterior": "snapshot_20261024T213242Z",
+    "actual": "snapshot_20261024T221623Z"
   }
 }
