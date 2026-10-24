@@ -6,10 +6,10 @@
   "bajas": [],
   "cambios": [],
   "suficientes_observaciones": true,
-  "n_snapshots": 7,
+  "n_snapshots": 8,
   "mensaje": "",
   "entre": {
-    "anterior": "snapshot_20261024T213242Z",
-    "actual": "snapshot_20261024T221623Z"
+    "anterior": "snapshot_20261024T221623Z",
+    "actual": "snapshot_20261024T222206Z"
   }
 }

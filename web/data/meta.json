@@ -1,9 +1,9 @@
 {
-  "snapshot": "snapshot_20261024T221623Z",
-  "generated_at": "2026-10-24T22:17:19.354004+00:00",
+  "snapshot": "snapshot_20261024T222206Z",
+  "generated_at": "2026-10-24T22:22:51.481365+00:00",
   "observed_at_min": "2026-10-15T18:56:47.149799+00:00",
-  "observed_at_max": "2026-10-24T22:15:53.403781+00:00",
-  "n_snapshots": 7,
+  "observed_at_max": "2026-10-24T22:21:31.674238+00:00",
+  "n_snapshots": 8,
   "n": 1131,
   "por_fuente": {
     "igdb": 630,

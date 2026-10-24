@@ -1,39 +1,39 @@
 source,source_id,slug,name,cheapshark_game_id,steam_app_id,precio_min_usd,moneda,en_steam,observed_at
-rawg,3328,the-witcher-3-wild-hunt,The Witcher 3: Wild Hunt,112330,,39.99,USD,0,2026-10-24T22:16:28.588926+00:00
-rawg,4200,portal-2,Portal 2,36,620,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,28,red-dead-redemption-2,Red Dead Redemption 2,206516,1174180,13.46,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,1942,the-witcher-3-wild-hunt,The Witcher 3: Wild Hunt,112330,,39.99,USD,0,2026-10-24T22:16:28.588926+00:00
-rawg,13536,portal,Portal,82,400,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,5679,the-elder-scrolls-v-skyrim,The Elder Scrolls V: Skyrim,180821,611670,50.90,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,72,portal-2,Portal 2,36,620,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,472,the-elder-scrolls-v-skyrim,The Elder Scrolls V: Skyrim,180821,611670,50.90,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,4062,bioshock-infinite,BioShock Infinite,93503,8870,6.45,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,13537,half-life-2,Half-Life 2,59,220,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,5286,tomb-raider,Tomb Raider,93922,,6.99,USD,0,2026-10-24T22:16:28.588926+00:00
-igdb,71,portal,Portal,82,400,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,25076,red-dead-redemption-2,Red Dead Redemption 2,206516,1174180,13.46,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,58134,marvels-spider-man,Marvel's Spider-Man,294621,2651280,44.74,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,19560,god-of-war--1,God of War,236053,1593500,24.99,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,233,half-life-2,Half-Life 2,59,220,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,3070,fallout-4,Fallout 4,144222,377160,16.79,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,12020,left-4-dead-2,Left 4 Dead 2,43,550,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,1030,limbo,Limbo,57,48000,12.49,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,4286,bioshock,BioShock,128,7670,4.80,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,29177,detroit-become-human,Detroit: Become Human,206736,1222140,6.50,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,802,borderlands-2,Borderlands 2,88304,49520,2.89,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,20,bioshock,BioShock,128,7670,4.80,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,127,assassin-s-creed-ii,Assassin's Creed II,232354,33230,2.25,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,41494,cyberpunk-2077,Cyberpunk 2077,202350,1091500,17.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,4161,far-cry-3,Far Cry 3,88168,220240,4.50,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,28568,assassins-creed-ii,Assassin's Creed II,232354,33230,2.25,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,231,half-life,Half-Life,75,70,9.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,7689,rise-of-the-tomb-raider,Rise of the Tomb Raider,145517,391220,2.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,2551,dark-souls-iii,Dark Souls III,144565,374320,36.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,9767,hollow-knight,Hollow Knight,165363,367520,14.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,4248,dishonored,Dishonored,88611,205100,8.69,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,3287,batman-arkham-knight,Batman: Arkham Knight,107598,208650,3.16,USD,1,2026-10-24T22:16:28.588926+00:00
-igdb,538,bioshock-infinite,BioShock Infinite,93503,8870,6.45,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,3841,assassins-creed-iv-black-flag,Assassin’s Creed IV: Black Flag,98236,242050,39.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,3612,hotline-miami,Hotline Miami,89908,219150,1.99,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,5563,fallout-new-vegas,Fallout: New Vegas,80,22380,8.69,USD,1,2026-10-24T22:16:28.588926+00:00
-rawg,1450,inside,INSIDE,153803,304430,24.99,USD,1,2026-10-24T22:16:28.588926+00:00
+rawg,3328,the-witcher-3-wild-hunt,The Witcher 3: Wild Hunt,112330,,39.99,USD,0,2026-10-24T22:22:12.972664+00:00
+rawg,4200,portal-2,Portal 2,36,620,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,28,red-dead-redemption-2,Red Dead Redemption 2,206516,1174180,13.46,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,1942,the-witcher-3-wild-hunt,The Witcher 3: Wild Hunt,112330,,39.99,USD,0,2026-10-24T22:22:12.972664+00:00
+rawg,13536,portal,Portal,82,400,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,5679,the-elder-scrolls-v-skyrim,The Elder Scrolls V: Skyrim,180821,611670,50.90,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,72,portal-2,Portal 2,36,620,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,472,the-elder-scrolls-v-skyrim,The Elder Scrolls V: Skyrim,180821,611670,50.90,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,4062,bioshock-infinite,BioShock Infinite,93503,8870,6.45,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,13537,half-life-2,Half-Life 2,59,220,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,5286,tomb-raider,Tomb Raider,93922,,6.99,USD,0,2026-10-24T22:22:12.972664+00:00
+igdb,71,portal,Portal,82,400,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,25076,red-dead-redemption-2,Red Dead Redemption 2,206516,1174180,13.46,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,58134,marvels-spider-man,Marvel's Spider-Man,294621,2651280,44.74,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,19560,god-of-war--1,God of War,236053,1593500,24.99,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,233,half-life-2,Half-Life 2,59,220,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,3070,fallout-4,Fallout 4,144222,377160,16.79,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,12020,left-4-dead-2,Left 4 Dead 2,43,550,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,1030,limbo,Limbo,57,48000,12.49,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,4286,bioshock,BioShock,128,7670,4.80,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,29177,detroit-become-human,Detroit: Become Human,206736,1222140,6.50,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,802,borderlands-2,Borderlands 2,88304,49520,2.89,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,20,bioshock,BioShock,128,7670,4.80,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,127,assassin-s-creed-ii,Assassin's Creed II,232354,33230,2.25,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,41494,cyberpunk-2077,Cyberpunk 2077,202350,1091500,17.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,4161,far-cry-3,Far Cry 3,88168,220240,4.50,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,28568,assassins-creed-ii,Assassin's Creed II,232354,33230,2.25,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,231,half-life,Half-Life,75,70,9.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,7689,rise-of-the-tomb-raider,Rise of the Tomb Raider,145517,391220,2.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,2551,dark-souls-iii,Dark Souls III,144565,374320,36.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,9767,hollow-knight,Hollow Knight,165363,367520,14.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,4248,dishonored,Dishonored,88611,205100,8.69,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,3287,batman-arkham-knight,Batman: Arkham Knight,107598,208650,3.16,USD,1,2026-10-24T22:22:12.972664+00:00
+igdb,538,bioshock-infinite,BioShock Infinite,93503,8870,6.45,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,3841,assassins-creed-iv-black-flag,Assassin’s Creed IV: Black Flag,98236,242050,39.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,3612,hotline-miami,Hotline Miami,89908,219150,1.99,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,5563,fallout-new-vegas,Fallout: New Vegas,80,22380,8.69,USD,1,2026-10-24T22:22:12.972664+00:00
+rawg,1450,inside,INSIDE,153803,304430,24.99,USD,1,2026-10-24T22:22:12.972664+00:00
