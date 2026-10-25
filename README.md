@@ -1,8 +1,17 @@
 # GameScope
 
-Comparador de videojuegos frente a sus competidores directos en PC, consolas y móvil. Eliges un juego y ves con qué juegos compite (mismo género, plataformas y época), cómo los valoran la crítica y los usuarios, y qué ha cambiado entre una semana y otra.
+**Cómo se posiciona un videojuego frente a sus competidores directos, cruzando IGDB, RAWG y CheapShark sin mezclar escalas.**
 
-**Demo:** https://gamescope-comparador.vercel.app
+[![Demo](https://img.shields.io/badge/Demo-en%20vivo-2ea44f?style=flat-square)](https://gamescope-comparador.vercel.app) [![Snapshot semanal](https://github.com/alvarodc093-pixel/GameScope/actions/workflows/weekly_snapshot.yml/badge.svg)](https://github.com/alvarodc093-pixel/GameScope/actions/workflows/weekly_snapshot.yml) ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Tests](https://img.shields.io/badge/Tests-61-2ea44f?style=flat-square)
+
+![Comparador de GameScope](docs/img/comparador.png)
+
+## En resumen
+
+- **Problema:** las notas de prensa y de usuarios viven en sitios distintos, con escalas y número de votos distintos, y nadie las pone lado a lado por plataforma.
+- **Datos:** 1.131 juegos de IGDB y RAWG con precios de CheapShark, en snapshots semanales fechados.
+- **Resultado:** una puntuación configurable elige los competidores y explica por qué; la web compara notas, votos y años, y muestra qué ha cambiado entre semanas.
+- **Ingeniería:** pipeline de muestreo, cruce entre fuentes y exportación automatizado con GitHub Actions y cubierto por 61 tests.
 
 ## El problema
 
@@ -36,6 +45,8 @@ Del notebook [`notebooks/02_eda.ipynb`](notebooks/02_eda.ipynb), con la muestra 
 Una puntuación configurable (`src/scoring.py`) combina género y plataforma (obligatorios), cercanía en el año de lanzamiento y estudio en común si se conoce. Cada competidor sale con una explicación de por qué lo es. El **modo estricto** exige además año conocido y al menos dos géneros en común. La misma regla está replicada en JavaScript (`web/js/scoring.js`) y hay tests que comprueban ambas.
 
 ## La web
+
+![Evolución entre snapshots](docs/img/evolucion.png)
 
 Web estática (HTML, CSS y JavaScript sin dependencias) en `web/`, generada a partir del último snapshot:
 
