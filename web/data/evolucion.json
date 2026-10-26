@@ -1,15 +1,6524 @@
 {
   "n_anteriores": 1131,
   "n_actuales": 1131,
-  "con_cambio": 0,
-  "altas": [],
-  "bajas": [],
-  "cambios": [],
+  "con_cambio": 232,
+  "altas": [
+    {
+      "source": "igdb",
+      "source_id": "105049",
+      "name": "Remnant: From the Ashes"
+    }
+  ],
+  "bajas": [
+    {
+      "source": "igdb",
+      "source_id": "28512",
+      "name": "Risk of Rain 2"
+    }
+  ],
+  "cambios": [
+    {
+      "source": "igdb",
+      "source_id": "626",
+      "name": "Carmageddon",
+      "slug": "carmageddon",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 79.7371788784589,
+          "ahora": 79.3837467337587,
+          "delta": -0.353
+        },
+        "user_count": {
+          "antes": 186.0,
+          "ahora": 187.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "126",
+      "name": "Diablo II",
+      "slug": "diablo-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 2.0,
+          "ahora": 2.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.48197095356609,
+          "ahora": 88.61517713476893,
+          "delta": 0.133
+        },
+        "user_count": {
+          "antes": 1610.0,
+          "ahora": 1611.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "7334",
+      "name": "Bloodborne",
+      "slug": "bloodborne",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.11111111111111,
+          "ahora": 91.11111111111111,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 18.0,
+          "ahora": 18.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 91.34688869645586,
+          "ahora": 91.43213317569456,
+          "delta": 0.085
+        },
+        "user_count": {
+          "antes": 1881.0,
+          "ahora": 1883.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "10233",
+      "name": "Brawlhalla",
+      "slug": "brawlhalla",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 1.0,
+          "ahora": 1.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 65.87811598985371,
+          "ahora": 65.95798715358944,
+          "delta": 0.08
+        },
+        "user_count": {
+          "antes": 290.0,
+          "ahora": 290.0,
+          "delta": 0.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "39",
+      "name": "Mafia",
+      "slug": "mafia",
+      "metricas": {
+        "critic_score": {
+          "antes": 62.66666666666666,
+          "ahora": 62.66666666666666,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.31950715657806,
+          "ahora": 86.34216199345772,
+          "delta": 0.023
+        },
+        "user_count": {
+          "antes": 1547.0,
+          "ahora": 1548.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3387",
+      "name": "Bloodborne",
+      "slug": "bloodborne",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.4,
+          "ahora": 4.41,
+          "delta": 0.01
+        },
+        "user_count": {
+          "antes": 2465.0,
+          "ahora": 2466.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10073",
+      "name": "Divinity: Original Sin 2",
+      "slug": "divinity-original-sin-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 95.0,
+          "ahora": 95.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.37,
+          "delta": -0.01
+        },
+        "user_count": {
+          "antes": 1693.0,
+          "ahora": 1694.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "58134",
+      "name": "Marvel's Spider-Man",
+      "slug": "marvels-spider-man",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.44,
+          "ahora": 4.45,
+          "delta": 0.01
+        },
+        "user_count": {
+          "antes": 3755.0,
+          "ahora": 3754.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "12320",
+      "name": "Prison Architect",
+      "slug": "prison-architect-all-day-and-a-psych",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.72,
+          "ahora": 3.73,
+          "delta": 0.01
+        },
+        "user_count": {
+          "antes": 589.0,
+          "ahora": 590.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "817974",
+      "name": "Wallpaper Engine",
+      "slug": "wallpaper-engine",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.05,
+          "ahora": 4.06,
+          "delta": 0.01
+        },
+        "user_count": {
+          "antes": 263.0,
+          "ahora": 264.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "115289",
+      "name": "Hollow Knight: Silksong",
+      "slug": "hollow-knight-silksong",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.5,
+          "ahora": 89.5,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 92.47023426117946,
+          "ahora": 92.46805588442946,
+          "delta": -0.002
+        },
+        "user_count": {
+          "antes": 517.0,
+          "ahora": 519.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "50199",
+      "name": "Metro: Last Light Redux",
+      "slug": "metro-last-light-redux",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 80.28155962175248,
+          "ahora": 80.279720194913,
+          "delta": -0.002
+        },
+        "user_count": {
+          "antes": 283.0,
+          "ahora": 283.0,
+          "delta": 0.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "26226",
+      "name": "Celeste",
+      "slug": "celeste",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.3,
+          "ahora": 91.3,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.71585223535334,
+          "ahora": 86.7149716326048,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 1476.0,
+          "ahora": 1477.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1877",
+      "name": "Cyberpunk 2077",
+      "slug": "cyberpunk-2077",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.23809523809524,
+          "ahora": 75.23809523809524,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 21.0,
+          "ahora": 21.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.26777948565045,
+          "ahora": 83.26842507991628,
+          "delta": 0.001
+        },
+        "user_count": {
+          "antes": 1659.0,
+          "ahora": 1659.0,
+          "delta": 0.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "441",
+      "name": "Empire: Total War",
+      "slug": "empire-total-war",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.83333333333333,
+          "ahora": 89.83333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 77.9484579918527,
+          "ahora": 77.94754560154814,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 162.0,
+          "ahora": 163.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "119277",
+      "name": "Genshin Impact",
+      "slug": "genshin-impact",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.28571428571429,
+          "ahora": 83.28571428571429,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 7.0,
+          "ahora": 7.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 78.85135981678641,
+          "ahora": 78.85263023823605,
+          "delta": 0.001
+        },
+        "user_count": {
+          "antes": 676.0,
+          "ahora": 676.0,
+          "delta": 0.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "732",
+      "name": "Grand Theft Auto: San Andreas",
+      "slug": "grand-theft-auto-san-andreas",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.14285714285714,
+          "ahora": 93.14285714285714,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 90.09005956545911,
+          "ahora": 90.089434797977,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 4094.0,
+          "ahora": 4096.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1384",
+      "name": "Hotline Miami",
+      "slug": "hotline-miami",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.2,
+          "ahora": 86.2,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.00429096343987,
+          "ahora": 83.00353741604694,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 1268.0,
+          "ahora": 1269.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "298526",
+      "name": "Kingdom Come: Deliverance II",
+      "slug": "kingdom-come-deliverance-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.0,
+          "ahora": 93.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 92.55387253137798,
+          "ahora": 92.55449267700257,
+          "delta": 0.001
+        },
+        "user_count": {
+          "antes": 274.0,
+          "ahora": 275.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "19565",
+      "name": "Marvel's Spider-Man",
+      "slug": "marvels-spider-man",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.6875,
+          "ahora": 89.6875,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 16.0,
+          "ahora": 16.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.14425252835923,
+          "ahora": 87.1436532039951,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 2177.0,
+          "ahora": 2179.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "115115",
+      "name": "Resident Evil 3",
+      "slug": "resident-evil-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.81818181818181,
+          "ahora": 79.81818181818181,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 11.0,
+          "ahora": 11.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 77.51995603226456,
+          "ahora": 77.5193895801025,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 623.0,
+          "ahora": 624.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "438",
+      "name": "Rome: Total War",
+      "slug": "rome-total-war",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.0,
+          "ahora": 91.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 3.0,
+          "ahora": 3.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.0846314853426,
+          "ahora": 83.08411905120506,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 322.0,
+          "ahora": 323.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "7205",
+      "name": "SuperHot",
+      "slug": "superhot",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.72222222222223,
+          "ahora": 84.72222222222223,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 18.0,
+          "ahora": 18.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 76.74337072115118,
+          "ahora": 76.74233550962148,
+          "delta": -0.001
+        },
+        "user_count": {
+          "antes": 557.0,
+          "ahora": 557.0,
+          "delta": 0.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "104967",
+      "name": "Valheim",
+      "slug": "valheim",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 2.0,
+          "ahora": 2.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 84.27683684102908,
+          "ahora": 84.27807112889141,
+          "delta": 0.001
+        },
+        "user_count": {
+          "antes": 312.0,
+          "ahora": 313.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "59359",
+      "name": "A Plague Tale: Innocence",
+      "slug": "a-plague-tale-innocence",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.14,
+          "ahora": 4.14,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1547.0,
+          "ahora": 1548.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "19487",
+      "name": "Alan Wake",
+      "slug": "alan-wake",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.09,
+          "ahora": 4.09,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2305.0,
+          "ahora": 2306.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "4754",
+      "name": "Alien: Isolation",
+      "slug": "alien-isolation",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.63157894736842,
+          "ahora": 85.63157894736842,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 19.0,
+          "ahora": 19.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.30074100334973,
+          "ahora": 85.30084847376772,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 721.0,
+          "ahora": 722.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "13668",
+      "name": "Amnesia: The Dark Descent",
+      "slug": "amnesia-the-dark-descent",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.65,
+          "ahora": 3.65,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1241.0,
+          "ahora": 1242.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "290856",
+      "name": "Apex Legends",
+      "slug": "apex-legends",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.63,
+          "ahora": 3.63,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2424.0,
+          "ahora": 2425.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "9810",
+      "name": "ARK: Survival Evolved",
+      "slug": "ark-survival-evolved",
+      "metricas": {
+        "critic_score": {
+          "antes": 70.0,
+          "ahora": 70.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.08,
+          "ahora": 3.08,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 676.0,
+          "ahora": 677.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "113",
+      "name": "Assassin's Creed Brotherhood",
+      "slug": "assassins-creed-brotherhood",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.33333333333333,
+          "ahora": 83.33333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 9.0,
+          "ahora": 9.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 82.82624704754627,
+          "ahora": 82.82624704754627,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1763.0,
+          "ahora": 1764.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "127",
+      "name": "Assassin's Creed II",
+      "slug": "assassin-s-creed-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.25,
+          "ahora": 90.25,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.71388565136682,
+          "ahora": 86.71393145462983,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3230.0,
+          "ahora": 3232.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "103054",
+      "name": "Assassin's Creed Odyssey",
+      "slug": "assassins-creed-odyssey",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.35714285714286,
+          "ahora": 88.35714285714286,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 14.0,
+          "ahora": 14.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 80.89388913319821,
+          "ahora": 80.89430910131122,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 977.0,
+          "ahora": 978.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "28153",
+      "name": "Assassin's Creed Origins",
+      "slug": "assassins-creed-origins",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.96,
+          "ahora": 3.96,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2121.0,
+          "ahora": 2120.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "537",
+      "name": "Assassin's Creed Revelations",
+      "slug": "assassins-creed-revelations",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.71428571428571,
+          "ahora": 81.71428571428571,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 7.0,
+          "ahora": 7.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 76.99567171026001,
+          "ahora": 76.99576150746253,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1248.0,
+          "ahora": 1249.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3841",
+      "name": "Assassin’s Creed IV: Black Flag",
+      "slug": "assassins-creed-iv-black-flag",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.16,
+          "ahora": 4.16,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2671.0,
+          "ahora": 2672.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "500",
+      "name": "Batman: Arkham Asylum",
+      "slug": "batman-arkham-asylum",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.4,
+          "ahora": 89.4,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 5.0,
+          "ahora": 5.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.59541545644805,
+          "ahora": 85.59530948373396,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2602.0,
+          "ahora": 2603.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "501",
+      "name": "Batman: Arkham City",
+      "slug": "batman-arkham-city",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.2,
+          "ahora": 91.2,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.58133715938956,
+          "ahora": 87.58135954274789,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2706.0,
+          "ahora": 2708.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "998",
+      "name": "Battlefield 1",
+      "slug": "battlefield-1",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.84,
+          "ahora": 3.84,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1986.0,
+          "ahora": 1987.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "352",
+      "name": "Battlefield: Bad Company 2",
+      "slug": "battlefield-bad-company-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.16666666666667,
+          "ahora": 87.16666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 80.63056888408786,
+          "ahora": 80.63056888408786,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 655.0,
+          "ahora": 656.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10090",
+      "name": "Beholder",
+      "slug": "beholder",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.8,
+          "ahora": 3.8,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 732.0,
+          "ahora": 733.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "20",
+      "name": "BioShock",
+      "slug": "bioshock",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.625,
+          "ahora": 92.625,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.68819241447657,
+          "ahora": 86.68819434122446,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3231.0,
+          "ahora": 3233.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4286",
+      "name": "BioShock",
+      "slug": "bioshock",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.0,
+          "ahora": 96.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.36,
+          "ahora": 4.36,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3379.0,
+          "ahora": 3380.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "21",
+      "name": "BioShock 2",
+      "slug": "bioshock-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 80.88229031555579,
+          "ahora": 80.88253666273974,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1115.0,
+          "ahora": 1116.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4427",
+      "name": "BioShock 2",
+      "slug": "bioshock-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.07,
+          "ahora": 4.07,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1967.0,
+          "ahora": 1968.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "538",
+      "name": "BioShock Infinite",
+      "slug": "bioshock-infinite",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.21428571428571,
+          "ahora": 93.21428571428571,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 14.0,
+          "ahora": 14.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.65261685759958,
+          "ahora": 85.65266109776145,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2697.0,
+          "ahora": 2699.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "22571",
+      "name": "Black Desert Online",
+      "slug": "black-desert-online",
+      "metricas": {
+        "critic_score": {
+          "antes": 73.0,
+          "ahora": 73.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 2.92,
+          "ahora": 2.92,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 655.0,
+          "ahora": 656.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "498",
+      "name": "Borderlands",
+      "slug": "borderlands",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 78.90843339295371,
+          "ahora": 78.90845879141837,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1025.0,
+          "ahora": 1026.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4828",
+      "name": "Borderlands",
+      "slug": "borderlands",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.82,
+          "ahora": 3.82,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2127.0,
+          "ahora": 2128.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "802",
+      "name": "Borderlands 2",
+      "slug": "borderlands-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.01,
+          "ahora": 4.01,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3331.0,
+          "ahora": 3332.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3543",
+      "name": "Borderlands: The Pre-Sequel",
+      "slug": "borderlands-the-pre-sequel",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.57,
+          "ahora": 3.57,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1387.0,
+          "ahora": 1388.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "545",
+      "name": "Call of Duty: Black Ops",
+      "slug": "call-of-duty-black-ops",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.41666666666667,
+          "ahora": 81.41666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 13.0,
+          "ahora": 13.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 79.26196121699648,
+          "ahora": 79.2618702692888,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1344.0,
+          "ahora": 1345.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "559",
+      "name": "Call of Duty: Modern Warfare 2",
+      "slug": "call-of-duty-modern-warfare-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.27272727272727,
+          "ahora": 85.27272727272727,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 81.2508916935439,
+          "ahora": 81.25095768190049,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1570.0,
+          "ahora": 1571.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11276",
+      "name": "Call of Duty: Modern Warfare 3",
+      "slug": "call-of-duty-modern-warfare-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.79,
+          "ahora": 3.79,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1658.0,
+          "ahora": 1659.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10065",
+      "name": "Cities: Skylines",
+      "slug": "cities-skylines",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.12,
+          "ahora": 4.12,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1540.0,
+          "ahora": 1541.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "305152",
+      "name": "Clair Obscur: Expedition 33",
+      "slug": "clair-obscur-expedition-33",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 5.0,
+          "ahora": 5.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 91.80891819208135,
+          "ahora": 91.80912269376145,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 992.0,
+          "ahora": 993.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10243",
+      "name": "Company of Heroes 2",
+      "slug": "company-of-heroes-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.1,
+          "ahora": 3.1,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 877.0,
+          "ahora": 878.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "58812",
+      "name": "Control",
+      "slug": "control",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.14,
+          "ahora": 4.14,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2071.0,
+          "ahora": 2072.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4291",
+      "name": "Counter-Strike: Global Offensive",
+      "slug": "counter-strike-global-offensive",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.57,
+          "ahora": 3.57,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3649.0,
+          "ahora": 3650.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "28154",
+      "name": "Cuphead",
+      "slug": "cuphead",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.37,
+          "ahora": 4.37,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2052.0,
+          "ahora": 2053.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "41494",
+      "name": "Cyberpunk 2077",
+      "slug": "cyberpunk-2077",
+      "metricas": {
+        "critic_score": {
+          "antes": 73.0,
+          "ahora": 73.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.23,
+          "ahora": 4.23,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3064.0,
+          "ahora": 3065.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "2155",
+      "name": "Dark Souls",
+      "slug": "dark-souls",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.625,
+          "ahora": 90.625,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.56954500503934,
+          "ahora": 86.56993049064333,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1733.0,
+          "ahora": 1735.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "11133",
+      "name": "Dark Souls III",
+      "slug": "dark-souls-iii",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.07692307692308,
+          "ahora": 86.07692307692308,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 26.0,
+          "ahora": 26.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.13186394972882,
+          "ahora": 87.1320283537451,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1982.0,
+          "ahora": 1983.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2551",
+      "name": "Dark Souls III",
+      "slug": "dark-souls-iii",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.4,
+          "ahora": 4.4,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2807.0,
+          "ahora": 2808.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "51610",
+      "name": "Dark Souls: Remastered",
+      "slug": "dark-souls8482-remastered",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.48,
+          "ahora": 4.48,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1479.0,
+          "ahora": 1480.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4502",
+      "name": "Darksiders",
+      "slug": "darksiders",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.77,
+          "ahora": 3.77,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1220.0,
+          "ahora": 1221.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4179",
+      "name": "Darksiders II",
+      "slug": "darksiders-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.74,
+          "ahora": 3.74,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 975.0,
+          "ahora": 976.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10449",
+      "name": "Darksiders II Deathinitive Edition",
+      "slug": "darksiders-ii-deathinitive-edition",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.79,
+          "ahora": 3.79,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 689.0,
+          "ahora": 690.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11726",
+      "name": "Dead Cells",
+      "slug": "dead-cells",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.23,
+          "ahora": 4.23,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1755.0,
+          "ahora": 1756.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4570",
+      "name": "Dead Space (2008)",
+      "slug": "dead-space",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.39,
+          "ahora": 4.39,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2224.0,
+          "ahora": 2225.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "38",
+      "name": "Dead Space 2",
+      "slug": "dead-space-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.42664129411719,
+          "ahora": 86.42645580593161,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1090.0,
+          "ahora": 1091.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "32",
+      "name": "Destiny 2",
+      "slug": "destiny-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.52,
+          "ahora": 3.52,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2674.0,
+          "ahora": 2675.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "14362",
+      "name": "Detroit: Become Human",
+      "slug": "detroit-become-human--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 77.61538461538461,
+          "ahora": 77.61538461538461,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 13.0,
+          "ahora": 13.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 82.34402873436352,
+          "ahora": 82.34402873436352,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1305.0,
+          "ahora": 1306.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1447",
+      "name": "Deus Ex: Mankind Divided",
+      "slug": "deus-ex-mankind-divided",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.96,
+          "ahora": 3.96,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2023.0,
+          "ahora": 2024.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "120",
+      "name": "Diablo III",
+      "slug": "diablo-iii",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.4,
+          "ahora": 83.4,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 78.15769448716684,
+          "ahora": 78.1574768993112,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 946.0,
+          "ahora": 947.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "262382",
+      "name": "Disco Elysium",
+      "slug": "disco-elysium",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.0,
+          "ahora": 91.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.36,
+          "ahora": 4.36,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1371.0,
+          "ahora": 1372.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "533",
+      "name": "Dishonored",
+      "slug": "dishonored",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.8125,
+          "ahora": 84.8125,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 84.85077119876374,
+          "ahora": 84.8505956200625,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1919.0,
+          "ahora": 1921.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4248",
+      "name": "Dishonored",
+      "slug": "dishonored",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.0,
+          "ahora": 91.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2758.0,
+          "ahora": 2759.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "864",
+      "name": "Dishonored 2",
+      "slug": "dishonored-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.26,
+          "ahora": 4.26,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2043.0,
+          "ahora": 2044.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "9882",
+      "name": "Don't Starve Together",
+      "slug": "dont-starve-together",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.77,
+          "ahora": 3.77,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1404.0,
+          "ahora": 1405.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "7351",
+      "name": "Doom",
+      "slug": "doom--2",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.96875,
+          "ahora": 86.96875,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 28.0,
+          "ahora": 28.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.18052741510195,
+          "ahora": 85.18052741510195,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1929.0,
+          "ahora": 1930.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2454",
+      "name": "DOOM (2016)",
+      "slug": "doom",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3644.0,
+          "ahora": 3645.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "58777",
+      "name": "DOOM Eternal",
+      "slug": "doom-eternal",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.37,
+          "ahora": 4.37,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1435.0,
+          "ahora": 1436.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10213",
+      "name": "Dota 2",
+      "slug": "dota-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.07,
+          "ahora": 3.07,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2868.0,
+          "ahora": 2869.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "119133",
+      "name": "Elden Ring",
+      "slug": "elden-ring",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.9,
+          "ahora": 96.9,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 93.46577395910097,
+          "ahora": 93.46570034453107,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2323.0,
+          "ahora": 2324.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "326243",
+      "name": "Elden Ring",
+      "slug": "elden-ring",
+      "metricas": {
+        "critic_score": {
+          "antes": 95.0,
+          "ahora": 95.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1504.0,
+          "ahora": 1505.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "15",
+      "name": "Fallout 3",
+      "slug": "fallout-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.1,
+          "ahora": 89.1,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.28827430746416,
+          "ahora": 83.28857235958995,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1781.0,
+          "ahora": 1782.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "9630",
+      "name": "Fallout 4",
+      "slug": "fallout-4",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.66666666666667,
+          "ahora": 84.66666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 21.0,
+          "ahora": 21.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 79.53308391572455,
+          "ahora": 79.53312137194055,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1748.0,
+          "ahora": 1749.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3070",
+      "name": "Fallout 4",
+      "slug": "fallout-4",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.81,
+          "ahora": 3.81,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3449.0,
+          "ahora": 3451.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "559",
+      "name": "Fallout Shelter",
+      "slug": "fallout-shelter",
+      "metricas": {
+        "critic_score": {
+          "antes": 63.0,
+          "ahora": 63.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.42,
+          "ahora": 3.42,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1541.0,
+          "ahora": 1543.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "5563",
+      "name": "Fallout: New Vegas",
+      "slug": "fallout-new-vegas",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.43,
+          "ahora": 4.43,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2661.0,
+          "ahora": 2663.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "529",
+      "name": "Far Cry 3",
+      "slug": "far-cry-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.53333333333333,
+          "ahora": 89.53333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.3762440193248,
+          "ahora": 83.37621239361049,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2230.0,
+          "ahora": 2231.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4161",
+      "name": "Far Cry 3",
+      "slug": "far-cry-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.26,
+          "ahora": 4.26,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3020.0,
+          "ahora": 3021.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3497",
+      "name": "Far Cry 4",
+      "slug": "far-cry-4",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.82,
+          "ahora": 3.82,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1952.0,
+          "ahora": 1953.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "359",
+      "name": "Final Fantasy XV",
+      "slug": "final-fantasy-xv",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.44,
+          "ahora": 81.44,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 25.0,
+          "ahora": 25.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 75.90862262788386,
+          "ahora": 75.90814840976608,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 595.0,
+          "ahora": 596.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2819",
+      "name": "Firewatch",
+      "slug": "firewatch",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.3,
+          "ahora": 4.3,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2513.0,
+          "ahora": 2514.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "362",
+      "name": "For Honor",
+      "slug": "for-honor",
+      "metricas": {
+        "critic_score": {
+          "antes": 76.0,
+          "ahora": 76.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.3,
+          "ahora": 3.3,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1685.0,
+          "ahora": 1686.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "47137",
+      "name": "Fortnite Battle Royale",
+      "slug": "fornite-battle-royale",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.29,
+          "ahora": 3.29,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1144.0,
+          "ahora": 1145.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "624",
+      "name": "FTL: Faster Than Light",
+      "slug": "ftl-faster-than-light",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.25,
+          "ahora": 4.25,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 967.0,
+          "ahora": 968.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "9721",
+      "name": "Garry's Mod",
+      "slug": "garrys-mod",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.81,
+          "ahora": 3.81,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1611.0,
+          "ahora": 1612.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "401805",
+      "name": "Genshin Impact",
+      "slug": "genshin-impact",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.55,
+          "ahora": 3.55,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1108.0,
+          "ahora": 1109.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "75235",
+      "name": "Ghost of Tsushima",
+      "slug": "ghost-of-tsushima",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.91666666666667,
+          "ahora": 91.91666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 12.0,
+          "ahora": 12.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.25437258460838,
+          "ahora": 88.25459283946358,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1147.0,
+          "ahora": 1150.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1959",
+      "name": "Goat Simulator",
+      "slug": "goat-simulator",
+      "metricas": {
+        "critic_score": {
+          "antes": 62.0,
+          "ahora": 62.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.18,
+          "ahora": 3.18,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1200.0,
+          "ahora": 1201.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "19560",
+      "name": "God of War",
+      "slug": "god-of-war--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.23076923076923,
+          "ahora": 96.23076923076923,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 26.0,
+          "ahora": 26.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 91.9529330814444,
+          "ahora": 91.95253163118056,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 3608.0,
+          "ahora": 3611.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "58175",
+      "name": "God of War (2018)",
+      "slug": "god-of-war-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.0,
+          "ahora": 94.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.54,
+          "ahora": 4.54,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 5225.0,
+          "ahora": 5227.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "112875",
+      "name": "God of War Ragnarök",
+      "slug": "god-of-war-ragnarok",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.61538461538461,
+          "ahora": 94.61538461538461,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 13.0,
+          "ahora": 13.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 90.90462537624687,
+          "ahora": 90.90477494421614,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1179.0,
+          "ahora": 1181.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4459",
+      "name": "Grand Theft Auto IV",
+      "slug": "grand-theft-auto-iv",
+      "metricas": {
+        "critic_score": {
+          "antes": 95.0,
+          "ahora": 95.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.26,
+          "ahora": 4.26,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3128.0,
+          "ahora": 3129.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1020",
+      "name": "Grand Theft Auto V",
+      "slug": "grand-theft-auto-v",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.13793103448276,
+          "ahora": 88.13793103448276,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 27.0,
+          "ahora": 27.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 89.6385619666188,
+          "ahora": 89.63836619736811,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 6000.0,
+          "ahora": 6004.0,
+          "delta": 4.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3498",
+      "name": "Grand Theft Auto V",
+      "slug": "grand-theft-auto-v",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.47,
+          "ahora": 4.47,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 7455.0,
+          "ahora": 7456.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "416",
+      "name": "Grand Theft Auto: San Andreas",
+      "slug": "grand-theft-auto-san-andreas",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.0,
+          "ahora": 93.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.5,
+          "ahora": 4.5,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4120.0,
+          "ahora": 4122.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "733",
+      "name": "Grand Theft Auto: Vice City",
+      "slug": "grand-theft-auto-vice-city",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.0,
+          "ahora": 94.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.31728805283299,
+          "ahora": 87.31753381017789,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3174.0,
+          "ahora": 3178.0,
+          "delta": 4.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "430",
+      "name": "Grand Theft Auto: Vice City",
+      "slug": "grand-theft-auto-vice-city",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.0,
+          "ahora": 94.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.44,
+          "ahora": 4.44,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3138.0,
+          "ahora": 3139.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "113112",
+      "name": "Hades",
+      "slug": "hades--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.52941176470588,
+          "ahora": 93.52941176470588,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 17.0,
+          "ahora": 17.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 89.43287558676217,
+          "ahora": 89.43257565116589,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1775.0,
+          "ahora": 1776.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "274755",
+      "name": "Hades",
+      "slug": "hades-2018",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.0,
+          "ahora": 93.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.41,
+          "ahora": 4.41,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2128.0,
+          "ahora": 2129.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "231",
+      "name": "Half-Life",
+      "slug": "half-life",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 1.0,
+          "ahora": 1.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.47692950085259,
+          "ahora": 88.47689209561165,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2947.0,
+          "ahora": 2950.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "18080",
+      "name": "Half-Life",
+      "slug": "half-life",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.0,
+          "ahora": 96.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2458.0,
+          "ahora": 2459.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "233",
+      "name": "Half-Life 2",
+      "slug": "half-life-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.125,
+          "ahora": 79.125,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 7.0,
+          "ahora": 7.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 90.36488472494709,
+          "ahora": 90.36460032738898,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 3478.0,
+          "ahora": 3481.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "13537",
+      "name": "Half-Life 2",
+      "slug": "half-life-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.0,
+          "ahora": 96.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.47,
+          "ahora": 4.47,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4130.0,
+          "ahora": 4132.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "19710",
+      "name": "Half-Life 2: Episode One",
+      "slug": "half-life-2-episode-one",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2075.0,
+          "ahora": 2076.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "247",
+      "name": "Half-Life 2: Episode Two",
+      "slug": "half-life-2-episode-two",
+      "metricas": {
+        "critic_score": {
+          "antes": 70.0,
+          "ahora": 70.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 1.0,
+          "ahora": 1.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.57426654109146,
+          "ahora": 87.57404726486132,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1469.0,
+          "ahora": 1470.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "19709",
+      "name": "Half-Life 2: Episode Two",
+      "slug": "half-life-2-episode-two",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.46,
+          "ahora": 4.46,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2027.0,
+          "ahora": 2028.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "19103",
+      "name": "Half-Life 2: Lost Coast",
+      "slug": "half-life-2-lost-coast",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.46,
+          "ahora": 3.46,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1174.0,
+          "ahora": 1175.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1279",
+      "name": "Hearthstone",
+      "slug": "hearthstone",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.22222222222223,
+          "ahora": 88.22222222222223,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 9.0,
+          "ahora": 9.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 78.34703486978502,
+          "ahora": 78.34729677003278,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 727.0,
+          "ahora": 728.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "493",
+      "name": "Heavy Rain",
+      "slug": "heavy-rain",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.25,
+          "ahora": 80.25,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 81.45699667757775,
+          "ahora": 81.45684743568886,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1136.0,
+          "ahora": 1137.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10035",
+      "name": "Hitman",
+      "slug": "hitman",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.93,
+          "ahora": 3.93,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2038.0,
+          "ahora": 2039.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "530",
+      "name": "Hitman: Absolution",
+      "slug": "hitman-absolution",
+      "metricas": {
+        "critic_score": {
+          "antes": 71.88235294117646,
+          "ahora": 71.88235294117646,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 16.0,
+          "ahora": 16.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 75.0015919284892,
+          "ahora": 75.0014142273138,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 678.0,
+          "ahora": 679.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "5583",
+      "name": "Hitman: Absolution",
+      "slug": "hitman-absolution",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.0,
+          "ahora": 79.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.76,
+          "ahora": 3.76,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1657.0,
+          "ahora": 1658.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "14593",
+      "name": "Hollow Knight",
+      "slug": "hollow-knight",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.25,
+          "ahora": 91.25,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 91.79897425161897,
+          "ahora": 91.79897425161897,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2263.0,
+          "ahora": 2264.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "9767",
+      "name": "Hollow Knight",
+      "slug": "hollow-knight",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.4,
+          "ahora": 4.4,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2782.0,
+          "ahora": 2783.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "11156",
+      "name": "Horizon Zero Dawn",
+      "slug": "horizon-zero-dawn",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.84615384615384,
+          "ahora": 88.84615384615384,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 26.0,
+          "ahora": 26.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.36422495933839,
+          "ahora": 87.36402310328451,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2461.0,
+          "ahora": 2464.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "278",
+      "name": "Horizon Zero Dawn",
+      "slug": "horizon-zero-dawn",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.27,
+          "ahora": 4.27,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3788.0,
+          "ahora": 3789.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3612",
+      "name": "Hotline Miami",
+      "slug": "hotline-miami",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2667.0,
+          "ahora": 2668.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3408",
+      "name": "Hotline Miami 2: Wrong Number",
+      "slug": "hotline-miami-2-wrong-number",
+      "metricas": {
+        "critic_score": {
+          "antes": 72.0,
+          "ahora": 72.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.28,
+          "ahora": 4.28,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1338.0,
+          "ahora": 1339.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "13247",
+      "name": "Human: Fall Flat",
+      "slug": "human-fall-flat",
+      "metricas": {
+        "critic_score": {
+          "antes": 70.0,
+          "ahora": 70.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.83,
+          "ahora": 3.83,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1039.0,
+          "ahora": 1040.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2139",
+      "name": "Hyper Light Drifter",
+      "slug": "hyper-light-drifter",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.14,
+          "ahora": 4.14,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 599.0,
+          "ahora": 600.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "7342",
+      "name": "Inside",
+      "slug": "inside",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.48717948717949,
+          "ahora": 92.48717948717949,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 39.0,
+          "ahora": 39.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.67818061077489,
+          "ahora": 85.67818061077489,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1644.0,
+          "ahora": 1645.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "135243",
+      "name": "It Takes Two",
+      "slug": "it-takes-two",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.26666666666667,
+          "ahora": 90.26666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.39207480143871,
+          "ahora": 88.3921002462604,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1169.0,
+          "ahora": 1170.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3254",
+      "name": "Journey",
+      "slug": "journey",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.32,
+          "ahora": 4.32,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2472.0,
+          "ahora": 2473.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3017",
+      "name": "Just Cause 3",
+      "slug": "just-cause-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 74.0,
+          "ahora": 74.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.4,
+          "ahora": 3.4,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1593.0,
+          "ahora": 1594.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4514",
+      "name": "L.A. Noire",
+      "slug": "la-noire",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.16,
+          "ahora": 4.16,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2083.0,
+          "ahora": 2084.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2792",
+      "name": "Layers of Fear",
+      "slug": "layers-of-fear",
+      "metricas": {
+        "critic_score": {
+          "antes": 72.0,
+          "ahora": 72.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.54,
+          "ahora": 3.54,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1121.0,
+          "ahora": 1122.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "12020",
+      "name": "Left 4 Dead 2",
+      "slug": "left-4-dead-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.1,
+          "ahora": 4.1,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3423.0,
+          "ahora": 3424.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3439",
+      "name": "Life is Strange",
+      "slug": "life-is-strange-episode-1-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.12,
+          "ahora": 4.12,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3789.0,
+          "ahora": 3790.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1030",
+      "name": "Limbo",
+      "slug": "limbo",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.14,
+          "ahora": 4.14,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3413.0,
+          "ahora": 3414.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "41",
+      "name": "Little Nightmares",
+      "slug": "little-nightmares",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.04,
+          "ahora": 4.04,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1653.0,
+          "ahora": 1654.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3191",
+      "name": "Mad Max",
+      "slug": "mad-max",
+      "metricas": {
+        "critic_score": {
+          "antes": 73.0,
+          "ahora": 73.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.78,
+          "ahora": 3.78,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1765.0,
+          "ahora": 1766.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1416",
+      "name": "Mafia II",
+      "slug": "mafia-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 77.0,
+          "ahora": 77.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.25,
+          "ahora": 4.25,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2221.0,
+          "ahora": 2222.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4166",
+      "name": "Mass Effect",
+      "slug": "mass-effect",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.39,
+          "ahora": 4.39,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2718.0,
+          "ahora": 2719.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "960",
+      "name": "Max Payne 3",
+      "slug": "max-payne-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.33333333333333,
+          "ahora": 89.33333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 12.0,
+          "ahora": 12.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 81.91918144906194,
+          "ahora": 81.91909154571763,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1164.0,
+          "ahora": 1165.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4094",
+      "name": "Metal Gear Rising: Revengeance",
+      "slug": "metal-gear-rising-revengeance",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.25,
+          "ahora": 4.25,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1259.0,
+          "ahora": 1260.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3192",
+      "name": "Metal Gear Solid V: The Phantom Pain",
+      "slug": "metal-gear-solid-v-the-phantom-pain",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.0,
+          "ahora": 91.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.16,
+          "ahora": 4.16,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2540.0,
+          "ahora": 2541.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "29028",
+      "name": "Metro 2033",
+      "slug": "metro-2033",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.0,
+          "ahora": 79.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.94,
+          "ahora": 3.94,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2304.0,
+          "ahora": 2305.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3603",
+      "name": "Metro 2033 Redux",
+      "slug": "metro-redux",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.09,
+          "ahora": 4.09,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1937.0,
+          "ahora": 1938.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "37016",
+      "name": "Metro Exodus",
+      "slug": "metro-exodus",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.25,
+          "ahora": 83.25,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 12.0,
+          "ahora": 12.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.0302561353578,
+          "ahora": 83.0302561353578,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 686.0,
+          "ahora": 685.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "28201",
+      "name": "Metro Exodus",
+      "slug": "metro-exodus",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.17,
+          "ahora": 4.17,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1718.0,
+          "ahora": 1719.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "539",
+      "name": "Metro: Last Light",
+      "slug": "metro-last-light",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.9,
+          "ahora": 79.9,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 82.4944037687095,
+          "ahora": 82.49453038318481,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 732.0,
+          "ahora": 733.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3604",
+      "name": "Metro: Last Light Redux",
+      "slug": "metro-last-light-redux",
+      "metricas": {
+        "critic_score": {
+          "antes": 76.0,
+          "ahora": 76.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.13,
+          "ahora": 4.13,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1710.0,
+          "ahora": 1711.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11973",
+      "name": "Middle-earth: Shadow of Mordor",
+      "slug": "shadow-of-mordor",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.91,
+          "ahora": 3.91,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2573.0,
+          "ahora": 2574.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "25",
+      "name": "Middle-earth: Shadow of War",
+      "slug": "middle-earth-shadow-of-war",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.86,
+          "ahora": 3.86,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1393.0,
+          "ahora": 1395.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "22509",
+      "name": "Minecraft",
+      "slug": "minecraft",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.44,
+          "ahora": 4.44,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3178.0,
+          "ahora": 3179.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "121",
+      "name": "Minecraft: Java Edition",
+      "slug": "minecraft-java-edition",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.35714285714286,
+          "ahora": 84.35714285714286,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 14.0,
+          "ahora": 14.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.19512646532067,
+          "ahora": 85.19512646532067,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2080.0,
+          "ahora": 2081.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4252",
+      "name": "Mirror's Edge",
+      "slug": "mirrors-edge",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.07,
+          "ahora": 4.07,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2387.0,
+          "ahora": 2386.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11663",
+      "name": "My Friend Pedro",
+      "slug": "my-friend-pedro",
+      "metricas": {
+        "critic_score": {
+          "antes": 76.0,
+          "ahora": 76.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.87,
+          "ahora": 3.87,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 745.0,
+          "ahora": 746.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "11208",
+      "name": "NieR: Automata",
+      "slug": "nier-automata",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.72,
+          "ahora": 85.72,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 24.0,
+          "ahora": 24.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 89.77794383984816,
+          "ahora": 89.77810941155144,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1579.0,
+          "ahora": 1580.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10141",
+      "name": "NieR:Automata",
+      "slug": "nierautomata",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.37,
+          "ahora": 4.37,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2188.0,
+          "ahora": 2189.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2093",
+      "name": "No Man's Sky",
+      "slug": "no-mans-sky",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.71,
+          "ahora": 3.71,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1590.0,
+          "ahora": 1591.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3790",
+      "name": "Outlast",
+      "slug": "outlast",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.76,
+          "ahora": 3.76,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1873.0,
+          "ahora": 1874.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1358",
+      "name": "Papers, Please",
+      "slug": "papers-please",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.0,
+          "ahora": 85.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1786.0,
+          "ahora": 1787.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1911",
+      "name": "Path of Exile",
+      "slug": "path-of-exile",
+      "metricas": {
+        "critic_score": {
+          "antes": 78.0,
+          "ahora": 78.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 81.83763546170564,
+          "ahora": 81.83763546170564,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 494.0,
+          "ahora": 495.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10533",
+      "name": "Path of Exile",
+      "slug": "path-of-exile",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.65,
+          "ahora": 3.65,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1647.0,
+          "ahora": 1648.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3939",
+      "name": "PAYDAY 2",
+      "slug": "payday-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.0,
+          "ahora": 79.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.52,
+          "ahora": 3.52,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2250.0,
+          "ahora": 2251.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "71",
+      "name": "Portal",
+      "slug": "portal",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 1.0,
+          "ahora": 1.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 86.4079818647135,
+          "ahora": 86.40802839608153,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4056.0,
+          "ahora": 4058.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "13536",
+      "name": "Portal",
+      "slug": "portal",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.48,
+          "ahora": 4.48,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 5062.0,
+          "ahora": 5064.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "72",
+      "name": "Portal 2",
+      "slug": "portal-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.44444444444444,
+          "ahora": 92.44444444444444,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 9.0,
+          "ahora": 9.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 91.33079145149934,
+          "ahora": 91.33084304648973,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4518.0,
+          "ahora": 4520.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4200",
+      "name": "Portal 2",
+      "slug": "portal-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 95.0,
+          "ahora": 95.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.57,
+          "ahora": 4.57,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 6149.0,
+          "ahora": 6150.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "19531",
+      "name": "Prey",
+      "slug": "prey--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.8125,
+          "ahora": 75.8125,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 16.0,
+          "ahora": 16.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 80.55011649950721,
+          "ahora": 80.55011649950721,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 701.0,
+          "ahora": 700.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "39",
+      "name": "Prey",
+      "slug": "prey",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.28,
+          "ahora": 4.28,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2250.0,
+          "ahora": 2251.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "434",
+      "name": "Red Dead Redemption",
+      "slug": "red-dead-redemption",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.8,
+          "ahora": 91.8,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 89.15317622041067,
+          "ahora": 89.15302828495805,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2566.0,
+          "ahora": 2568.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "25076",
+      "name": "Red Dead Redemption 2",
+      "slug": "red-dead-redemption-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.05882352941177,
+          "ahora": 94.05882352941177,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 17.0,
+          "ahora": 17.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 93.20011896977987,
+          "ahora": 93.20007633483297,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 3894.0,
+          "ahora": 3896.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "28",
+      "name": "Red Dead Redemption 2",
+      "slug": "red-dead-redemption-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.0,
+          "ahora": 96.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.59,
+          "ahora": 4.59,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 5587.0,
+          "ahora": 5590.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "19686",
+      "name": "Resident Evil 2",
+      "slug": "resident-evil-2--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.83333333333333,
+          "ahora": 92.83333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 12.0,
+          "ahora": 12.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.38193901602536,
+          "ahora": 87.38184347232419,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1439.0,
+          "ahora": 1440.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "58813",
+      "name": "Resident Evil 2",
+      "slug": "resident-evil-2-2019",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.0,
+          "ahora": 91.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.51,
+          "ahora": 4.51,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2312.0,
+          "ahora": 2313.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "397477",
+      "name": "Resident Evil 3",
+      "slug": "resident-evil-3",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.0,
+          "ahora": 80.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.04,
+          "ahora": 4.04,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1097.0,
+          "ahora": 1098.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "132181",
+      "name": "Resident Evil 4",
+      "slug": "resident-evil-4--1",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.5,
+          "ahora": 94.5,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 90.05719969675206,
+          "ahora": 90.05694103205437,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 692.0,
+          "ahora": 693.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "55163",
+      "name": "Resident Evil Village",
+      "slug": "resident-evil-village",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.8,
+          "ahora": 86.8,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 83.90864552883002,
+          "ahora": 83.90884912218482,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 608.0,
+          "ahora": 609.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "452649",
+      "name": "Resident Evil: Village",
+      "slug": "resident-evil-village",
+      "metricas": {
+        "critic_score": {
+          "antes": 83.0,
+          "ahora": 83.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.39,
+          "ahora": 4.39,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1078.0,
+          "ahora": 1079.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3272",
+      "name": "Rocket League",
+      "slug": "rocket-league",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.93,
+          "ahora": 3.93,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2871.0,
+          "ahora": 2872.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "76882",
+      "name": "Sekiro: Shadows Die Twice",
+      "slug": "sekiro-shadows-die-twice",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0909090909091,
+          "ahora": 90.0909090909091,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 11.0,
+          "ahora": 11.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 89.70741448033009,
+          "ahora": 89.70762614596615,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1409.0,
+          "ahora": 1410.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "50734",
+      "name": "Sekiro: Shadows Die Twice",
+      "slug": "shadows-die-twice",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.0,
+          "ahora": 90.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.38,
+          "ahora": 4.38,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2152.0,
+          "ahora": 2153.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "10297",
+      "name": "Sid Meier’s Civilization VI",
+      "slug": "civilization-vi",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.16,
+          "ahora": 4.16,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1438.0,
+          "ahora": 1440.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "9727",
+      "name": "Soma",
+      "slug": "soma",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.25,
+          "ahora": 81.25,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 15.0,
+          "ahora": 15.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 82.43777102498416,
+          "ahora": 82.43777102498416,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 673.0,
+          "ahora": 674.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3757",
+      "name": "South Park: The Stick of Truth",
+      "slug": "south-park-the-stick-of-truth",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.0,
+          "ahora": 84.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.22,
+          "ahora": 4.22,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1726.0,
+          "ahora": 1727.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "4332",
+      "name": "Spec Ops: The Line",
+      "slug": "spec-ops-the-line",
+      "metricas": {
+        "critic_score": {
+          "antes": 76.0,
+          "ahora": 76.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.1,
+          "ahora": 4.1,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1956.0,
+          "ahora": 1957.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "475",
+      "name": "Star Wars: The Force Unleashed",
+      "slug": "star-wars-the-force-unleashed",
+      "metricas": {
+        "critic_score": {
+          "antes": 62.22222222222222,
+          "ahora": 62.22222222222222,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 8.0,
+          "ahora": 8.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 73.247484698815,
+          "ahora": 73.24716677855615,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 452.0,
+          "ahora": 453.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "17000",
+      "name": "Stardew Valley",
+      "slug": "stardew-valley",
+      "metricas": {
+        "critic_score": {
+          "antes": 90.53846153846153,
+          "ahora": 90.53846153846153,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 13.0,
+          "ahora": 13.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.98369885528479,
+          "ahora": 85.98387348761732,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1832.0,
+          "ahora": 1833.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "654",
+      "name": "Stardew Valley",
+      "slug": "stardew-valley",
+      "metricas": {
+        "critic_score": {
+          "antes": 89.0,
+          "ahora": 89.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.39,
+          "ahora": 4.39,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2487.0,
+          "ahora": 2488.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "452638",
+      "name": "Stray",
+      "slug": "stray-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.15,
+          "ahora": 4.15,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1282.0,
+          "ahora": 1281.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "26758",
+      "name": "Super Mario Odyssey",
+      "slug": "super-mario-odyssey",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.70588235294117,
+          "ahora": 96.70588235294117,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 17.0,
+          "ahora": 17.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.82835199014096,
+          "ahora": 88.82840078986828,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1884.0,
+          "ahora": 1885.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "7819",
+      "name": "SUPERHOT",
+      "slug": "superhot",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.2,
+          "ahora": 4.2,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1555.0,
+          "ahora": 1556.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11859",
+      "name": "Team Fortress 2",
+      "slug": "team-fortress-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.68,
+          "ahora": 3.68,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2938.0,
+          "ahora": 2939.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "422",
+      "name": "Terraria",
+      "slug": "terraria",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.08,
+          "ahora": 4.08,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2485.0,
+          "ahora": 2486.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "59",
+      "name": "The Elder Scrolls IV: Oblivion",
+      "slug": "the-elder-scrolls-iv-oblivion",
+      "metricas": {
+        "critic_score": {
+          "antes": 80.57142857142857,
+          "ahora": 80.57142857142857,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 6.0,
+          "ahora": 6.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.07830914367582,
+          "ahora": 85.0782504260932,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1586.0,
+          "ahora": 1587.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "472",
+      "name": "The Elder Scrolls V: Skyrim",
+      "slug": "the-elder-scrolls-v-skyrim",
+      "metricas": {
+        "critic_score": {
+          "antes": 79.91666666666667,
+          "ahora": 79.91666666666667,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 10.0,
+          "ahora": 10.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 87.74861551160596,
+          "ahora": 87.74857909091784,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 4359.0,
+          "ahora": 4361.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "5679",
+      "name": "The Elder Scrolls V: Skyrim",
+      "slug": "the-elder-scrolls-v-skyrim",
+      "metricas": {
+        "critic_score": {
+          "antes": 94.0,
+          "ahora": 94.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.42,
+          "ahora": 4.42,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4965.0,
+          "ahora": 4967.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "204350",
+      "name": "The Last of Us Part I",
+      "slug": "the-last-of-us-part-i",
+      "metricas": {
+        "critic_score": {
+          "antes": 77.33333333333333,
+          "ahora": 77.33333333333333,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 12.0,
+          "ahora": 12.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 92.84144764279476,
+          "ahora": 92.84096054428788,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 813.0,
+          "ahora": 814.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "26192",
+      "name": "The Last of Us Part II",
+      "slug": "the-last-of-us-part-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 95.18181818181819,
+          "ahora": 95.18181818181819,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 11.0,
+          "ahora": 11.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 90.39624384097428,
+          "ahora": 90.39581349965366,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1814.0,
+          "ahora": 1817.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "7346",
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "slug": "the-legend-of-zelda-breath-of-the-wild",
+      "metricas": {
+        "critic_score": {
+          "antes": 97.5925925925926,
+          "ahora": 97.5925925925926,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 27.0,
+          "ahora": 27.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 92.49647158161706,
+          "ahora": 92.49619519661874,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 2998.0,
+          "ahora": 2999.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "11312",
+      "name": "The Long Dark",
+      "slug": "the-long-dark",
+      "metricas": {
+        "critic_score": {
+          "antes": 76.0,
+          "ahora": 76.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.91,
+          "ahora": 3.91,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 882.0,
+          "ahora": 883.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1871",
+      "name": "The Walking Dead",
+      "slug": "the-walking-dead",
+      "metricas": {
+        "critic_score": {
+          "antes": 84.3529411764706,
+          "ahora": 84.3529411764706,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 7.0,
+          "ahora": 7.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.88924707216347,
+          "ahora": 85.88924707216347,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1750.0,
+          "ahora": 1751.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "478",
+      "name": "The Witcher 2: Assassins of Kings",
+      "slug": "the-witcher-2-assassins-of-kings",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.71428571428571,
+          "ahora": 85.71428571428571,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 7.0,
+          "ahora": 7.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 84.57262743369697,
+          "ahora": 84.5723679300524,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1393.0,
+          "ahora": 1394.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "16944",
+      "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+      "slug": "the-witcher-2-assassins-of-kings-enhanced-edition",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.17,
+          "ahora": 4.17,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2185.0,
+          "ahora": 2186.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "1942",
+      "name": "The Witcher 3: Wild Hunt",
+      "slug": "the-witcher-3-wild-hunt",
+      "metricas": {
+        "critic_score": {
+          "antes": 91.73076923076923,
+          "ahora": 91.73076923076923,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 26.0,
+          "ahora": 26.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 93.77382549654283,
+          "ahora": 93.77367293830875,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 5502.0,
+          "ahora": 5504.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3328",
+      "name": "The Witcher 3: Wild Hunt",
+      "slug": "the-witcher-3-wild-hunt",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.64,
+          "ahora": 4.64,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 7293.0,
+          "ahora": 7296.0,
+          "delta": 3.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "17822",
+      "name": "The Witcher: Enhanced Edition Director's Cut",
+      "slug": "the-witcher-enhanced-edition-directors-cut",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.06,
+          "ahora": 4.06,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2057.0,
+          "ahora": 2059.0,
+          "delta": 2.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1682",
+      "name": "The Wolf Among Us",
+      "slug": "the-wolf-among-us",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.39,
+          "ahora": 4.39,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2190.0,
+          "ahora": 2191.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "122",
+      "name": "This is the Police",
+      "slug": "this-is-the-police",
+      "metricas": {
+        "critic_score": {
+          "antes": 66.0,
+          "ahora": 66.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.89,
+          "ahora": 3.89,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 721.0,
+          "ahora": 722.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "923",
+      "name": "Titanfall 2",
+      "slug": "titanfall-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 87.0,
+          "ahora": 87.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.32,
+          "ahora": 4.32,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2087.0,
+          "ahora": 2088.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "8488",
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "slug": "tom-clancys-rainbow-six-siege-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 75.0,
+          "ahora": 75.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.89,
+          "ahora": 3.89,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1524.0,
+          "ahora": 1525.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "562",
+      "name": "Tom Clancy's Splinter Cell: Conviction",
+      "slug": "tom-clancy-s-splinter-cell-conviction",
+      "metricas": {
+        "critic_score": {
+          "antes": 85.2,
+          "ahora": 85.2,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 76.56278653522472,
+          "ahora": 76.5623304217431,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 335.0,
+          "ahora": 336.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "5286",
+      "name": "Tomb Raider",
+      "slug": "tomb-raider",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.06,
+          "ahora": 4.06,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 4120.0,
+          "ahora": 4121.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "17126",
+      "name": "Torchlight II",
+      "slug": "torchlight-ii",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.83,
+          "ahora": 3.83,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1075.0,
+          "ahora": 1074.0,
+          "delta": -1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "2462",
+      "name": "Uncharted 4: A Thief’s End",
+      "slug": "uncharted-4-a-thiefs-end",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.0,
+          "ahora": 93.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.48,
+          "ahora": 4.48,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 3777.0,
+          "ahora": 3778.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "12517",
+      "name": "Undertale",
+      "slug": "undertale",
+      "metricas": {
+        "critic_score": {
+          "antes": 96.38461538461539,
+          "ahora": 96.38461538461539,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 13.0,
+          "ahora": 13.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 85.97234313955546,
+          "ahora": 85.97234313955546,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1894.0,
+          "ahora": 1895.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "13627",
+      "name": "Undertale",
+      "slug": "undertale",
+      "metricas": {
+        "critic_score": {
+          "antes": 92.0,
+          "ahora": 92.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.35,
+          "ahora": 4.35,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1902.0,
+          "ahora": 1903.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "9743",
+      "name": "Unturned",
+      "slug": "unturned",
+      "metricas": {
+        "critic_score": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 2.73,
+          "ahora": 2.73,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1124.0,
+          "ahora": 1125.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3678",
+      "name": "War Thunder",
+      "slug": "war-thunder",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.19,
+          "ahora": 3.19,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1044.0,
+          "ahora": 1045.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "igdb",
+      "source_id": "132",
+      "name": "Warcraft III: Reign of Chaos",
+      "slug": "warcraft-iii-reign-of-chaos",
+      "metricas": {
+        "critic_score": {
+          "antes": 93.0,
+          "ahora": 93.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": 4.0,
+          "ahora": 4.0,
+          "delta": 0.0
+        },
+        "user_score": {
+          "antes": 88.32450915673279,
+          "ahora": 88.32435562932821,
+          "delta": -0.0
+        },
+        "user_count": {
+          "antes": 1682.0,
+          "ahora": 1683.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "766",
+      "name": "Warframe",
+      "slug": "warframe",
+      "metricas": {
+        "critic_score": {
+          "antes": 73.0,
+          "ahora": 73.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.42,
+          "ahora": 3.42,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2121.0,
+          "ahora": 2122.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "45969",
+      "name": "Warhammer: Vermintide 2",
+      "slug": "warhammer-vermintide-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 82.0,
+          "ahora": 82.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 3.61,
+          "ahora": 3.61,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 781.0,
+          "ahora": 782.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "28202",
+      "name": "Wolfenstein II: The New Colossus",
+      "slug": "wolfenstein-2-the-new-colossus",
+      "metricas": {
+        "critic_score": {
+          "antes": 86.0,
+          "ahora": 86.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.09,
+          "ahora": 4.09,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1780.0,
+          "ahora": 1781.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "3696",
+      "name": "Wolfenstein: The New Order",
+      "slug": "wolfenstein-the-new-order",
+      "metricas": {
+        "critic_score": {
+          "antes": 81.0,
+          "ahora": 81.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.18,
+          "ahora": 4.18,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 2524.0,
+          "ahora": 2525.0,
+          "delta": 1.0
+        }
+      }
+    },
+    {
+      "source": "rawg",
+      "source_id": "1256",
+      "name": "XCOM 2",
+      "slug": "xcom-2",
+      "metricas": {
+        "critic_score": {
+          "antes": 88.0,
+          "ahora": 88.0,
+          "delta": 0.0
+        },
+        "critic_count": {
+          "antes": null,
+          "ahora": null,
+          "delta": null
+        },
+        "user_score": {
+          "antes": 4.11,
+          "ahora": 4.11,
+          "delta": 0.0
+        },
+        "user_count": {
+          "antes": 1318.0,
+          "ahora": 1319.0,
+          "delta": 1.0
+        }
+      }
+    }
+  ],
   "suficientes_observaciones": true,
-  "n_snapshots": 8,
+  "n_snapshots": 9,
   "mensaje": "",
   "entre": {
-    "anterior": "snapshot_20261024T221623Z",
-    "actual": "snapshot_20261024T222206Z"
+    "anterior": "snapshot_20261024T222206Z",
+    "actual": "snapshot_20261026T123732Z"
   }
 }
