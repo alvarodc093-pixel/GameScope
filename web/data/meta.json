@@ -1,13 +1,13 @@
 {
-  "snapshot": "snapshot_20261026T123732Z",
-  "generated_at": "2026-10-26T12:38:26.327261+00:00",
+  "snapshot": "snapshot_20261102T152010Z",
+  "generated_at": "2026-11-02T15:21:18.538318+00:00",
   "observed_at_min": "2026-10-15T18:56:47.149799+00:00",
-  "observed_at_max": "2026-10-26T12:37:05.813292+00:00",
-  "n_snapshots": 9,
-  "n": 1131,
+  "observed_at_max": "2026-11-02T15:19:37.249760+00:00",
+  "n_snapshots": 10,
+  "n": 1130,
   "por_fuente": {
     "igdb": 630,
-    "rawg": 501
+    "rawg": 500
   },
   "scoring": "v1",
   "matching": {
