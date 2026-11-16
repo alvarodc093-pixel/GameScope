@@ -1,9 +1,9 @@
 {
-  "snapshot": "snapshot_20261102T152010Z",
-  "generated_at": "2026-11-02T15:21:18.538318+00:00",
+  "snapshot": "snapshot_20261116T152255Z",
+  "generated_at": "2026-11-16T15:24:29.962585+00:00",
   "observed_at_min": "2026-10-15T18:56:47.149799+00:00",
-  "observed_at_max": "2026-11-02T15:19:37.249760+00:00",
-  "n_snapshots": 10,
+  "observed_at_max": "2026-11-16T15:22:23.065709+00:00",
+  "n_snapshots": 11,
   "n": 1130,
   "por_fuente": {
     "igdb": 630,
@@ -11,11 +11,11 @@
   },
   "scoring": "v1",
   "matching": {
-    "filas_con_contraparte": 373,
+    "filas_con_contraparte": 377,
     "nota": "Identidad cruzada derivada (src/matching.py); las metricas nunca se fusionan entre fuentes."
   },
   "precios_pc": {
-    "n": 38,
+    "n": 37,
     "moneda": "USD",
     "fuente": "CheapShark",
     "nota": "Observacion propia con fecha (observed_at) fuera del snapshot; sin conversion de moneda."
