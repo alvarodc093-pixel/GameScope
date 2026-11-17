@@ -65,8 +65,25 @@ def year_de(d: str | None) -> int | None:
         return None
 
 
+# Las listas se guardan unidas por '|', pero IGDB usa ese carácter dentro de un
+# nombre: "Xbox Series X|S". Al normalizar se sustituye por '/' (sin_separador);
+# los snapshots escritos antes del cambio se corrigen al leer (lista_de).
+NOMBRES_CON_SEPARADOR = {"Xbox Series X|S": "Xbox Series X/S"}
+
+
+def sin_separador(nombre: str) -> str:
+    return (nombre or "").replace("|", "/")
+
+
+def lista_de(v: str | None) -> list[str]:
+    v = v or ""
+    for viejo, nuevo in NOMBRES_CON_SEPARADOR.items():
+        v = v.replace(viejo, nuevo)
+    return [x.strip() for x in v.split("|") if x.strip()]
+
+
 def conjunto_de(v: str | None) -> set[str]:
-    return {x.strip().lower() for x in (v or "").split("|") if x.strip()}
+    return {x.lower() for x in lista_de(v)}
 
 
 def generos_canonicos(source: str, raw: str | None) -> set[str]:
@@ -76,7 +93,7 @@ def generos_canonicos(source: str, raw: str | None) -> set[str]:
 
 
 def n_plataformas(row: dict) -> int:
-    return len([x for x in (row.get("platform_names") or "").split("|") if x.strip()])
+    return len(lista_de(row.get("platform_names")))
 
 
 def dedup_fuente_id(rows: list[dict]) -> list[dict]:
