@@ -1,6 +1,6 @@
 # GameScope web (Vercel)
 
-Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. Los datos son una foto generada del snapshot (`web/data/games.json` — 1.131 juegos en la última exportación, 2026-10-24) más `meta.json` y `evolucion.json`; la app los carga desde `web/data/datos.js` (mismos datos como script global), por lo que **funciona abriendo `index.html` con doble clic** y también con cualquier servidor estático.
+Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. Los datos se generan desde el último snapshot (`web/data/games.json`, más `meta.json` y `evolucion.json`; el recuento y la fecha están en `meta.json`); la app los carga desde `web/data/datos.js` (mismos datos como script global), por lo que **funciona abriendo `index.html` con doble clic** y también con cualquier servidor estático.
 
 ## Funcionalidades
 
@@ -12,7 +12,7 @@ Comparador estático: HTML + CSS + JS **sin build y sin servidor obligatorio**. 
 * Filtros de plataforma y género (opciones salen de los datos del snapshot) que restringen la lista de competidores.
 * Tabla comparativa ref vs competidores (Δ crítica, Δ usuarios, Δ años; solo intra-fuente y misma escala).
 * Resumen de diferencias con mediana del grupo y caveats (no hay ventas ni métricas fusionadas).
-* Scoring v1 en `js/scoring.js`: réplica de `src/scoring.py` (incluido modo estricto); mantén pesos y umbrales sincronizados.
+* Scoring v2 en `js/scoring.js`: réplica de `src/scoring.py` (género ponderado por rareza y modo estricto). `tests/test_paridad_js.py` comprueba con Node que ambas versiones dan la misma nota.
 * Sección Evolución: deltas reales con ≥2 snapshots; con una sola foto, la app lo indica en lugar de inventar una tendencia.
 
 ## Ejecutar en local
@@ -40,7 +40,7 @@ python -m src.precios            # (opcional) precios PC CheapShark; consume cuo
 python -m src.export_web         # reescribe web/data/*.json y datos.js desde el último snapshot
 ```
 
-Los contraprecios (`contraparte`) y precios (`precio_pc`) se adjuntan al export; no inventan filas: si un juego no tiene precio o contraparte, simplemente no lleva ese bloque.
+Las contrapartes (`contraparte`) y los precios (`precio_pc`) se adjuntan al export; no inventan filas: si un juego no tiene precio o contraparte, simplemente no lleva ese bloque.
 
 ## Modificar
 
