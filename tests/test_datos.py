@@ -44,6 +44,18 @@ class TestConjuntoYGeneros(unittest.TestCase):
     def test_conjunto_minusculas(self):
         self.assertEqual(datos.conjunto_de("PC | PS4||"), {"pc", "ps4"})
 
+    def test_xbox_series_no_se_parte_en_dos(self):
+        # IGDB usa '|' dentro de "Xbox Series X|S"; antes salía una plataforma "s".
+        v = "Xbox Series X|S|PlayStation 5"
+        self.assertEqual(datos.lista_de(v), ["Xbox Series X/S", "PlayStation 5"])
+        self.assertEqual(datos.conjunto_de(v), {"xbox series x/s", "playstation 5"})
+        self.assertEqual(datos.n_plataformas({"platform_names": v}), 2)
+
+    def test_sin_separador_al_normalizar(self):
+        self.assertEqual(datos.sin_separador("Xbox Series X|S"), "Xbox Series X/S")
+        self.assertEqual(datos.lista_de(datos.sin_separador("Xbox Series X|S") + "|PC"),
+                         ["Xbox Series X/S", "PC"])
+
     def test_generos_igdb_se_canonizan_a_vocabulario_rawg(self):
         # IGDB "Role-playing (RPG)" -> "rpg" (vocabulario canónico).
         self.assertEqual(datos.generos_canonicos("igdb", "Role-playing (RPG)|Indie"),

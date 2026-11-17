@@ -1,6 +1,6 @@
 {
   "snapshot": "snapshot_20261116T152255Z",
-  "generated_at": "2026-11-16T15:24:29.962585+00:00",
+  "generated_at": "2026-11-17T14:12:16.021912+00:00",
   "observed_at_min": "2026-10-15T18:56:47.149799+00:00",
   "observed_at_max": "2026-11-16T15:22:23.065709+00:00",
   "n_snapshots": 11,
@@ -9,7 +9,7 @@
     "igdb": 630,
     "rawg": 500
   },
-  "scoring": "v1",
+  "scoring": "v2",
   "matching": {
     "filas_con_contraparte": 377,
     "nota": "Identidad cruzada derivada (src/matching.py); las metricas nunca se fusionan entre fuentes."

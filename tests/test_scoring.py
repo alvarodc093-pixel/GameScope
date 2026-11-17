@@ -1,4 +1,4 @@
-"""Tests del scoring v1 (stdlib unittest, sin API).
+"""Tests del scoring v2 (stdlib unittest, sin API).
 
 Se ejecutan con: python -m unittest discover tests
 """
@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.scoring import puntuar
+from src.scoring import idf_generos, puntuar
 
 
 def juego(**kw):
@@ -60,6 +60,39 @@ class TestScoring(unittest.TestCase):
     def test_insuficiente_con_genero_ausente(self):
         v = puntuar(juego(genre_names=""), juego())
         self.assertEqual(v["tier"], "insuficiente")
+
+
+class TestRarezaGeneros(unittest.TestCase):
+    def catalogo(self):
+        # "Adventure" en todos los juegos; "Platform" solo en dos.
+        rows = [juego(source_id=str(i), genre_names="Adventure|Shooter") for i in range(8)]
+        rows += [juego(source_id="p1", genre_names="Adventure|Platform"),
+                 juego(source_id="p2", genre_names="Adventure|Platform")]
+        return rows
+
+    def test_genero_universal_no_aporta(self):
+        idf = idf_generos(self.catalogo())
+        self.assertEqual(idf["igdb"]["action"], 0.0)  # IGDB Adventure -> canónico "action"
+        self.assertGreater(idf["igdb"]["platformer"], idf["igdb"]["shooter"])
+
+    def test_compartir_genero_raro_puntua_mas(self):
+        rows = self.catalogo()
+        idf = idf_generos(rows)
+        ref = juego(genre_names="Adventure|Platform|Shooter")
+        raro = puntuar(ref, juego(genre_names="Adventure|Platform"), idf=idf)
+        comun = puntuar(ref, juego(genre_names="Adventure|Shooter"), idf=idf)
+        self.assertGreater(raro["nota"], comun["nota"])
+
+    def test_solo_genero_universal_no_llega_a_secundario(self):
+        idf = idf_generos(self.catalogo())
+        v = puntuar(juego(genre_names="Adventure|Platform"), juego(genre_names="Adventure|Shooter"),
+                    idf=idf)
+        self.assertEqual(v["partes"]["genero"][0], 0.0)
+        self.assertNotIn(v["tier"], ("directo", "secundario"))
+
+    def test_sin_tabla_es_jaccard_simple(self):
+        v = puntuar(juego(genre_names="Adventure|Shooter"), juego(genre_names="Adventure"))
+        self.assertEqual(v["partes"]["genero"][0], 0.5)
 
 
 class TestModoEstricto(unittest.TestCase):

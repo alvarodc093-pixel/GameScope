@@ -76,7 +76,7 @@
           </div>
           <div>
             <span style="font-weight:600;display:block;margin-bottom:8px">Regla</span>
-            <label class="check-estricto" for="modo-estricto" title="Admisión más dura: exige año en ambas partes y al menos 2 géneros en común. Misma ponderación que v1.">
+            <label class="check-estricto" for="modo-estricto" title="Admisión más dura: exige año en ambas partes y al menos 2 géneros en común. Misma ponderación.">
               <input type="checkbox" id="modo-estricto">
               Modo estricto
             </label>
@@ -101,16 +101,16 @@
     </section>
 
     <section id="metodologia" class="methodology" aria-labelledby="t-metodologia">
-      <h2 id="t-metodologia">Metodología (scoring v1, heurístico)</h2>
+      <h2 id="t-metodologia">Metodología (scoring v2, heurístico)</h2>
       <div class="card">
         <ol>
           <li><strong>Requisitos duros:</strong> sin género común o sin plataforma común no hay competidor.</li>
-          <li><strong>Género</strong> (peso 3): 1.0 con ≥2 equivalentes, 0.6 con 1. Tabla RAWG↔IGDB documentada.</li>
+          <li><strong>Género</strong> (peso 3): Jaccard ponderado por rareza. Cada género pesa log(N / juegos de la fuente que lo tienen), así que compartir «Platform» cuenta más que compartir «Adventure», presente en dos de cada tres juegos de IGDB.</li>
           <li><strong>Plataforma</strong> (peso 2): 1.0 con ≥2 en común, 0.5 con 1.</li>
-          <li><strong>Era</strong> (peso 1): 1.0 si ≤2 años, 0.5 si ≤4, 0 si más o sin fecha (ausente = 0).</li>
+          <li><strong>Era</strong> (peso 1): 1.0 si ≤2 años, 0.5 si ≤4, 0 si más o sin fecha.</li>
           <li><strong>Estudio</strong> (peso 1): solo si ambas partes lo tienen; si no, no aplica ni penaliza.</li>
-          <li><strong>Tiers:</strong> ≥0.75 directo · ≥0.45 secundario · ≥0.25 relacionado.</li>
-          <li><strong>Modo estricto</strong> (interruptor del comparador): admisión más dura con los mismos pesos — exige año en ambas partes (si falta: <em>insuficiente</em>) y ≥2 géneros en común (con 1 solo: <em>descartado</em>). El estudio sigue siendo opcional: RAWG no publica desarrolladores en listado y exigirlo eliminaría todas las parejas RAWG. Sincronizado con <code>src/scoring.py --estricto</code>.</li>
+          <li><strong>Tiers:</strong> ≥0.75 directo · ≥0.60 secundario · ≥0.40 relacionado. En empate, primero el juego con más votos de usuarios.</li>
+          <li><strong>Modo estricto</strong> (interruptor del comparador): admisión más dura con los mismos pesos; exige año en ambas partes (si falta: <em>insuficiente</em>) y ≥2 géneros en común (con 1 solo: <em>descartado</em>). El estudio sigue siendo opcional: RAWG no publica desarrolladores en listado y exigirlo eliminaría todas las parejas RAWG. Sincronizado con <code>src/scoring.py --estricto</code>.</li>
           <li><strong>Deltas (tabla comparativa):</strong> solo dentro de la misma fuente y escala; nunca entre IGDB y RAWG.</li>
         </ol>
         <p>Cada competidor muestra qué aportó cada componente. Subgénero, modelo de negocio y audiencia están excluidos por falta de fuente válida. Popularidad solo como contexto dentro de cada fuente. Puntuaciones y votos no son ventas.</p>
@@ -141,10 +141,10 @@
   </footer>
 
   <!-- Datos como script (no fetch): la app funciona tambien con doble clic (file://) -->
-  <script src="data/datos.js?v=6"></script>
-  <script src="js/scoring.js?v=6" defer></script>
-  <script src="js/ui.js?v=6" defer></script>
-  <script src="js/data.js?v=6" defer></script>
-  <script src="js/app.js?v=6" defer></script>
+  <script src="data/datos.js?v=7"></script>
+  <script src="js/scoring.js?v=7" defer></script>
+  <script src="js/ui.js?v=7" defer></script>
+  <script src="js/data.js?v=7" defer></script>
+  <script src="js/app.js?v=7" defer></script>
 </body>
 </html>

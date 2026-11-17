@@ -31,7 +31,7 @@ SCALES = {"rawg": {"critic": 100, "user": 5}, "igdb": {"critic": 100, "user": 10
 
 
 def _list(v):
-    return [x.strip() for x in (v or "").split("|") if x.strip()]
+    return datos.lista_de(v)
 
 
 def contrapartes(matching_csv: Path | None = None) -> dict[tuple[str, str], dict]:
@@ -123,7 +123,7 @@ def meta_para(games: list[dict], snap: Path, n_snapshots: int) -> dict:
         "n_snapshots": n_snapshots,
         "n": len(games),
         "por_fuente": {s: sum(1 for g in games if g["source"] == s) for s in ("igdb", "rawg")},
-        "scoring": "v1",
+        "scoring": "v2",
         "matching": {"filas_con_contraparte": n_cp,
                      "nota": "Identidad cruzada derivada (src/matching.py); "
                              "las metricas nunca se fusionan entre fuentes."},

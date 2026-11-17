@@ -1,43 +1,62 @@
-# 08 — Caso de prueba: Hollow Knight + GTA V (datos reales 2026-10-15, snapshot 1.131)
+# 08 — Caso de prueba del scoring v2 (snapshot 2026-11-16, 1.130 juegos)
 
-## 1. Piloto IGDB — Hollow Knight (modo v1)
+Salidas reales de `python -m src.scoring` sobre `snapshot_20261116T152255Z.csv`.
+Los nombres de género del detalle son canónicos: el "Adventure" de IGDB aparece
+como `action` y "Platform" como `platformer` (tabla de `docs/05`).
+
+## 1. Hollow Knight en IGDB
 
 Comando: `python -m src.scoring --slug hollow-knight --source igdb --top 10`.
 
-Referencia: Hollow Knight (2017-02-24) [igdb]. Directos+secundarios: **440** (114 directo + 326 secundario) de 629 candidatos IGDB. Descartes: 142 sin género común, 7 sin plataforma común, 10 con género ausente (30 relacionados quedan bajo el umbral).
+Por tier: 9 directos, 35 secundarios, 227 relacionados, 349 descartados y 9 con
+género ausente. **Directos+secundarios: 44 de 629.**
 
 | Nota | Tier | Juego | Por qué |
 |---|---|---|---|
-| 1.000 | directo | Hollow Knight: Godmaster | action+indie+platformer, 6 plats, Δ1a, mismo estudio |
-| 1.000 | directo | She Sees Red | action+indie, 5 plats, Δ2a |
-| 0.857 | directo | Night in the Woods / Brawlhalla | 2–3 géneros, 5–7 plats, Δ0a, distinto estudio |
-| 0.857 | directo | Enter the Gungeon / What Remains of Edith Finch / Neo Cab… | action+indie, 4–8 plats, Δ0–2a |
+| 0.857 | directo | Celeste, Dead Cells, Night in the Woods, Arise | mismos 3 géneros, ≥4 plataformas, Δ0–2 años, distinto estudio |
+| 0.857 | directo | Hollow Knight: Silksong | mismos géneros y estudio, pero Δ8 años (era = 0) |
+| 0.820 | directo | Hollow Knight: Godmaster | añade "Hack and slash", así que el género baja a 0.581; mismo estudio |
+| 0.786 | directo | Shovel Knight, Pumpkin Jack, Shantae | mismos géneros, Δ3 años (era = 0.5) |
+| 0.720 | secundario | Super Mario Odyssey | comparte Platform y Adventure, no Indie (género 0.679) |
 
-Controles: Super Mario Odyssey (action+platformer, 2 plats, Δ0a) entra como directo 0.857; Call of Duty: Mobile queda descartado por "sin plataforma común"; 10 casos con género ausente dan `insuficiente`, nunca puntúan. En esta foto no hay filas sin fecha (0 en ambas fuentes): la regla "fecha ausente = era 0" sigue implementada y cubierta por tests unitarios.
+Con la regla v1 este mismo juego tenía 440 competidores directos o secundarios
+(el 70 % del catálogo IGDB), y una novela visual en FMV (*She Sees Red*) salía
+con 1.000 por compartir Adventure e Indie. En v2 queda en 0.607, justo por
+encima del umbral de secundario.
 
-## 2. Mismo piloto en modo estricto (`--estricto`)
+En modo estricto (`--estricto`) siguen siendo 44: todos comparten al menos dos
+géneros. El modo estricto solo saca de la lista relacionados con un único género
+común.
 
-Directos+secundarios: **191** (de 440). La admisión exige año en ambas partes y ≥2 géneros en común con los mismos pesos: la lista se limpia de "solo 1 género" sin mover umbrales. Top idéntico en las primeras plazas (Godmaster, She Sees Red…).
+## 2. Grand Theft Auto V en RAWG: el límite del Jaccard
 
-## 3. Piloto RAWG — Grand Theft Auto V (otra escala, sin estudio)
+Comando: `python -m src.scoring --slug grand-theft-auto-v --source rawg --top 6`.
 
-Comando: `python -m src.scoring --slug grand-theft-auto-v --source rawg --top 8`.
+**Directos+secundarios: 55 de 499** (22 directos, 33 secundarios). El top son
+todos 1.000: Tomb Raider, Rise of the Tomb Raider, Batman: Arkham Knight,
+Assassin's Creed IV, Arkham City y Arkham Origins.
 
-Referencia: Grand Theft Auto V (2013-09-17) [rawg]. Directos+secundarios: **340**; el top son todos 0.800 con **un solo género `action`** (0.6) — Transistor, Darksiders II Deathinitive, Path of Exile, Mortal Kombat X, CoD MW3, The Long Dark, SteamWorld Heist, Shadow of Mordor. Útil pero generoso: es la evidencia que justifica el endurecimiento.
+RAWG cataloga GTA V con un único género, `Action`, y esos juegos también. Dos
+conjuntos idénticos dan Jaccard 1 aunque el género sea el más común: la rareza
+solo baja la nota cuando los conjuntos difieren. Con solo un género la nota
+la deciden plataforma y época. El desempate de la lista es el número de votos de
+usuarios.
 
-## 4. GTA V en modo estricto: 0 con diagnóstico (caso límite documentado)
-
-`--estricto` devuelve **0 competidores** y el motivo real, sin rellenar nada:
+En modo estricto devuelve 0 y explica por qué:
 
 ```
-Referencia con 1 género(s): action. Mínimo estricto = 2 géneros en común.
-340 candidatos: solo 1 género en común (mínimo 2 en estricto)
+Géneros de la referencia: action
+339 candidatos: solo 1 género en común (mínimo 2 en estricto)
 159 candidatos: sin género común
   1 candidatos: sin plataforma común
 ```
 
-RAWG cataloga GTA V con un único género, así que **ningún** candidato puede superar el mínimo de 2: 0 es la respuesta correcta, no un fallo. La web muestra el mismo caso con mensaje explícito ("la referencia solo tiene 1 género… desactiva «Regla»") en lugar de una lista vacía sin explicación. Lección: el modo estricto es una admisión del usuario, no una verdad; con referencias de un solo género en RAWG hay que apagarlo.
+Con referencias de un solo género el modo estricto no aplica; la web lo indica
+con un mensaje en lugar de una lista vacía.
 
-## 5. Limitación
+## 3. Limitaciones
 
-Candidatos = snapshot (muestra top+mid+cola, no el catálogo entero); era ±4; mismo título ≠ mismo juego (el matching cruzado es aparte y con confianza declarada). La evolución temporal sí está activa: hay ≥2 snapshots (`docs/06`).
+Los candidatos son el snapshot (capas top, intermedia y cola larga), no el
+catálogo entero. La rareza de cada género se calcula sobre ese mismo snapshot, así
+que cambia un poco de una semana a otra. El mismo título no implica el mismo juego:
+el enlace entre fuentes va aparte (`src/matching.py`).

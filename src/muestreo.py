@@ -29,7 +29,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src import config  # noqa: E402
+from src import config, datos  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "data" / "raw"
@@ -197,11 +197,12 @@ def norm_rawg(g: dict, observed: str) -> dict:
         "slug": g.get("slug"),
         "name": g.get("name"),
         "grupo": g.get("_grupo"),
-        "platform_names": "|".join(p.get("platform", {}).get("name", "") for p in plats),
-        "genre_names": "|".join(x.get("name", "") for x in genres),
+        "platform_names": "|".join(datos.sin_separador(p.get("platform", {}).get("name", ""))
+                                   for p in plats),
+        "genre_names": "|".join(datos.sin_separador(x.get("name", "")) for x in genres),
         "release_date": g.get("released"),
-        "developer_names": "|".join(x.get("name", "") for x in devs),
-        "publisher_names": "|".join(x.get("name", "") for x in pubs),
+        "developer_names": "|".join(datos.sin_separador(x.get("name", "")) for x in devs),
+        "publisher_names": "|".join(datos.sin_separador(x.get("name", "")) for x in pubs),
         "critic_score": g.get("metacritic"),
         "critic_count": None,  # RAWG no da nº de reseñas Metacritic
         "user_score": g.get("rating"),
@@ -239,14 +240,14 @@ def norm_igdb(g: dict, observed: str) -> dict:
         "name": g.get("name"),
         "grupo": g.get("_grupo"),
         "platform_names": "|".join(
-            p.get("name", "") if isinstance(p, dict) else str(p) for p in plats
+            datos.sin_separador(p.get("name", "") if isinstance(p, dict) else str(p)) for p in plats
         ),
         "genre_names": "|".join(
-            x.get("name", "") if isinstance(x, dict) else str(x) for x in genres
+            datos.sin_separador(x.get("name", "") if isinstance(x, dict) else str(x)) for x in genres
         ),
         "release_date": _ts_to_iso(g.get("first_release_date")),
-        "developer_names": "|".join([d for d in devs if d]),
-        "publisher_names": "|".join([p for p in pubs if p]),
+        "developer_names": "|".join(datos.sin_separador(d) for d in devs if d),
+        "publisher_names": "|".join(datos.sin_separador(p) for p in pubs if p),
         "critic_score": g.get("aggregated_rating"),
         "critic_count": g.get("aggregated_rating_count"),
         "user_score": g.get("rating"),
