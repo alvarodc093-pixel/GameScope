@@ -6,7 +6,7 @@
   const GS = global.GS;
   const $ = (id) => document.getElementById(id);
   const estado = {
-    games: [], source: "igdb", tier: "secundario", top: 10, refSlug: null,
+    games: [], idf: null, source: "igdb", tier: "secundario", top: 10, refSlug: null,
     plataforma: "", genero: "", evolucion: null, estricto: false,
   };
 
@@ -177,10 +177,10 @@
     for (const j of juegosDeFuente()) {
       if (j.source_id === ref.source_id) continue;
       if (!pasaFiltros(j)) continue;
-      const v = GS.puntuar(ref, j, G, estado.estricto);
+      const v = GS.puntuar(ref, j, G, estado.estricto, estado.idf);
       if (RANGO[v.tier] >= minNivel) scored.push([v.nota, j, v]);
     }
-    scored.sort((a, b) => b[0] - a[0]);
+    scored.sort(GS.compararCompetidores);
     const top = scored.slice(0, estado.top);
     const filtros = [];
     if (estado.plataforma) filtros.push(`plataforma=${estado.plataforma}`);
@@ -280,9 +280,10 @@
       return;
     }
     estado.games = games;
+    estado.idf = GS.idfGeneros(games);
     estado.evolucion = await GS.cargarEvolucion();
     $("meta-linea").textContent =
-      `Snapshot ${meta.snapshot} · ${meta.n} juegos (${meta.por_fuente.igdb} IGDB + ${meta.por_fuente.rawg} RAWG) · scoring v1 · ${meta.n_snapshots} snapshot(s) capturado(s)`;
+      `Snapshot ${meta.snapshot} · ${meta.n} juegos (${meta.por_fuente.igdb} IGDB + ${meta.por_fuente.rawg} RAWG) · scoring v2 · ${meta.n_snapshots} snapshot(s) capturado(s)`;
     refrescarFiltros();
     pintarEvolucion();
     // Demo inicial: comparación real visible sin tocar nada.
@@ -292,7 +293,7 @@
     else resultados.innerHTML = GS.estadoVacio("Escribe un juego arriba y elige de la lista.");
   }
 
-  // Solo arranca en navegador (en Node se cargan los scripts para test de lógica pura).
+  // Solo arranca en navegador.
   if (typeof document !== "undefined") iniciar();
 
   Object.assign(GS, { estado, buscarJuegos, seleccionar, compararActual });

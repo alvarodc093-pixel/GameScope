@@ -1,28 +1,33 @@
-"""Scoring de similitud competitivo v1 (GameScope Fase 4) — HEURÍSTICO, no ML.
+"""Scoring de competidores v2: heurístico y explicable, sin ML.
 
-Incluye el modo estricto (--estricto): admisión de parejas más dura (año en
-ambas partes y >=2 géneros en común) con los mismos pesos y umbrales.
-Sincronizado con web/js/scoring.js.
+Dos juegos de la misma fuente son comparables si comparten de qué van
+(género), dónde se juegan (plataforma) y de cuándo son (era). El estudio suma
+solo cuando ambas partes lo tienen (IGDB); en RAWG no aplica y no penaliza.
 
-Idea: dos juegos son comparables si comparten de qué van (género), dónde se
-juegan (plataforma) y de cuándo son (era). El estudio suma solo cuando ambas
-partes lo tienen (IGDB); en RAWG ese componente no aplica y no penaliza.
+Componentes (nota = suma ponderada / suma de pesos aplicables):
+- genero (3): Jaccard ponderado por rareza. Cada género pesa
+  log(N / nº de juegos de la fuente que lo tienen): compartir "Platform" dice
+  más que compartir "Adventure", que está en dos de cada tres juegos de IGDB.
+  En v1 bastaba un género común para sacar 0.6, y con eso más de la mitad del
+  catálogo era competidor de cualquier juego.
+- plataforma (2): 1 si comparten >=2, 0.5 si una.
+- era (1): 1 si diferencia <=2 años, 0.5 si <=4, 0 si más o si falta la fecha.
+- estudio (1): 1 mismo estudio, 0 distinto; no entra si falta en alguna parte.
 
-Reglas anti-sesgo:
-- Requisitos duros: sin género común o sin plataforma común no hay
-  competidor (da igual el resto).
-- Un campo ausente aporta 0 y queda registrado; nunca suma.
-- La nota se normaliza por el máximo alcanzable con los datos presentes.
-- Subgénero, modelo de negocio y audiencia NO entran: no hay fuente válida.
+Sin género común o sin plataforma común no hay competidor. El modo estricto
+(--estricto) exige además año en ambas partes y >=2 géneros en común.
 
-Base de datos: el ÚLTIMO snapshot de data/snapshots/ (antes estaba hardcodeado
-a snapshot_20261013.csv y quedaba obsoleto al capturar uno nuevo).
+La tabla de rareza se calcula sobre el snapshot cargado (idf_generos). Sin ella
+(tests, llamadas sueltas) todos los géneros pesan 1 y el componente es un
+Jaccard simple. web/js/scoring.js replica esta lógica; tests/test_paridad_js.py
+comprueba que ambas dan la misma nota.
 
 Ejecución: python -m src.scoring --slug hollow-knight --source igdb
 """
 from __future__ import annotations
 
 import argparse
+import math
 import sys
 from collections import Counter
 from pathlib import Path
@@ -32,52 +37,71 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from src import datos  # noqa: E402
 
 PESOS = {"genero": 3.0, "plataforma": 2.0, "era": 1.0, "estudio": 1.0}
-UMBRALES = {"directo": 0.75, "secundario": 0.45, "relacionado": 0.25}
+UMBRALES = {"directo": 0.75, "secundario": 0.60, "relacionado": 0.40}
 ERA_CERCA = 2
 ERA_ANCHA = 4
 
 
-def puntuar(ref: dict, cand: dict, pesos: dict | None = None,
-            umbrales: dict | None = None, estricto: bool = False) -> dict:
-    """Devuelve nota normalizada, tier y qué aportó cada componente.
+def redondear3(x: float) -> float:
+    """Redondeo a 3 decimales con la misma aritmética que Math.round de la web.
 
-    estricto=True endurece la admisión de parejas SIN tocar pesos ni umbrales:
-    exige año en ambas partes y >=2 géneros en común. Fecha ausente =>
-    "insuficiente"; un solo género compartido => "descartado". El estudio sigue
-    siendo opcional (RAWG no trae developers en listado: exigirlo eliminaría
-    todas las parejas RAWG). Sincronizado con web/js/scoring.js.
+    round() de Python redondea a par y daría notas distintas a la versión JS
+    (0.525 frente a 0.526).
     """
+    return math.floor(x * 1000 + 0.5) / 1000
+
+
+def idf_generos(rows: list[dict]) -> dict[str, dict[str, float]]:
+    """Rareza de cada género canónico por fuente: log(N / juegos con ese género)."""
+    out: dict[str, dict[str, float]] = {}
+    for src in sorted({r["source"] for r in rows}):
+        sub = [r for r in rows if r["source"] == src]
+        df = Counter(g for r in sub for g in _generos(r))
+        out[src] = {g: math.log(len(sub) / n) for g, n in df.items()}
+    return out
+
+
+def _generos(r: dict) -> set[str]:
+    return r["_g"] if r.get("_g") else datos.generos_canonicos(r["source"], r["genre_names"])
+
+
+def similitud_genero(g_ref: set[str], g_cand: set[str], pesos_g: dict[str, float] | None) -> float:
+    """Jaccard ponderado. Un género fuera de la tabla pesa 1."""
+    def peso(g: str) -> float:
+        return pesos_g.get(g, 1.0) if pesos_g else 1.0
+    den = sum(peso(g) for g in g_ref | g_cand)
+    return sum(peso(g) for g in g_ref & g_cand) / den if den else 0.0
+
+
+def puntuar(ref: dict, cand: dict, pesos: dict | None = None,
+            umbrales: dict | None = None, estricto: bool = False,
+            idf: dict[str, dict[str, float]] | None = None) -> dict:
+    """Nota normalizada (0-1), tier y aportación de cada componente."""
     pesos = {**PESOS, **(pesos or {})}
     umbrales = {**UMBRALES, **(umbrales or {})}
-    if not ref.get("_g"):
-        ref = {**ref, "_g": datos.generos_canonicos(ref["source"], ref["genre_names"])}
-    if not cand.get("_g"):
-        cand = {**cand, "_g": datos.generos_canonicos(cand["source"], cand["genre_names"])}
-
-    g_com = sorted(ref["_g"] & cand["_g"])
+    g_ref, g_cand = _generos(ref), _generos(cand)
+    if not g_ref or not g_cand:
+        return _veredicto("insuficiente", "género ausente en una parte")
+    g_com = sorted(g_ref & g_cand)
     p_com = sorted(datos.conjunto_de(ref["platform_names"]) & datos.conjunto_de(cand["platform_names"]))
-    if not ref["_g"] or not cand["_g"]:
-        return _veredicto("insuficiente", 0.0, "género ausente en una parte")
     if not g_com:
-        return _veredicto("descartado", 0.0, "sin género común")
+        return _veredicto("descartado", "sin género común")
     if not p_com:
-        return _veredicto("descartado", 0.0, "sin plataforma común")
+        return _veredicto("descartado", "sin plataforma común")
+    y1, y2 = datos.year_de(ref["release_date"]), datos.year_de(cand["release_date"])
     if estricto:
-        y_ref = datos.year_de(ref["release_date"])
-        y_cand = datos.year_de(cand["release_date"])
-        if y_ref is None or y_cand is None:
-            return _veredicto("insuficiente", 0.0, "fecha ausente en modo estricto")
+        if y1 is None or y2 is None:
+            return _veredicto("insuficiente", "fecha ausente en modo estricto")
         if len(g_com) < 2:
-            return _veredicto("descartado", 0.0, "solo 1 género en común (mínimo 2 en estricto)")
+            return _veredicto("descartado", "solo 1 género en común (mínimo 2 en estricto)")
 
-    partes: dict[str, tuple[float, float, str]] = {}  # comp -> (valor, peso, detalle)
-    partes["genero"] = (1.0 if len(g_com) >= 2 else 0.6, pesos["genero"],
-                        f"{len(g_com)} en común: {'|'.join(g_com)}")
+    partes: dict[str, tuple[float, float, str]] = {}  # componente -> (valor, peso, detalle)
+    v_gen = redondear3(similitud_genero(g_ref, g_cand, (idf or {}).get(ref["source"])))
+    partes["genero"] = (v_gen, pesos["genero"], f"{len(g_com)} en común: {'|'.join(g_com)}")
     partes["plataforma"] = (1.0 if len(p_com) >= 2 else 0.5, pesos["plataforma"],
                             f"{len(p_com)} en común")
-    y1, y2 = datos.year_de(ref["release_date"]), datos.year_de(cand["release_date"])
     if y1 is None or y2 is None:
-        partes["era"] = (0.0, pesos["era"], "fecha ausente: no suma")
+        partes["era"] = (0.0, pesos["era"], "fecha ausente")
     else:
         d = abs(y1 - y2)
         partes["era"] = ((1.0 if d <= ERA_CERCA else 0.5 if d <= ERA_ANCHA else 0.0),
@@ -86,23 +110,30 @@ def puntuar(ref: dict, cand: dict, pesos: dict | None = None,
     if d1 and d2:
         partes["estudio"] = (1.0 if d1 & d2 else 0.0, pesos["estudio"],
                              "mismo estudio" if d1 & d2 else "distinto estudio")
-    # Sin dev en alguna parte el componente no aplica: ni suma ni resta.
 
     num = sum(v * w for v, w, _ in partes.values())
     den = sum(w for _, w, _ in partes.values())
-    nota = round(num / den, 3)
+    nota = redondear3(num / den)
     tier = ("directo" if nota >= umbrales["directo"]
             else "secundario" if nota >= umbrales["secundario"]
             else "relacionado" if nota >= umbrales["relacionado"] else "descartado")
     return {"tier": tier, "nota": nota, "partes": partes, "motivo": ""}
 
 
-def _veredicto(tier: str, nota: float, motivo: str) -> dict:
-    return {"tier": tier, "nota": nota, "partes": {}, "motivo": motivo}
+def orden_competidor(nota: float, r: dict) -> tuple:
+    """Nota descendente; en empate, más votos de usuarios primero y luego nombre.
+
+    RAWG solo tiene unos pocos géneros amplios, así que muchos candidatos empatan.
+    """
+    return (-nota, -(datos.entero(r.get("user_count")) or 0), (r.get("name") or "").lower())
+
+
+def _veredicto(tier: str, motivo: str) -> dict:
+    return {"tier": tier, "nota": 0.0, "partes": {}, "motivo": motivo}
 
 
 def cargar(snap: Path | None = None) -> list[dict]:
-    """Carga el último snapshot (o el indicado) ya deduplicado y con géneros canónicos."""
+    """Carga el último snapshot (o el indicado) deduplicado y con géneros canónicos."""
     path = snap or datos.ultimo_snapshot()
     if path is None or not path.exists():
         raise FileNotFoundError(
@@ -115,12 +146,12 @@ def cargar(snap: Path | None = None) -> list[dict]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Competidores de un juego (regla v1, con --estricto)")
+    ap = argparse.ArgumentParser(description="Competidores de un juego (scoring v2)")
     ap.add_argument("--slug", default="hollow-knight")
     ap.add_argument("--source", default="igdb", choices=("igdb", "rawg"))
     ap.add_argument("--top", type=int, default=10)
     ap.add_argument("--estricto", action="store_true",
-                    help="admision estricta: año en ambas partes y >=2 géneros en común")
+                    help="exige año en ambas partes y >=2 géneros en común")
     a = ap.parse_args(argv)
     try:
         rows = [r for r in cargar() if r["source"] == a.source]
@@ -132,34 +163,24 @@ def main(argv: list[str] | None = None) -> int:
         print(f"El slug no está en el snapshot [{a.source}]")
         return 1
     ref = refs[0]
-    modo = "estricto" if a.estricto else "v1"
-    print(f"Referencia: {ref['name']} ({ref['release_date']}) [{a.source}] · modo {modo}")
-    scored = []
-    for r in rows:
-        if r["source_id"] == ref["source_id"]:
-            continue
-        v = puntuar(ref, r, estricto=a.estricto)
-        if v["tier"] in ("directo", "secundario"):
-            scored.append((v["nota"], r["name"], r["slug"], v))
-    scored.sort(key=lambda x: -x[0])
-    print(f"Directos+secundarios: {len(scored)}")
+    idf = idf_generos(rows)
+    print(f"Referencia: {ref['name']} ({ref['release_date']}) [{a.source}] · "
+          f"modo {'estricto' if a.estricto else 'normal'}")
+    veredictos = [(puntuar(ref, r, estricto=a.estricto, idf=idf), r)
+                  for r in rows if r["source_id"] != ref["source_id"]]
+    tiers = Counter(v["tier"] for v, _ in veredictos)
+    print("Por tier:", dict(tiers.most_common()))
+    scored = sorted(((v, r) for v, r in veredictos if v["tier"] in ("directo", "secundario")),
+                    key=lambda x: orden_competidor(x[0]["nota"], x[1]))
+    print(f"Directos+secundarios: {len(scored)} de {len(veredictos)}")
     if not scored:
-        # Diagnóstico honesto del vacío (nunca imputar datos para rellenar).
-        motivos = Counter()
-        for r in rows:
-            if r["source_id"] == ref["source_id"]:
-                continue
-            v = puntuar(ref, r, estricto=a.estricto)
-            motivos[v["motivo"] or v["tier"]] += 1
-        gs = sorted(ref["_g"])
-        print(f"  Referencia con {len(gs)} género(s): {', '.join(gs) or 'ninguno'}. "
-              + ("Mínimo estricto = 2 géneros en común."
-                 if a.estricto else "Revisa filtros/datos."))
+        motivos = Counter(v["motivo"] or v["tier"] for v, _ in veredictos)
+        print(f"  Géneros de la referencia: {', '.join(sorted(ref['_g'])) or 'ninguno'}")
         for m, n in motivos.most_common(4):
             print(f"  {n} candidatos: {m}")
-    for nota, name, slug, v in scored[:a.top]:
+    for v, r in scored[:a.top]:
         det = "; ".join(f"{k}={vv}({d})" for k, (vv, _, d) in v["partes"].items())
-        print(f" {nota:.3f} [{v['tier']}] {name} ({slug}) :: {det}")
+        print(f" {v['nota']:.3f} [{v['tier']}] {r['name']} ({r['slug']}) :: {det}")
     return 0
 
 
